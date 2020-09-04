@@ -276,7 +276,7 @@ public class GameServer {
 		log.info("Core Version: Aion Ascension NA 3.5");
 		log.info("===================================================");
 		log.info("===================================================");
-		log.info("Reworked by G-Robson26 e wennerstrom");
+		log.info("Reworked by G-Robson26 e lpw");
 		log.info("===================================================");
 		log.info("===================================================");
 		log.info("Copyright 2012 - 2020");
