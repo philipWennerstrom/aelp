@@ -1,0 +1,25 @@
+2020-09-04 02:39:34,557 Unable to get Soft information
+File name 'C:\Users\luizw\Documents\edgework\aelp\AL-Game\target\classes' isn't a valid jar
+java.io.FileNotFoundException: C:\Users\luizw\Documents\edgework\aelp\AL-Game\target\classes (Acesso negado)
+	at java.util.zip.ZipFile.open(Native Method) ~[na:1.7.0_80]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:215) ~[na:1.7.0_80]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:145) ~[na:1.7.0_80]
+	at java.util.jar.JarFile.<init>(JarFile.java:154) ~[na:1.7.0_80]
+	at java.util.jar.JarFile.<init>(JarFile.java:118) ~[na:1.7.0_80]
+	at com.aionemu.commons.versionning.Version.loadInformation(Version.java:37) [al-commons-1.3.jar:na]
+	at com.aionemu.commons.versionning.Version.<init>(Version.java:30) [al-commons-1.3.jar:na]
+	at com.aionemu.gameserver.utils.AEVersions.<clinit>(AEVersions.java:17) [classes/:na]
+	at com.aionemu.gameserver.GameServer.main(GameServer.java:267) [classes/:na]
+2020-09-04 02:42:53,733 Error handling client (admin) message :[C] 0xEB CM_CASTSPELL
+java.lang.NullPointerException: null
+	at com.aionemu.gameserver.fix.GeoDataBugUtils.canSee(GeoDataBugUtils.java:17) ~[classes/:na]
+	at com.aionemu.gameserver.skillengine.model.Skill.endCast(Skill.java:700) ~[classes/:na]
+	at com.aionemu.gameserver.skillengine.model.Skill.useSkill(Skill.java:296) ~[classes/:na]
+	at com.aionemu.gameserver.skillengine.model.Skill.useSkill(Skill.java:232) ~[classes/:na]
+	at com.aionemu.gameserver.controllers.PlayerController.useSkill(PlayerController.java:512) ~[classes/:na]
+	at com.aionemu.gameserver.network.aion.clientpackets.CM_CASTSPELL.runImpl(CM_CASTSPELL.java:91) ~[classes/:na]
+	at com.aionemu.gameserver.network.aion.AionClientPacket.run(AionClientPacket.java:51) ~[classes/:na]
+	at com.aionemu.commons.utils.concurrent.ExecuteWrapper.execute(ExecuteWrapper.java:30) [al-commons-1.3.jar:na]
+	at com.aionemu.commons.utils.concurrent.ExecuteWrapper.execute(ExecuteWrapper.java:23) [al-commons-1.3.jar:na]
+	at com.aionemu.commons.network.PacketProcessor$PacketProcessorTask.run(PacketProcessor.java:248) [al-commons-1.3.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]

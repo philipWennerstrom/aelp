@@ -1,5 +1,9 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import java.util.Date;
+
+import org.joda.time.Duration;
+
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
@@ -83,8 +87,12 @@ public class CM_CASTSPELL extends AionClientPacket {
 
 		long currentTime = System.currentTimeMillis();
 		if (player.getNextSkillUse() > currentTime) {
-			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300021));
-			return;
+			long attackedAtFromNow =  new Duration(player.getNextSkillUse(),currentTime).getStandardSeconds();
+			
+			if(attackedAtFromNow!=0) {
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300021));
+				return;
+			}
 		}
 
 		if (!player.getLifeStats().isAlreadyDead()) {
