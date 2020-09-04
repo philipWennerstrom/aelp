@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<in_game_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="in_game_shop.xsd">
+
+<!-- Supporting Items -->
+	<category id="0" name="Support">
+		<sub_category id="10" name="Boost"/>
+		<sub_category id="11" name="Potions"/>
+		<sub_category id="15" name="Scrolls"/>
+		<sub_category id="18" name="Drinks/Jelly"/>
+		<sub_category id="20" name="Food"/>
+		<sub_category id="22" name="Material"/>
+		<sub_category id="23" name="Candy"/>
+		<sub_category id="24" name="General Goods"/>
+		<sub_category id="26" name="Title Card"/>
+		<sub_category id="50" name="Rings"/>
+		<sub_category id="35" name="Time Scroll"/>
+		<sub_category id="27" name="Courier Pass"/>
+		<sub_category id="74" name="Special"/>
+		<sub_category id="21" name="Promos"/>
+		<sub_category id="116" name="Events"/>
+		<sub_category id="28" name="Promo Event"/>
+		<sub_category id="29" name="Free"/>
+	</category>
+
+		<!-- Menu 2 -->
+	<category id="1" name="Enchant">
+		<!--<sub_category id="30" name="Manastone IV"/> 
+		<sub_category id="31" name="Godstone"/>
+		<sub_category id="32" name="Manastone"/>
+		<sub_category id="92" name="Manastone S"/>
+		<sub_category id="34" name="Godstones"/>
+		<sub_category id="39" name="Enchant Stones"/>-->
+		<sub_category id="31" name="Manaston"/>
+		<sub_category id="40" name="Supplements"/>
+		<sub_category id="41" name="Conditioning"/>
+		<!--<sub_category id="42" name="Extraction"/>-->
+	</category>
+	
+	 <!-- Menu 3 -->
+	<category id="2" name="Housing">
+	    <sub_category id="127" name="Special"/> <!-- END OF SUB_CATEGORY :( -->
+		<sub_category id="112" name="House Remodeling"/>
+		<sub_category id="113" name="Trade: Housing"/>
+		<sub_category id="114" name="Paint"/>
+		<sub_category id="115" name="Bed"/>
+		<!--<sub_category id="116" name="Merchants"/> -->
+		<sub_category id="118" name="Couch"/>
+		<sub_category id="119" name="Table"/>
+		<sub_category id="120" name="Art/Decoration"/>
+		<sub_category id="121" name="Light"/>
+		<sub_category id="122" name="Carpet"/>
+		<sub_category id="123" name="Wallpapers"/>
+		<sub_category id="124" name="Souvenir"/>
+		<sub_category id="125" name="Outdoor"/>
+		<!--<sub_category id="128" name=""/>  DO NOT USE, WILL NOT WORK!!! -->
+	</category>
+	
+		<!-- Menu 4 -->
+	<category id="3" name="Character">
+		<sub_category id="61" name="Name Change"/>
+		<sub_category id="62" name="Plastic Surgery"/>
+		<sub_category id="63" name="Cube/Warehouse"/>
+		<sub_category id="65" name="Emotion Cards"/>
+		<sub_category id="66" name="Motion Cards"/>
+		<sub_category id="45" name="Wings Skin"/>
+		<sub_category id="44" name="Wings"/>
+		<!--<sub_category id="46" name="Armor Set"/>
+		<sub_category id="47" name="Weapons"/>-->
+		<sub_category id="73" name="Firecrackers"/>
+<!--		<sub_category id="75" name=""/>
+		<sub_category id="76" name=""/>
+		<sub_category id="77" name=""/>-->
+	</category>
+	
+			<!-- Menu 5 -->
+	<category id="4" name="Mounts/Pets">
+		<sub_category id="78" name="Mounts"/>
+		<sub_category id="79" name="Inventory"/>
+		<sub_category id="80" name="Alarm"/>
+		<sub_category id="81" name="Loot"/>
+		<sub_category id="82" name="Production"/>
+		<sub_category id="83" name="Buff"/>
+		<sub_category id="91" name="Pet Food: Rare"/>
+<!--	<sub_category id="92" name=""/>
+		<sub_category id="93" name=""/>
+		<sub_category id="94" name=""/> -->
+	</category>
+	
+			<!-- Menu 6 -->
+	<category id="5" name="Gear">
+		<sub_category id="95" name="Dye"/>
+		<sub_category id="96" name="Headwear I"/>
+		<sub_category id="97" name="Headwear II"/>
+		<sub_category id="98" name="Costume Skins I"/>
+		<sub_category id="99" name="Costume Skins II"/>
+		<sub_category id="100" name="Weaponskins I"/>
+		<sub_category id="102" name="Armorskins I"/>
+		<sub_category id="101" name="Stormwing"/>
+		<sub_category id="103" name="Dragon King"/>
+    	<sub_category id="106" name="Innocent Aris"/>
+	    <sub_category id="110" name="Steel Rake Sailor"/>
+    	<sub_category id="111" name="Firebolt"/>
+	</category>	
+	
+	<!-- Menu 8 
+	<category id="6" name="Event">
+		<sub_category id="93" name="Pets"/>
+		<sub_category id="107" name="Candys"/>
+		<sub_category id="108" name="Weapons"/>
+		<sub_category id="94" name="Costumes"/>
+		<sub_category id="33" name="Decor"/>
+		<sub_category id="109" name="Food"/>
+	</category>-->
+</in_game_shop>

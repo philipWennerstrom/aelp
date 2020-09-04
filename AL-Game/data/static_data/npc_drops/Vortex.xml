@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Theobomos Asmo Aliance-->
+<npc_drops>
+	<npc_drop npc_id="209433">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209430">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209434">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209431">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209432">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209427">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209426">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209428">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209429">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209425">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 	
+	<!-- Theobomos Elyos Aliance -->		
+    <npc_drop npc_id="209480">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209418">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209416">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209419">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209415">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209417">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209420">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209423">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209422">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209458">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209421">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209424">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+	<!-- Brusthonin Asmo Aliance drop best -->
+    <npc_drop npc_id="209451">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="209452">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209453">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209476">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209450">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+    </npc_drop>	
+    <npc_drop npc_id="209454">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209470">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209448">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>	
+    <npc_drop npc_id="209447">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>	
+    <npc_drop npc_id="209483">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209445">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209446">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209449">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000053"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>	
+    <!-- Brusthonin Elyos Aliance drop best-->
+    <npc_drop npc_id="209443">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209441">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209439">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209435">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209436">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209479">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209440">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209444">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="800512">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209442">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="800504">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209438">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="209437">
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="186000054"/>
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="4" max_amount="1" min_amount="1" item_id="186000199"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="186000143"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="152010319"/>
+			<drop chance="4" max_amount="1" min_amount="1" item_id="182005205"/>
+        </drop_group>
+    </npc_drop>	
+</npc_drops>

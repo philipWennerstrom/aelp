@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elyos-->
+<npc_drops>
+	<npc_drop npc_id="219340"><!-- red nosed granker king -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="188051731" eachmember="true" no_reduce="true"/><!-- [Event] Lenatinerk's Lost Gift Box -->
+            <drop chance="25" max_amount="1" min_amount="1" item_id="170170086" no_reduce="true"/><!-- Desktop Solorius Tree -->
+			<drop chance="25" max_amount="1" min_amount="1" item_id="170110012" no_reduce="true"/><!-- Solorius Tree -->
+			<drop chance="25" max_amount="1" min_amount="1" item_id="171110045" no_reduce="true"/><!-- Solorius Wallpaper -->
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="219341"><!-- granker king's second -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219338"><!-- lazy shugo courier -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219337"><!-- red nose granker -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+	<!-- Asmos-->
+	<npc_drop npc_id="219342"><!-- red nosed granker king -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="1" min_amount="1" item_id="188051731" eachmember="true" no_reduce="true"/><!-- [Event] Lenatinerk's Lost Gift Box -->
+            <drop chance="25" max_amount="1" min_amount="1" item_id="170175063" no_reduce="true"/><!-- Desktop Solorius Tree -->
+			<drop chance="25" max_amount="1" min_amount="1" item_id="170115012" no_reduce="true"/><!-- Solorius Tree -->
+			<drop chance="25" max_amount="1" min_amount="1" item_id="171110045" no_reduce="true"/><!-- Solorius Wallpaper -->
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="219343"><!-- granker king's second -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219339"><!-- lazy shugo courier -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219337"><!-- red nose granker -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="10" min_amount="3" item_id="169000004" no_reduce="true"/>
+			<drop chance="100" max_amount="3" min_amount="1" item_id="141000001" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000006" no_reduce="true"/>
+			<drop chance="30" max_amount="3" min_amount="1" item_id="162000011" no_reduce="true"/>
+			<drop chance="3" max_amount="1" min_amount="1" item_id="186000177" no_reduce="true"/>
+        </drop_group>
+    </npc_drop>
+</npc_drops>
