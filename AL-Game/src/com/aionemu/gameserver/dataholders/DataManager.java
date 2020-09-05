@@ -192,7 +192,7 @@ public final class DataManager {
 		ITEM_DATA.cleanup();
 		F14_EVENTS_DATA = data.f14_eventsData;
 
-		NPC_DROP_DATA = data.npcDropData;
+		NPC_DROP_DATA = NpcDropData.load(data.npcDropData.getNpcDrop());
 		// some sexy time message
 		long seconds = time / 1000;
 

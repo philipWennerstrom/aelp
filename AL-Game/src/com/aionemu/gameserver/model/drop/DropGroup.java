@@ -1,5 +1,6 @@
 package com.aionemu.gameserver.model.drop;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +25,29 @@ public class DropGroup implements DropCalculator {
     protected Boolean useCategory = true;
     @XmlAttribute(name = "name")
     protected String group_name;
+    
+    public DropGroup() {
+    	
+    }
+    
+    public DropGroup(DropGroup dropGroup) {
+    	this.drop= new ArrayList<Drop>(dropGroup.getDrop());
+    	this.race = dropGroup.getRace();
+		this.useCategory = dropGroup.useCategory;
+		this.group_name = dropGroup.group_name;
+    }
+    /**
+	 * @param drop
+	 * @param race
+	 * @param useCategory
+	 * @param group_name
+	 */
+	public DropGroup(List<Drop> drop, Race race, Boolean useCategory, String group_name) {
+		this.drop = drop;
+		this.race = race;
+		this.useCategory = useCategory;
+		this.group_name = group_name;
+	}
 
     public List<Drop> getDrop() {
         return this.drop;

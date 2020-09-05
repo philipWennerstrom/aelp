@@ -1,13 +1,29 @@
+/*
+ * This file is part of aion-lightning <aion-lightning.org>
+ *
+ * aion-lightning is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * aion-lightning is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with aion-lightning. If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.aionemu.gameserver.services.drop;
 
 import com.aionemu.commons.utils.Rnd;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import java.util.*;
-
-import com.aionemu.gameserver.dataholders.DataManager;
-import com.aionemu.gameserver.dataholders.NpcDropData;
-import com.aionemu.gameserver.model.drop.DropGroup;
-import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import javolution.util.FastMap;
 
 import com.aionemu.gameserver.ai2.event.AIEventType;
@@ -55,45 +71,7 @@ public class DropRegistrationService {
 	}
 
 	public final void init() {
-        NpcDropData npcDrop = DataManager.NPC_DROP_DATA;
-        for (NpcDrop drop : npcDrop.getNpcDrop()) {
-            NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(drop.getNpcId());
-            if (npcTemplate == null) {
-                continue;
-            }
-            if (npcTemplate.getNpcDrop() != null) {
-                NpcDrop currentDrop = npcTemplate.getNpcDrop();
-                for (DropGroup dg : currentDrop.getDropGroup()) {
-                    Iterator<Drop> iter = dg.getDrop().iterator();
-                    while (iter.hasNext()) {
-                        Drop d = iter.next();
-                        for (DropGroup dg2 : drop.getDropGroup()) {
-                            for (Drop d2 : dg2.getDrop()) {
-                                if (d.getItemId() == d2.getItemId())
-                                    iter.remove();
-                            }
-                        }
-                    }
-                }
-                List<DropGroup> list = new ArrayList<DropGroup>();
-                for (DropGroup dg : drop.getDropGroup()) {
-                    boolean added = false;
-                    for (DropGroup dg2 : currentDrop.getDropGroup()) {
-                        if (dg2.getGroupName().equals(dg.getGroupName())) {
-                            dg2.getDrop().addAll(dg.getDrop());
-                            added = true;
-                        }
-                    }
-                    if (!added)
-                        list.add(dg);
-                }
-                if (!list.isEmpty()) {
-                    currentDrop.getDropGroup().addAll(list);
-                }
-            }
-            else
-                npcTemplate.setNpcDrop(drop);
-        }
+		
 	}
 
 	/**
@@ -311,4 +289,5 @@ public class DropRegistrationService {
 
 		protected static final DropRegistrationService instance = new DropRegistrationService();
 	}
+
 }
