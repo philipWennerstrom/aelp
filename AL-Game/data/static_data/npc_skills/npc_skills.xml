@@ -20578,13 +20578,14 @@
     </npcskills>
     <npcskills npcid="214843">
         <npcskill skillid="16407" skilllevel="1" probability="25"/>
-        <npcskill skillid="16781" skilllevel="41" probability="25"/>
-        <npcskill skillid="16797" skilllevel="41" probability="25"/>
-        <npcskill skillid="16934" skilllevel="41" probability="25"/>
+        <npcskill skillid="16781" skilllevel="41" probability="35"/>
+        <npcskill skillid="16797" skilllevel="41" probability="50"/>
+        <npcskill skillid="16934" skilllevel="41" probability="35"/>
         <npcskill skillid="17274" skilllevel="41" probability="25"/>
         <npcskill skillid="17496" skilllevel="41" probability="25"/>
         <npcskill skillid="17520" skilllevel="41" probability="25"/>
         <npcskill skillid="17521" skilllevel="41" probability="25"/>
+		<npcskill skillid="17859" skilllevel="41" probability="25"/>
     </npcskills>
     <npcskills npcid="214844">
         <npcskill skillid="16602" skilllevel="41" probability="25"/>
