@@ -360,6 +360,7 @@
             <drop item_id="182003802" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
         </drop_group>
     </npc_drop>
+    <!-- Spiritmaster Atmach -->
     <npc_drop npc_id="214843">
         <drop_group name="BALAUR MATS_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="152014011" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
