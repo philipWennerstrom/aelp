@@ -155,7 +155,7 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 			
 		
 		
-		for(NpcDrop staticDrop: staticDrops) {
+		/**for(NpcDrop staticDrop: staticDrops) {
 			boolean addStDrop = true;
 			for(NpcDrop dataFileDrop: npcDrops) {
 				
@@ -171,8 +171,12 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 			if(addStDrop) {
 				npcDrops.add(staticDrop);
 			}
-		}
+		}**/
 			
+			
+		for (NpcDrop staticDrop : staticDrops) {
+			npcDrops.add(staticDrop);
+		}
 		
 		NpcDropData dropData = new NpcDropData();
 		log.info("Drop loader: Npc drops loading done.");

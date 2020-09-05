@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generiert am/um 10.04.2016 08:49 aus PS-Drop-Datei: Right Wing Chamber_4.9_loot_live446267591.xml -->
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+    <npc_drop npc_id="214744">
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="4002" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003799" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214745">
+        <drop_group name="ARMOR_UNIQUE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="112300466" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014009" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="4141" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003799" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214746">
+        <drop_group name="WEAPON_LEGEND_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="101300412" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="102000320" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL38" use_category="true" race="PC_ALL">
+            <drop item_id="152011006" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152011026" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+            <drop item_id="152011046" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="4082" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003799" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214747">
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL38" use_category="true" race="PC_ALL">
+            <drop item_id="152011006" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152011026" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+            <drop item_id="152011046" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="3788" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003799" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214748">
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL38" use_category="true" race="PC_ALL">
+            <drop item_id="152011006" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152011026" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+            <drop item_id="152011046" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="4758" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003799" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214749">
+        <drop_group name="ARMOR_UNIQUE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="112500454" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014009" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL38" use_category="true" race="PC_ALL">
+            <drop item_id="152011006" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152011026" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+            <drop item_id="152011046" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003809" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="7386" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214750">
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003809" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="8720" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214751">
+        <drop_group name="WEAPON_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="101300222" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="ARMOR_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="112500444" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="152013007" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013013" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014001" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014002" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014003" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014004" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152014005" chance="2.75" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152013001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152014007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL38" use_category="true" race="PC_ALL">
+            <drop item_id="152011006" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="152011026" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+            <drop item_id="152011046" chance="2.80" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="188054202" chance="0.2" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="169000007" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="182003809" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="8715" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000032" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="188052207" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="700470">
+        <drop_group name="ARMOR_COMMON_LVL30" use_category="true" race="PC_ALL">
+            <drop item_id="113500475" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="2150" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="MEDALS_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000031" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="186000062" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="700471">
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="5369" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182202181" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="MEDALS_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="186000031" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="186000066" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="701481">
+        <drop_group  use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="988" no_reduce="false" eachmember="false"  />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="186000066" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+        </drop_group>
+    </npc_drop>
+</npc_drops>
