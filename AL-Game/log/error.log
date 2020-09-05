@@ -1,0 +1,20 @@
+2020-09-04 21:57:27,596 Unable to get Soft information
+File name 'F:\projectaion\aelp\AL-Game\target\classes' isn't a valid jar
+java.io.FileNotFoundException: F:\projectaion\aelp\AL-Game\target\classes (Acesso negado)
+	at java.util.zip.ZipFile.open(Native Method) ~[na:1.7.0_80]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:215) ~[na:1.7.0_80]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:145) ~[na:1.7.0_80]
+	at java.util.jar.JarFile.<init>(JarFile.java:154) ~[na:1.7.0_80]
+	at java.util.jar.JarFile.<init>(JarFile.java:118) ~[na:1.7.0_80]
+	at com.aionemu.commons.versionning.Version.loadInformation(Version.java:37) [al-commons-1.3.jar:na]
+	at com.aionemu.commons.versionning.Version.<init>(Version.java:30) [al-commons-1.3.jar:na]
+	at com.aionemu.gameserver.utils.AEVersions.<clinit>(AEVersions.java:17) [classes/:na]
+	at com.aionemu.gameserver.GameServer.main(GameServer.java:267) [classes/:na]
+2020-09-04 21:58:57,998 Dispatcher error! java.lang.NullPointerException
+java.lang.NullPointerException: null
+	at com.aionemu.gameserver.network.aion.serverpackets.SM_LOOT_ITEMLIST.writeImpl(SM_LOOT_ITEMLIST.java:55) ~[classes/:na]
+	at com.aionemu.gameserver.network.aion.AionServerPacket.write(AionServerPacket.java:60) ~[classes/:na]
+	at com.aionemu.gameserver.network.aion.AionConnection.writeData(AionConnection.java:234) ~[classes/:na]
+	at com.aionemu.commons.network.Dispatcher.write(Dispatcher.java:271) ~[al-commons-1.3.jar:na]
+	at com.aionemu.commons.network.AcceptReadWriteDispatcherImpl.dispatch(AcceptReadWriteDispatcherImpl.java:65) ~[al-commons-1.3.jar:na]
+	at com.aionemu.commons.network.Dispatcher.run(Dispatcher.java:89) ~[al-commons-1.3.jar:na]

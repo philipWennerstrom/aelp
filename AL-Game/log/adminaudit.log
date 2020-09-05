@@ -1,0 +1,33 @@
+2020-09-04 21:57:21,057 Chat processor load started
+2020-09-04 21:57:23,026 Loaded 126 commands.
+2020-09-04 21:57:23,201 Loaded 128 commands.
+2020-09-04 21:57:23,557 Loaded 146 commands.
+2020-09-04 21:58:10,995 [ADMIN COMMAND] > [Name: Admin]: invul
+2020-09-04 21:58:17,582 [ADMIN COMMAND] > [Name: Admin]: speed 5000
+2020-09-04 21:58:19,800 [ADMIN COMMAND] > [Name: Admin]: speed 500
+2020-09-04 21:58:29,755 [ADMIN COMMAND] > [Name: Admin]: goto dark poeta
+2020-09-04 21:58:41,241 [ADMIN COMMAND] > [Name: Admin][Target : anuhart sentinel]: kill
+2020-09-04 21:58:42,263 [ADMIN COMMAND] > [Name: Admin][Target : anuhart scaleguard]: kill
+2020-09-04 21:58:50,780 [ADMIN COMMAND] > [Name: Admin][Target : anuhart trooper]: kill
+2020-09-04 21:58:56,898 [ADMIN COMMAND] > [Name: Admin][Target : anuhart scaleguard]: kill
+2020-09-04 22:01:23,544 [ADMIN COMMAND] > [Name: Admin]: invul
+2020-09-04 22:01:31,464 [ADMIN COMMAND] > [Name: Admin]: speed 500
+2020-09-04 22:01:39,118 [ADMIN COMMAND] > [Name: Admin][Target : anuhart petmaster]: kill
+2020-09-04 22:01:41,119 [ADMIN COMMAND] > [Name: Admin][Target : anuhart sergeant]: kill
+2020-09-04 22:04:40,096 [ADMIN COMMAND] > [Name: Admin][Target : anuhart lookout]: kill
+2020-09-04 22:04:42,813 [ADMIN COMMAND] > [Name: Admin][Target : anuhart ambusher]: kill
+2020-09-04 22:07:19,294 [ADMIN COMMAND] > [Name: Admin][Target : spiritmaster atmach]: kill
+2020-09-04 22:07:37,518 [ADMIN COMMAND] > [Name: Admin][Target : anuhart fighter]: kill
+2020-09-04 22:07:40,837 [ADMIN COMMAND] > [Name: Admin][Target : anuhart healer]: kill
+2020-09-04 22:07:44,639 [ADMIN COMMAND] > [Name: Admin][Target : anuhart lookout]: kill
+2020-09-04 22:07:50,774 [ADMIN COMMAND] > [Name: Admin][Target : anuhart healer]: kill
+2020-09-04 22:07:54,392 [ADMIN COMMAND] > [Name: Admin][Target : anuhart ambusher]: kill
+2020-09-04 22:07:57,994 [ADMIN COMMAND] > [Name: Admin][Target : anuhart fighter]: kill
+2020-09-04 22:08:03,328 [ADMIN COMMAND] > [Name: Admin][Target : anuhart fighter]: kill
+2020-09-04 22:08:06,930 [ADMIN COMMAND] > [Name: Admin][Target : anuhart ambusher]: kill
+2020-09-04 22:08:12,002 [ADMIN COMMAND] > [Name: Admin][Target : anuhart lookout]: kill
+2020-09-04 22:08:14,754 [ADMIN COMMAND] > [Name: Admin][Target : anuhart shadowsnipe]: kill
+2020-09-04 22:08:15,503 [ADMIN COMMAND] > [Name: Admin][Target : anuhart kurinark]: kill
+2020-09-04 22:08:15,868 [ADMIN COMMAND] > [Name: Admin][Target : anuhart kurinark]: kill
+2020-09-04 22:08:20,254 [ADMIN COMMAND] > [Name: Admin][Target : anuhart warmonger]: kill
+2020-09-04 22:08:23,755 [ADMIN COMMAND] > [Name: Admin][Target : anuhart guard]: kill
