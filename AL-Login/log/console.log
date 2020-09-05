@@ -95,3 +95,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'al_server_ls.t
 19:32:56.682 INFO [pool-3-thread-5]: com.aionemu.loginserver.PingPongThread [PingPongThread.java:35] - PingPong for gameserver #1 has started.
 19:35:48.799 INFO [pool-3-thread-19]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
 19:35:49.087 INFO [AcceptReadWrite Dispatcher]: com.aionemu.loginserver.network.aion.LoginConnection [LoginConnection.java:380] - Connection attemp from: 127.0.0.1
+19:42:48.968 INFO [pool-3-thread-1]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+19:49:48.771 INFO [pool-3-thread-10]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+19:56:49.068 INFO [pool-3-thread-15]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+20:03:48.772 INFO [pool-3-thread-17]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+20:05:52.714 INFO [pool-6-thread-1]: com.aionemu.loginserver.network.gameserver.GsConnection [GsConnection.java:126] - GameServer [ID:1] 127.0.0.1 disconnected
