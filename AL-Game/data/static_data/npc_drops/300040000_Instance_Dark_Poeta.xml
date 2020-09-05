@@ -373,7 +373,15 @@
             <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="37152" no_reduce="false" eachmember="false"  />
         </drop_group>
         <drop_group name="OTHER_LEGEND_LVL50" use_category="true" race="PC_ALL">
-            <drop item_id="188053284" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="115000858" chance="3.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="115000859" chance="3.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="110600868" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="113300892" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="113500858" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="110500884" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="110300916" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="110100971" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
+            <drop item_id="120000903" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"  />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="214844">
