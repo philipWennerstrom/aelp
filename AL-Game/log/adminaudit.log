@@ -86,3 +86,148 @@
 2020-09-04 10:06:55,839 [ADMIN COMMAND] > [Name: Spiritmaster][Target : Spiritmaster]: set level 60
 2020-09-04 10:12:12,821 [ADMIN COMMAND] > [Name: Spiritmaster]: speed 500
 2020-09-04 10:12:15,272 [ADMIN COMMAND] > [Name: Spiritmaster]: invul
+2020-09-04 10:16:40,567 [ADMIN COMMAND] > [Name: Spiritmaster]: goto darkpoeta
+2020-09-04 10:16:45,757 [ADMIN COMMAND] > [Name: Spiritmaster]: goto dark poeta
+2020-09-04 10:25:21,903 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart ambusher]: kill
+2020-09-04 10:27:47,663 [ADMIN COMMAND] > [Name: Spiritmaster][Target : spiritmaster atmach]: kill
+2020-09-04 10:27:52,000 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart lookout]: kill
+2020-09-04 10:27:53,000 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart fighter]: kill
+2020-09-04 10:27:58,152 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart healer]: kill
+2020-09-04 10:28:01,621 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart lookout]: kill
+2020-09-04 10:28:02,489 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart healer]: kill
+2020-09-04 10:28:04,740 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart shadowsnipe]: kill
+2020-09-04 10:28:07,074 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart lookout]: kill
+2020-09-04 10:28:07,975 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart warmonger]: kill
+2020-09-04 10:28:08,323 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart warmonger]: kill
+2020-09-04 10:28:08,690 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart warmonger]: kill
+2020-09-04 10:28:10,575 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart guard]: kill
+2020-09-04 10:28:11,809 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart kurinark]: kill
+2020-09-04 10:28:27,797 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart ambusher]: kill
+2020-09-04 10:28:29,314 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart fighter]: kill
+2020-09-04 10:28:36,084 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart ambusher]: kill
+2020-09-04 10:28:37,118 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart fighter]: kill
+2020-09-04 10:28:50,592 [ADMIN COMMAND] > [Name: Spiritmaster][Target : marabata of strength]: kill
+2020-09-04 10:28:57,261 [ADMIN COMMAND] > [Name: Spiritmaster][Target : marabata of aether]: kill
+2020-09-04 10:29:02,147 [ADMIN COMMAND] > [Name: Spiritmaster][Target : marabata of poisoning]: kill
+2020-09-04 10:29:24,788 [ADMIN COMMAND] > [Name: Spiritmaster][Target : noah's furious shade]: kill
+2020-09-04 10:29:33,074 [ADMIN COMMAND] > [Name: Spiritmaster][Target : spectral elim elder]: kill
+2020-09-04 10:30:06,956 [ADMIN COMMAND] > [Name: Spiritmaster][Target : mutating dragrint]: kill
+2020-09-04 10:30:27,131 [ADMIN COMMAND] > [Name: Spiritmaster][Target : spaller rakanatra]: kill
+2020-09-04 10:30:30,299 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart chief surgeon]: kill
+2020-09-04 10:30:30,682 [ADMIN COMMAND] > [Name: Spiritmaster][Target : thrall vigilante]: kill
+2020-09-04 10:30:34,669 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart invoker]: kill
+2020-09-04 10:31:01,928 [ADMIN COMMAND] > [Name: Spiritmaster][Target : spaller dhatra]: kill
+2020-09-04 10:31:09,552 [ADMIN COMMAND] > [Name: Spiritmaster][Target : spaller echtra]: kill
+2020-09-04 10:31:19,888 [ADMIN COMMAND] > [Name: Spiritmaster][Target : balaur barricade]: kill
+2020-09-04 10:31:35,460 [ADMIN COMMAND] > [Name: Spiritmaster][Target : balaur barricade]: kill
+2020-09-04 10:32:58,007 [ADMIN COMMAND] > [Name: Spiritmaster][Target : huge drana]: kill
+2020-09-04 10:33:03,343 [ADMIN COMMAND] > [Name: Spiritmaster][Target : telepathy controller]: kill
+2020-09-04 10:33:28,420 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart high scout]: kill
+2020-09-04 10:33:37,140 [ADMIN COMMAND] > [Name: Spiritmaster][Target : brainwashed sentinel]: kill
+2020-09-04 10:33:38,057 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart consul]: kill
+2020-09-04 10:33:44,963 [ADMIN COMMAND] > [Name: Spiritmaster][Target : huge drana]: kill
+2020-09-04 10:33:53,997 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart shadow]: kill
+2020-09-04 10:33:57,767 [ADMIN COMMAND] > [Name: Spiritmaster][Target : main power generator]: kill
+2020-09-04 10:34:00,070 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart high raider]: kill
+2020-09-04 10:34:00,437 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart vindicator]: kill
+2020-09-04 10:34:00,920 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart vindicator]: kill
+2020-09-04 10:34:01,305 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart seneschal]: kill
+2020-09-04 10:34:01,622 [ADMIN COMMAND] > [Name: Spiritmaster][Target : auxiliary power generator]: kill
+2020-09-04 10:34:02,872 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart transporter]: kill
+2020-09-04 10:34:04,704 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart transporter]: kill
+2020-09-04 10:34:16,312 [ADMIN COMMAND] > [Name: Spiritmaster][Target : emergency generator]: kill
+2020-09-04 10:34:23,481 [ADMIN COMMAND] > [Name: Spiritmaster][Target : brigade general anuhart]: kill
+2020-09-04 10:34:29,812 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart shadow]: kill
+2020-09-04 10:34:30,303 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart consul]: kill
+2020-09-04 10:34:30,678 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart consul]: kill
+2020-09-04 10:34:33,180 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart high templar]: kill
+2020-09-04 10:34:36,497 [ADMIN COMMAND] > [Name: Spiritmaster][Target : anuhart high templar]: kill
+2020-09-04 10:35:04,798 [ADMIN COMMAND] > [Name: Spiritmaster][Target : asaratu bloodshade]: kill
+2020-09-04 11:56:55,212 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:03,769 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:14,389 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:16,272 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:22,526 [ADMIN COMMAND] > [Name: Admin][Target : kishar assaulter]: kill
+2020-09-04 11:57:24,626 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:25,877 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:36,733 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:57:39,716 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:57:50,640 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:51,853 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:57:57,960 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar grappler]: kill
+2020-09-04 11:58:01,961 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:58:02,527 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:58:09,017 [ADMIN COMMAND] > [Name: Admin][Target : kishar good healer]: kill
+2020-09-04 11:58:10,381 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:58:11,081 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:58:11,650 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 11:58:15,114 [ADMIN COMMAND] > [Name: Admin][Target : kishar grappler captain]: kill
+2020-09-04 11:58:23,952 [ADMIN COMMAND] > [Name: Admin][Target : kishar shaman]: kill
+2020-09-04 11:58:24,667 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:58:29,239 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:58:29,973 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 11:58:30,561 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 11:58:31,159 [ADMIN COMMAND] > [Name: Admin][Target : kishar smackstopper]: kill
+2020-09-04 11:58:31,540 [ADMIN COMMAND] > [Name: Admin][Target : kishar grappler]: kill
+2020-09-04 11:58:31,937 [ADMIN COMMAND] > [Name: Admin][Target : kishar grappler]: kill
+2020-09-04 11:58:32,371 [ADMIN COMMAND] > [Name: Admin][Target : kishar grappler]: kill
+2020-09-04 11:58:33,491 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:58:40,612 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:58:41,227 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar grappler]: kill
+2020-09-04 11:58:42,027 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:59:04,137 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar loudmouth]: kill
+2020-09-04 11:59:07,687 [ADMIN COMMAND] > [Name: Admin][Target : kishar firemaster]: kill
+2020-09-04 11:59:13,783 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 11:59:14,447 [ADMIN COMMAND] > [Name: Admin][Target : kishar good healer]: kill
+2020-09-04 11:59:19,274 [ADMIN COMMAND] > [Name: Admin][Target : kishar smackstopper]: kill
+2020-09-04 11:59:38,936 [ADMIN COMMAND] > [Name: Admin][Target : kishar eerie]: kill
+2020-09-04 11:59:42,819 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 11:59:47,054 [ADMIN COMMAND] > [Name: Admin][Target : kishar gotchas]: kill
+2020-09-04 11:59:49,155 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 11:59:49,638 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar grappler]: kill
+2020-09-04 11:59:50,855 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:59:52,291 [ADMIN COMMAND] > [Name: Admin][Target : kishar eerie]: kill
+2020-09-04 11:59:53,793 [ADMIN COMMAND] > [Name: Admin][Target : kishar shaman]: kill
+2020-09-04 11:59:54,206 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 11:59:59,543 [ADMIN COMMAND] > [Name: Admin][Target : kishar guard]: kill
+2020-09-04 12:00:29,191 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 12:00:29,975 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 12:00:30,622 [ADMIN COMMAND] > [Name: Admin][Target : kishar shaman]: kill
+2020-09-04 12:00:45,964 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar scout]: kill
+2020-09-04 12:00:46,446 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 12:00:47,012 [ADMIN COMMAND] > [Name: Admin][Target : kishar firemaster]: kill
+2020-09-04 12:01:03,200 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar wallarm]: set level 60
+2020-09-04 12:01:06,760 [ADMIN COMMAND] > [Name: Admin][Target : Admin]: set level 60
+2020-09-04 12:01:30,897 [ADMIN COMMAND] > [Name: Admin][Target : head chef paparu]: kill
+2020-09-04 12:01:35,619 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar wallarm]: kill
+2020-09-04 12:01:36,634 [ADMIN COMMAND] > [Name: Admin][Target : kishar juggernaut]: kill
+2020-09-04 12:01:39,021 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 12:01:40,650 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar raider]: kill
+2020-09-04 12:01:41,552 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar grappler]: kill
+2020-09-04 12:01:43,735 [ADMIN COMMAND] > [Name: Admin][Target : kishar big chopper]: kill
+2020-09-04 12:01:57,163 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar loudmouth]: kill
+2020-09-04 12:01:57,791 [ADMIN COMMAND] > [Name: Admin][Target : kishar eerie]: kill
+2020-09-04 12:02:03,146 [ADMIN COMMAND] > [Name: Admin][Target : kishar gotchas]: kill
+2020-09-04 12:02:03,579 [ADMIN COMMAND] > [Name: Admin][Target : kishar eerie]: kill
+2020-09-04 12:02:06,597 [ADMIN COMMAND] > [Name: Admin][Target : kishar bodyguard]: kill
+2020-09-04 12:02:09,248 [ADMIN COMMAND] > [Name: Admin][Target : kishar big chopper]: kill
+2020-09-04 12:02:09,599 [ADMIN COMMAND] > [Name: Admin][Target : kishar healer]: kill
+2020-09-04 12:02:16,901 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar charger]: kill
+2020-09-04 12:02:17,651 [ADMIN COMMAND] > [Name: Admin][Target : kishar smackstopper]: kill
+2020-09-04 12:02:20,769 [ADMIN COMMAND] > [Name: Admin][Target : kishar firemaster]: kill
+2020-09-04 12:02:21,452 [ADMIN COMMAND] > [Name: Admin][Target : kishar big chopper]: kill
+2020-09-04 12:03:24,713 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:03:32,531 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar slicer]: kill
+2020-09-04 12:03:34,799 [ADMIN COMMAND] > [Name: Admin][Target : crack kishar seeker]: kill
+2020-09-04 12:03:49,539 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:03:51,029 [ADMIN COMMAND] > [Name: Admin][Target : indratu bloodbinder]: kill
+2020-09-04 12:03:51,607 [ADMIN COMMAND] > [Name: Admin][Target : indratu patrol head]: kill
+2020-09-04 12:04:01,049 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:04:02,596 [ADMIN COMMAND] > [Name: Admin][Target : indratu patroller]: kill
+2020-09-04 12:04:08,400 [ADMIN COMMAND] > [Name: Admin][Target : indratu patroller]: kill
+2020-09-04 12:04:11,082 [ADMIN COMMAND] > [Name: Admin][Target : indratu lookout]: kill
+2020-09-04 12:07:14,094 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:07:14,631 [ADMIN COMMAND] > [Name: Admin][Target : indratu bloodbinder]: kill
+2020-09-04 12:07:16,063 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:07:22,864 [ADMIN COMMAND] > [Name: Admin][Target : indratu legionary]: kill
+2020-09-04 12:07:24,483 [ADMIN COMMAND] > [Name: Admin][Target : indratu patroller]: kill
