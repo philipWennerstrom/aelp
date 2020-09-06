@@ -179,8 +179,9 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 		}
 		
 		NpcDropData dropData = new NpcDropData();
-		log.info("Drop loader: Npc drops loading done.");
+		
 		dropData.setNpcDrop(npcDrops);
+		log.info("Drop loader: Npc drops loading done: " + npcDrops.size() +" drops.");
 		return dropData;
 	}
 

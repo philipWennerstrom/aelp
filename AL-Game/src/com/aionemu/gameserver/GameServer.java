@@ -77,7 +77,7 @@ import pirate.events.EventManager;
 public class GameServer {
 
 	private static final Logger log = LoggerFactory.getLogger(GameServer.class);
-
+    
 	//TODO remove all this shit
 	private static int ELYOS_COUNT = 0;
 	private static int ASMOS_COUNT = 0;
