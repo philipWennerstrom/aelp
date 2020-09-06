@@ -109,7 +109,24 @@ public class EnchantService {
             level = 1;
         }
         int enchantItemLevel = targetItem.getItemTemplate().getLevel() + level;
-        int enchantItemId = 166000000 + enchantItemLevel;
+        
+        int reducedEchantLevel = 0;
+        
+        int rGen = Rnd.get(1, 100);
+        
+        if(rGen<70) {
+        	reducedEchantLevel = enchantItemLevel - 10;
+        }else if(rGen <90) {
+        	reducedEchantLevel = enchantItemLevel - 7;
+        }else {
+        	reducedEchantLevel = enchantItemLevel;
+        }
+        
+        if(reducedEchantLevel < 0) {
+        	reducedEchantLevel =10;
+        }
+        
+        int enchantItemId = 166000000 + reducedEchantLevel;
 
         if (inventory.delete(targetItem) != null) {
             if (inventory.decreaseByObjectId(parentItem.getObjectId(), 1)) {
