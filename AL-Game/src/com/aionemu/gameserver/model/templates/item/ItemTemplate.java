@@ -444,6 +444,10 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return specialSlots;
 	}
 	
+	public int setMaxEnchantLevel(int level) {
+		return maxEnchant = level;
+	}
+	
 	public int getMaxEnchantLevel() {
 		return maxEnchant;
 	}

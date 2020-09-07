@@ -31,6 +31,7 @@ import com.aionemu.gameserver.model.items.storage.StorageType;
 import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAllianceService;
 import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
+import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.*;
 import com.aionemu.gameserver.questEngine.model.QuestState;
@@ -203,7 +204,28 @@ public final class PlayerEnterWorldService {
 			return;
 		}
 		Player player = PlayerService.getPlayer(objectId, account);
-
+		
+		List<Item> equipmentInPlayer = player.getEquipment().getEquippedItems();
+		
+		for(Item playerItem: equipmentInPlayer) {
+			ItemTemplate itemTemplate = playerItem.getItemTemplate();
+			switch (itemTemplate.getEquipmentType()) {
+			case ARMOR:
+			case WEAPON:
+				switch (itemTemplate.getItemQuality()) {
+				case UNIQUE:
+				case MYTHIC:
+				case EPIC:
+					itemTemplate.setMaxEnchantLevel(EnchantsConfig.ENCHANT_MAX_LEVEL_TYPE2);
+					break;
+				default:
+					break;
+				}
+				break;
+			default:
+				break;
+			}
+		}
 		if (player != null && client.setActivePlayer(player)) {
 			player.setClientConnection(client);
 

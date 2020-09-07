@@ -14,6 +14,7 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatEnchantFunction;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.model.stats.listeners.ItemEquipmentListener;
 import com.aionemu.gameserver.model.templates.item.ArmorType;
+import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemQuality;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
@@ -281,7 +282,8 @@ public class EnchantService {
         } else if (rnd < 15) {
             addLevel = 2;
         }
-        ItemQuality targetQuality = targetItem.getItemTemplate().getItemQuality();
+        ItemTemplate itemTemplate = targetItem.getItemTemplate();
+		ItemQuality targetQuality = itemTemplate.getItemQuality();
 
         if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
             AuditLogger.info(player, "Possible enchant hack, do not remove enchant stone.");
@@ -312,6 +314,7 @@ public class EnchantService {
                 case UNIQUE:
                 case EPIC:
                 case MYTHIC:
+                	itemTemplate.setMaxEnchantLevel(EnchantsConfig.ENCHANT_MAX_LEVEL_TYPE2);
                     if (currentEnchant > EnchantsConfig.ENCHANT_MAX_LEVEL_TYPE2) {
                         currentEnchant = EnchantsConfig.ENCHANT_MAX_LEVEL_TYPE2;
                         AuditLogger.info(player, "Possible enchant hack, send fake packet for enchant up more posible.");
@@ -332,12 +335,18 @@ public class EnchantService {
             // Retail: http://powerwiki.na.aiononline.com/aion/Patch+Notes:+1.9.0.1
             // When socketing fails at +11~+15, the value falls back to +10.
             if (currentEnchant > 10) {
-                currentEnchant = 10;
+            	if(currentEnchant > 15) {
+            		int i = Rnd.get(1,5);
+            		 currentEnchant = currentEnchant - i;
+            	}else {
+            		int i = Rnd.get(1,3);
+           		    currentEnchant = currentEnchant - i;
+            	}
             } else if (currentEnchant > 0) {
                 currentEnchant -= 1;
             }
         }
-
+        currentEnchant = 25;
         targetItem.setEnchantLevel(currentEnchant);
         if (targetItem.isEquipped()) {
             player.getGameStats().updateStatsVisually();
