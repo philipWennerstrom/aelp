@@ -4,6 +4,7 @@ import org.joda.time.Duration;
 
 import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.ai2.event.AIEventType;
+import com.aionemu.gameserver.controllers.movement.NpcMoveController;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
@@ -39,15 +40,20 @@ public class AttackEventBugFix {
 	}
 
 	/**
-	 * Verifica quanto tempo o npc esta parado e o target nao recebe ataque
+	 * Verifica quanto tempo o npc esta parado e o target nao recebe um ataque
 	 * @param attackedAtFromNow
 	 * @param secFromLastNpcMove
 	 * @return
 	 */
 	private static boolean isFreezing(Player target, Npc npc) {
-	  long attackedAtFromNow =  new Duration(target.getController().getLastAttackedTime(), System.currentTimeMillis()).getStandardSeconds();
-	  long secFromLastNpcMove =  new Duration(npc.getMoveController().getLastMoveUpdate(), System.currentTimeMillis()).getStandardSeconds();
-	  return secFromLastNpcMove > 2 && attackedAtFromNow > 6;
+	   long attackedAtFromNow =  new Duration(target.getController().getLastAttackedTime(), System.currentTimeMillis()).getStandardSeconds();
+	   NpcMoveController moveController = npc.getMoveController();
+	   long secFromLastNpcMove =  new Duration(moveController.getLastMoveUpdate(), System.currentTimeMillis()).getStandardSeconds();
+	   long lastNpcAttack =  new Duration( npc.getLastAttackAt(),System.currentTimeMillis()).getStandardSeconds();
+	   if(lastNpcAttack>2) {
+		   return secFromLastNpcMove > 2 && attackedAtFromNow > 6;
+	   }
+	  return false;
 	}
 
 	/**

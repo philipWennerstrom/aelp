@@ -1,5 +1,12 @@
 package com.aionemu.gameserver.services;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.configs.main.EnchantsConfig;
 import com.aionemu.gameserver.model.DescriptionId;
@@ -14,7 +21,6 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatEnchantFunction;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.model.stats.listeners.ItemEquipmentListener;
 import com.aionemu.gameserver.model.templates.item.ArmorType;
-import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemQuality;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
@@ -24,11 +30,6 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.item.ItemSocketService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author ATracer
@@ -111,16 +112,14 @@ public class EnchantService {
         }
         int enchantItemLevel = targetItem.getItemTemplate().getLevel() + level;
         
-        int reducedEchantLevel = 0;
+        int reducedEchantLevel = enchantItemLevel;
         
-        int rGen = Rnd.get(1, 100);
+        int toReduce = Rnd.get(EnchantsConfig.ECHANT_STONE_REDUCED_VALUE2, EnchantsConfig.ECHANT_STONE_REDUCED_VALUE1);
         
-        if(rGen<70) {
-        	reducedEchantLevel = enchantItemLevel - 10;
-        }else if(rGen <90) {
-        	reducedEchantLevel = enchantItemLevel - 7;
-        }else {
-        	reducedEchantLevel = enchantItemLevel;
+        if(EnchantsConfig.ECHANT_STONE_REDUCED) {
+        	if(!(Rnd.get(0,100)>90)) {
+        		reducedEchantLevel = enchantItemLevel - toReduce;
+        	}
         }
         
         if(reducedEchantLevel < 0) {
@@ -146,7 +145,8 @@ public class EnchantService {
      * @param supplementItem the item, giving additional chance
      * @return true, if successful
      */
-    public static boolean enchantItem(Player player, Item parentItem, Item targetItem, Item supplementItem) {
+    @SuppressWarnings("incomplete-switch")
+	public static boolean enchantItem(Player player, Item parentItem, Item targetItem, Item supplementItem) {
         ItemTemplate enchantStone = parentItem.getItemTemplate();
         int enchantStoneLevel = enchantStone.getLevel();
         int targetItemLevel = targetItem.getItemTemplate().getLevel();
@@ -346,7 +346,7 @@ public class EnchantService {
                 currentEnchant -= 1;
             }
         }
-        currentEnchant = 25;
+       
         targetItem.setEnchantLevel(currentEnchant);
         if (targetItem.isEquipped()) {
             player.getGameStats().updateStatsVisually();
