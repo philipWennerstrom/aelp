@@ -34,4 +34,14 @@ public class EnchantsConfig {
 	
 	@Property(key = "gameserver.manastone.clean", defaultValue = "false")
 	public static boolean CLEAN_STONE;
+	
+	/**
+	 * Echantment Stones Drop
+	 */
+	@Property(key = "gameserver.enchant.stone.reduce", defaultValue = "false")
+	public static boolean ECHANT_STONE_REDUCED;
+	@Property(key = "gameserver.enchant.stone.reduce.value1", defaultValue = "10")
+	public static int ECHANT_STONE_REDUCED_VALUE1;
+	@Property(key = "gameserver.enchant.stone.reduce.value2", defaultValue = "7")
+	public static int ECHANT_STONE_REDUCED_VALUE2;
 }

@@ -35,6 +35,7 @@ public class AttackManager {
 		// don't start attack while in casting substate
 		AISubState subState = npcAI.getSubState();
 		if (subState == AISubState.NONE) {
+			npcAI.getOwner().setLastAttackAt(System.currentTimeMillis());
 			chooseAttack(npcAI, npcAI.getOwner().getGameStats().getNextAttackInterval());
 		}
 		else {

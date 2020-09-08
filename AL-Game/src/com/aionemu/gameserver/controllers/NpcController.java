@@ -115,7 +115,7 @@ public class NpcController extends CreatureController<Npc> {
 		}
 		PacketSendUtility.broadcastPacket(owner, new SM_EMOTION(owner, EmotionType.DIE, 0,
 				owner.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()));
-
+	
 		try {
 			if (owner.getAi2().poll(AIQuestion.SHOULD_REWARD))
 				this.doReward();

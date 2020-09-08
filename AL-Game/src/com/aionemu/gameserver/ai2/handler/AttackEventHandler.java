@@ -25,12 +25,14 @@ public class AttackEventHandler {
 	 * @param creature
 	 */
 	public static void onAttack(NpcAI2 npcAI, Creature creature) {
+		
 		if (npcAI.isLogging()) {
 			AI2Logger.info(npcAI, "onAttack");
 		}
 		if (creature == null || creature.getLifeStats().isAlreadyDead()) {
 			return;
 		}
+
 		// TODO lock or better switch
 		if (npcAI.isInState(AIState.RETURNING)) {
 			npcAI.getOwner().getMoveController().abortMove();

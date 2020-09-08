@@ -53,6 +53,7 @@ public class Npc extends Creature {
 	private NpcSkillList skillList;
 	private WalkerGroupShift walkerGroupShift;
 	private long lastShoutedSeconds;
+	private long lastAttackAt;
 	private String masterName = StringUtils.EMPTY;
 	private int creatorId = 0;
 	private int townId;
@@ -447,5 +448,13 @@ public class Npc extends Creature {
 				}
 			}
 		}, delaySeconds * 1000);
+	}
+
+	public long getLastAttackAt() {
+		return lastAttackAt;
+	}
+
+	public void setLastAttackAt(long lastAttackAt) {
+		this.lastAttackAt = lastAttackAt;
 	}
 }

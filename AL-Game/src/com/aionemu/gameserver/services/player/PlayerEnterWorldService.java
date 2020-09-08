@@ -1,13 +1,36 @@
 package com.aionemu.gameserver.services.player;
 
-import com.aionemu.gameserver.services.SerialKillerService;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.versionning.Version;
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.cache.HTMLCache;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
-import com.aionemu.gameserver.configs.main.*;
-import com.aionemu.gameserver.dao.*;
+import com.aionemu.gameserver.configs.main.AutoGroupConfig;
+import com.aionemu.gameserver.configs.main.CraftConfig;
+import com.aionemu.gameserver.configs.main.CustomConfig;
+import com.aionemu.gameserver.configs.main.EventsConfig;
+import com.aionemu.gameserver.configs.main.GSConfig;
+import com.aionemu.gameserver.configs.main.HTMLConfig;
+import com.aionemu.gameserver.configs.main.PeriodicSaveConfig;
+import com.aionemu.gameserver.configs.main.SecurityConfig;
+import com.aionemu.gameserver.dao.AbyssRankDAO;
+import com.aionemu.gameserver.dao.InventoryDAO;
+import com.aionemu.gameserver.dao.ItemStoneListDAO;
+import com.aionemu.gameserver.dao.PlayerDAO;
+import com.aionemu.gameserver.dao.PlayerPasskeyDAO;
+import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
+import com.aionemu.gameserver.dao.PlayerQuestListDAO;
+import com.aionemu.gameserver.dao.PlayerSkillListDAO;
+import com.aionemu.gameserver.dao.WeddingDAO;
 import com.aionemu.gameserver.model.ChatType;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.account.Account;
@@ -31,15 +54,54 @@ import com.aionemu.gameserver.model.items.storage.StorageType;
 import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAllianceService;
 import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
-import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
-import com.aionemu.gameserver.network.aion.serverpackets.*;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ABYSS_RANK;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CHANNEL_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CHARACTER_SELECT;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CUBE_UPDATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ENTER_WORLD_CHECK;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_GAME_TIME;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MACRO_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_SPAWN;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_PRICES;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_COMPLETED_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUIT_RESPONSE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_RECIPE_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_COOLDOWN;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_TITLE_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_UI_SETTINGS;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_3_5_1;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
+import com.aionemu.gameserver.services.AutoGroupService;
+import com.aionemu.gameserver.services.BrokerService;
+import com.aionemu.gameserver.services.ClassChangeService;
+import com.aionemu.gameserver.services.DisputeLandService;
+import com.aionemu.gameserver.services.EventService;
+import com.aionemu.gameserver.services.HTMLService;
+import com.aionemu.gameserver.services.HousingService;
+import com.aionemu.gameserver.services.KiskService;
+import com.aionemu.gameserver.services.LegionService;
+import com.aionemu.gameserver.services.PetitionService;
+import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
-import com.aionemu.gameserver.services.*;
+import com.aionemu.gameserver.services.SerialKillerService;
+import com.aionemu.gameserver.services.SiegeService;
+import com.aionemu.gameserver.services.StigmaService;
+import com.aionemu.gameserver.services.SurveyService;
+import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
+import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
@@ -54,14 +116,8 @@ import com.aionemu.gameserver.utils.audit.GMService;
 import com.aionemu.gameserver.utils.collections.ListSplitter;
 import com.aionemu.gameserver.utils.rates.Rates;
 import com.aionemu.gameserver.world.World;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 import javolution.util.FastList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author ATracer
@@ -205,28 +261,8 @@ public final class PlayerEnterWorldService {
 		}
 		Player player = PlayerService.getPlayer(objectId, account);
 		
-		List<Item> equipmentInPlayer = player.getEquipment().getEquippedItems();
-		
-		for(Item playerItem: equipmentInPlayer) {
-			ItemTemplate itemTemplate = playerItem.getItemTemplate();
-			switch (itemTemplate.getEquipmentType()) {
-			case ARMOR:
-			case WEAPON:
-				switch (itemTemplate.getItemQuality()) {
-				case UNIQUE:
-				case MYTHIC:
-				case EPIC:
-					itemTemplate.setMaxEnchantLevel(EnchantsConfig.ENCHANT_MAX_LEVEL_TYPE2);
-					break;
-				default:
-					break;
-				}
-				break;
-			default:
-				break;
-			}
-		}
 		if (player != null && client.setActivePlayer(player)) {
+			EnchLv.checkEnchLv(player);
 			player.setClientConnection(client);
 
 			log.info("[MAC_AUDIT] Player " + player.getName() + " (account " + account.getName() + ") has entered world with "

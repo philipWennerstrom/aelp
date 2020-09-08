@@ -304,9 +304,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		  }
 		}
 			
-		 
-		
-
 		int damage = 0;
 		for (AttackResult result : attackResult) {
 			if (result.getAttackStatus() == AttackStatus.RESIST || result.getAttackStatus() == AttackStatus.DODGE)
