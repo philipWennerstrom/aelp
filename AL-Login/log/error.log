@@ -1,4 +1,4 @@
-2020-09-06 23:50:33,090 Loading tasks failed: 
+2020-09-08 09:38:36,767 Loading tasks failed: 
 com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'al_server_ls.tasks' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.7.0_80]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57) ~[na:1.7.0_80]
