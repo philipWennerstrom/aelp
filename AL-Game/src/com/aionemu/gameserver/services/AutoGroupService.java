@@ -58,6 +58,7 @@ public class AutoGroupService {
 			return;
 		}
 		Integer obj = player.getObjectId();
+		//TODO verificar na party escolhida se o char na pt pertence a conta do player
 		LookingForParty lfp = searchers.get(obj);
 		if (penaltys.contains(obj)) {
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400181, agt.getInstanceMapId()));
@@ -87,7 +88,9 @@ public class AutoGroupService {
 			if (agt.isDredgion()) {
 				PacketSendUtility.sendPacket(player, new SM_AUTO_GROUP(instanceMaskId, 6, true));
 			}
+			// manda mensagen dizendo que teve sucesso ao aplicar na entrada da instancia
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400194, agt.getInstanceMapId()));
+			// atualiza o cliente mostrando o tempo de espera pra entrar na instancia
 			PacketSendUtility.sendPacket(player, new SM_AUTO_GROUP(instanceMaskId, 1, ert.getId(), player.getName()));
 		}
 		startSort(ert, instanceMaskId, true);
@@ -285,6 +288,7 @@ public class AutoGroupService {
 				Iterator<LookingForParty> iter = searchers.values().iterator();
 				LookingForParty lfp;
 				while (iter.hasNext()) {
+					// procurando outros players para iniciar a instancia
 					lfp = iter.next();
 					if (lfp.getPlayer() == null || lfp.isOnStartEnterTask()) {
 						continue;

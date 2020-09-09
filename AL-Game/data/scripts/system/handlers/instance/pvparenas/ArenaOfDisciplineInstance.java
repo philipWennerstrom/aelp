@@ -4,6 +4,8 @@ import com.aionemu.gameserver.instance.handlers.InstanceID;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.playerreward.InstancePlayerReward;
 import com.aionemu.gameserver.model.instance.playerreward.PvPArenaPlayerReward;
+import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.utils.audit.AuditLogger;
 
 /**
  *
@@ -22,7 +24,18 @@ public class ArenaOfDisciplineInstance extends DisciplineTrainingGroundsInstance
 		float totalCourage = (0.174f * size) * 100; // to do config
 		for (InstancePlayerReward playerReward : instanceReward.getInstanceRewards()) {
 			PvPArenaPlayerReward reward = (PvPArenaPlayerReward) playerReward;
+			if(getWorldInstance().getMapId()==300360000) {
+				
+				Player player = instance.getPlayer(playerReward.getOwner());
+				AuditLogger.info(player, getWorldInstance().getPlayersInside().size()+ " grupo size ao dar reward na arena discipline");
+				if(getWorldInstance().getPlayersInside().size()==1) {
+					//TODO adiciona o ticket de arena no iventario antes de mandar o player de volta
+					ItemService.addItem(player, 186000135, 1);
+					reward.setRewarded();
+				}
+			}
 			if (!reward.isRewarded()) {
+				
 				float playerRate = 1;
 				Player player = instance.getPlayer(playerReward.getOwner());
 				if (player != null) {

@@ -15,10 +15,10 @@ import org.joda.time.DateTime;
 public class PvPArenaService {
 
 	public static boolean isPvPArenaAvailable(Player player, AutoGroupType agt) {
-		if (AutoGroupConfig.START_TIME_ENABLE && !checkTime(agt)) {
+		/**if (AutoGroupConfig.START_TIME_ENABLE && !checkTime(agt)) {
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401306, agt.getInstanceMapId()));
 			return false;
-		}
+		}**/
 		if (!checkItem(player, agt)) {
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400219, agt.getInstanceMapId()));
 			return false;
