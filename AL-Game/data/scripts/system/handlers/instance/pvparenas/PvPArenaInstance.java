@@ -31,6 +31,7 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
@@ -39,11 +40,15 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  * @author xTz
  */
 public class PvPArenaInstance extends GeneralInstanceHandler {
-
+    protected boolean checkArenaBug=false;
 	private boolean isInstanceDestroyed;
 	protected PvPArenaReward instanceReward;
 	protected int killBonus;
 	protected int deathFine;
+	
+	public boolean isCheckArenaBug() {
+		return checkArenaBug;
+	}
 
 	@Override
 	public boolean onDie(Player player, Creature lastAttacker) {
@@ -274,10 +279,21 @@ public class PvPArenaInstance extends GeneralInstanceHandler {
 			public void run() {
 				// start round 1
 				if (!isInstanceDestroyed && !instanceReward.isRewarded() && canStart()) {
+					WorldMapInstance worldInstance = getWorldInstance();
+					if(worldInstance.getMapId()==300360000) {
+						if(worldInstance.getPlayersInside().size()==1) {
+							checkArenaBug = true;
+							for(Player  p: worldInstance.getPlayersInside()) {
+								worldInstance.getInstanceHandler().onExitInstance(p);
+								return;
+							}
+						}
+					}
 					openDoors();
 					sendPacket(new SM_SYSTEM_MESSAGE(1401058));
 					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
 					sendPacket();
+					checkArenaBug = false;
 					ThreadPoolManager.getInstance().schedule(new Runnable() {
 						@Override
 						public void run() {
@@ -419,6 +435,14 @@ public class PvPArenaInstance extends GeneralInstanceHandler {
 			if (PlayerActions.isAlreadyDead(player))
 				PlayerReviveService.duelRevive(player);
 			PvPArenaPlayerReward reward = getPlayerReward(player.getObjectId());
+			
+			if(getWorldInstance().getMapId()==300360000) {
+				if(getWorldInstance().getPlayersInside().size()==1) {
+						reward.setRewarded();
+						AuditLogger.info(player, getWorldInstance().getPlayersInside().size()+ " grupo size ao dar reward na arena discipline");								
+				}
+			}
+		
 			if (!reward.isRewarded()) {
 				reward.setRewarded();
 				AbyssPointsService.addAp(player, reward.getBasicAP() + reward.getRankingAP() + reward.getScoreAP());

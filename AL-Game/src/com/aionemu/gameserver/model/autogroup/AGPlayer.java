@@ -3,6 +3,7 @@ package com.aionemu.gameserver.model.autogroup;
 import com.aionemu.gameserver.model.PlayerClass;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.network.aion.AionConnection;
 
 /**
  *
@@ -17,13 +18,16 @@ public class AGPlayer {
 	private boolean isInInstance;
 	private boolean isOnline;
 	private boolean isPressEnter;
-
+	private final AionConnection clientConnection;
+	
+	
 	public AGPlayer(Player player) {
 		objectId = player.getObjectId();
 		race = player.getRace();
 		playerClass = player.getPlayerClass();
 		name = player.getName();
 		isOnline = true;
+		this.clientConnection =  player.getClientConnection();
 	}
 
 	public Integer getObjectId() {
@@ -64,5 +68,9 @@ public class AGPlayer {
 
 	public void setPressEnter(boolean result) {
 		isPressEnter = result;
+	}
+
+	public AionConnection getClientConnection() {
+		return clientConnection;
 	}
 }

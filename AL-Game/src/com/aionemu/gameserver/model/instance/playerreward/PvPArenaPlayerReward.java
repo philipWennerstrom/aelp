@@ -63,6 +63,7 @@ public class PvPArenaPlayerReward extends InstancePlayerReward {
 	public boolean isRewarded() {
 		return isRewarded;
 	}
+	
 
 	public void setRewarded() {
 		isRewarded = true;

@@ -33,6 +33,10 @@ public class GeneralInstanceHandler implements InstanceHandler {
         this.instanceId = instance.getInstanceId();
         this.mapId = instance.getMapId();
     }
+    
+    public WorldMapInstance getWorldInstance() {
+    	return this.instance;
+    }
 
     @Override
     public void onInstanceDestroy() {
