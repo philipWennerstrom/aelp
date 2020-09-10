@@ -319,4 +319,6 @@ public class CustomConfig {
 	@Property(key = "gameserver.commands.admin.dot.enable", defaultValue = "false")
 	public static boolean ENABLE_ADMIN_DOT_COMMANDS;
 	
+	@Property(key = "gameserver.aion.version", defaultValue = "3.5")
+	public static String GAMESERVER_AION_VERSION;
 }

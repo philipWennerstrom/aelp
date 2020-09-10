@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
@@ -28,6 +29,7 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class StigmaService {
 
+	private static final String FIRST_AION_VERSION = "1.9";
 	private static final Logger log = LoggerFactory.getLogger(StigmaService.class);
 
 	public static boolean extendAdvancedStigmaSlots(Player player) {

@@ -29,7 +29,7 @@ public class EnchantsConfig {
 	 */
 	@Property(key = "gameserver.base.manastone", defaultValue = "50")
 	public static float MANA_STONE;
-	@Property(key = "gameserver.base.enchant", defaultValue = "60")
+	@Property(key = "gameserver.base.enchant", defaultValue = "37")
 	public static float ENCHANT_STONE;
 	
 	@Property(key = "gameserver.manastone.clean", defaultValue = "false")
@@ -40,8 +40,8 @@ public class EnchantsConfig {
 	 */
 	@Property(key = "gameserver.enchant.stone.reduce", defaultValue = "false")
 	public static boolean ECHANT_STONE_REDUCED;
-	@Property(key = "gameserver.enchant.stone.reduce.value1", defaultValue = "10")
+	@Property(key = "gameserver.enchant.stone.reduce.value1", defaultValue = "2")
 	public static int ECHANT_STONE_REDUCED_VALUE1;
-	@Property(key = "gameserver.enchant.stone.reduce.value2", defaultValue = "7")
+	@Property(key = "gameserver.enchant.stone.reduce.value2", defaultValue = "1")
 	public static int ECHANT_STONE_REDUCED_VALUE2;
 }

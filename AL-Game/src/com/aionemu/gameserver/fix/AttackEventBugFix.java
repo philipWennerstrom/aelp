@@ -49,11 +49,12 @@ public class AttackEventBugFix {
 	   long attackedAtFromNow =  new Duration(target.getController().getLastAttackedTime(), System.currentTimeMillis()).getStandardSeconds();
 	   NpcMoveController moveController = npc.getMoveController();
 	   long secFromLastNpcMove =  new Duration(moveController.getLastMoveUpdate(), System.currentTimeMillis()).getStandardSeconds();
-	   long lastNpcAttack =  new Duration( npc.getLastAttackAt(),System.currentTimeMillis()).getStandardSeconds();
+	   /**long lastNpcAttack =  new Duration(npc.getLastAttackAt(),System.currentTimeMillis()).getStandardSeconds();
 	   if(lastNpcAttack>2) {
 		   return secFromLastNpcMove > 2 && attackedAtFromNow > 6;
 	   }
-	  return false;
+	  return false;**/
+	  return secFromLastNpcMove > 2 && attackedAtFromNow > 6;
 	}
 
 	/**

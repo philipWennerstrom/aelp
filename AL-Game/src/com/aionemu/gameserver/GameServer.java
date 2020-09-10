@@ -75,7 +75,6 @@ import pirate.events.EventManager;
  * @author cura
  */
 public class GameServer {
-
 	private static final Logger log = LoggerFactory.getLogger(GameServer.class);
     
 	//TODO remove all this shit

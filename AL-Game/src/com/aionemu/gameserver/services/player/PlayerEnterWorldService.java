@@ -31,6 +31,7 @@ import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
 import com.aionemu.gameserver.dao.PlayerQuestListDAO;
 import com.aionemu.gameserver.dao.PlayerSkillListDAO;
 import com.aionemu.gameserver.dao.WeddingDAO;
+import com.aionemu.gameserver.fix.ServerUtils;
 import com.aionemu.gameserver.model.ChatType;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.account.Account;
@@ -123,7 +124,7 @@ import javolution.util.FastList;
  * @author ATracer
  */
 public final class PlayerEnterWorldService {
-
+	private static final String _1_9 = "1.9";
 	private static final Logger log = LoggerFactory.getLogger("GAMECONNECTION_LOG");
 	private static final String serverName = "Welcome to " + GSConfig.SERVER_NAME + "!";
 	private static final String serverIntro = "Please remember:";
@@ -132,23 +133,27 @@ public final class PlayerEnterWorldService {
 	private static final Set<Integer> pendingEnterWorld = new HashSet<Integer>();
 
 	static {
-		String infoBuffer;
+		String infoBuffer="";
 		String alBuffer;
-
-		infoBuffer = "Announcement : " + GSConfig.SERVER_NAME + " Staff will never ask for your password.\n";
-		infoBuffer += "Announcement : Advertising for another server is prohibited.";
-
 		alBuffer = "=============================\n";
-		alBuffer += "Core Version: AionLighting NA 3.5 \n ";
-		alBuffer += "Reworked by G-Robson26 \n ";
-		alBuffer += "Copyright 2012 - 2019 \n";
+		
+		if(CustomConfig.GAMESERVER_AION_VERSION.equals(_1_9)) {
+			
+			alBuffer += "Please enjoy your stay on our server.";
+		}else {
+			infoBuffer = "Announcement : " + GSConfig.SERVER_NAME + " Staff will never ask for your password.\n";
+			infoBuffer += "Announcement : Advertising for another server is prohibited.";
+			alBuffer += "Core Version: AionLighting NA 3.5 \n ";
+			alBuffer += "Reworked by G-Robson26 \n ";
+			alBuffer += "Copyright 2012 - 2019 \n";
 
-		if (GSConfig.SERVER_MOTD_DISPLAYREV) {
-			alBuffer += "-----------------------------\n";
-			alBuffer += "Server Revision: " + String.format("%-6s", new Version(GameServer.class).getRevision()) + "\n";
+			if (GSConfig.SERVER_MOTD_DISPLAYREV) {
+				alBuffer += "-----------------------------\n";
+				alBuffer += "Server Revision: " + String.format("%-6s", new Version(GameServer.class).getRevision()) + "\n";
+			}
+			alBuffer += "=============================\n";
+			alBuffer += "Please enjoy your stay on our server.";
 		}
-		alBuffer += "=============================\n";
-		alBuffer += "Please enjoy your stay on our server.";
 
 		serverInfo = infoBuffer;
 		alInfo = alBuffer;
@@ -398,7 +403,11 @@ public final class PlayerEnterWorldService {
 
 			// Intro message
 			PacketSendUtility.sendWhiteMessage(player, serverName);
-			PacketSendUtility.sendYellowMessage(player, serverIntro);
+			
+			if(!CustomConfig.GAMESERVER_AION_VERSION.equals(_1_9)) {
+				PacketSendUtility.sendYellowMessage(player, serverIntro);
+			}
+			
 			PacketSendUtility.sendBrightYellowMessage(player, serverInfo);
 			PacketSendUtility.sendWhiteMessage(player, alInfo);
 
@@ -587,6 +596,9 @@ public final class PlayerEnterWorldService {
 
 		client.sendPacket(new SM_INVENTORY_INFO(false, new ArrayList<Item>(0), npcExpands, questExpands, player));
 		client.sendPacket(new SM_STATS_INFO(player));
+		
+		ServerUtils.openAdvStigmaSlots(player);
+		
 		client.sendPacket(SM_CUBE_UPDATE.stigmaSlots(player.getCommonData().getAdvencedStigmaSlotSize()));
 	}
 
