@@ -189,6 +189,10 @@ public class NpcTemplate extends VisibleObjectTemplate {
 		return aggrorange;
 	}
 	
+	public int setAggroRange(int tamanho) {
+		return aggrorange = tamanho;
+	}
+	
 	public int getMinimumShoutRange() {
 		if (aggrorange < 10)
 			return 10;

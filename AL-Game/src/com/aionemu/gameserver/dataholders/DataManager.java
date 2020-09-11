@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.dataholders.loadingutils.XmlDataLoader;
 import com.aionemu.gameserver.model.templates.mail.Mails;
+import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.utils.Util;
 import pirate.events.xml.EventsData;
 
@@ -197,6 +198,7 @@ public final class DataManager {
 		long seconds = time / 1000;
 
 		String timeMsg = seconds > 0 ? seconds + " seconds" : time + " miliseconds";
+	
 
 		log.info("##### [Static Data loaded in: " + timeMsg + "] #####");
 		log.info("##### End Loading Static Data 3.5 #####");

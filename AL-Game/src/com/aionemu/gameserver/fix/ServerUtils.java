@@ -39,7 +39,7 @@ public class ServerUtils {
 	}
 
 	private static boolean isLevel50(Player player) {
-		return player.getCommonData().getLevel()>50;
+		return player.getCommonData().getLevel()>=50;
 	}
 
 	private static boolean is1_9() {

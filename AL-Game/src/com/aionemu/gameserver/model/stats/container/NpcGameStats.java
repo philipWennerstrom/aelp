@@ -7,6 +7,7 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.SummonedObject;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.stats.calc.Stat2;
+import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.stats.NpcStatsTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.taskmanager.tasks.PacketBroadcaster.BroadcastMode;
@@ -285,6 +286,20 @@ public class NpcGameStats extends CreatureGameStats<Npc> {
 		int nextAttack = 0;
 		if (attackDelay < attackSpeed) {
 			nextAttack = (int) (attackSpeed - attackDelay);
+		}
+		
+		NpcTemplate npcTemplate = owner.getObjectTemplate();
+		switch (npcTemplate.getRating()) {
+		case ELITE:
+		case NORMAL:
+		case JUNK:
+			if(nextAttack>1800) {
+				nextAttack = Rnd.get(1550, 1850);
+			}
+			break;
+
+		default:
+			break;
 		}
 		return nextAttack;
 	}

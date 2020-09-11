@@ -20,6 +20,7 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.utils.MathUtil;
+import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -90,6 +91,7 @@ public class AggroList {
 			  }
 		  }
 		}
+	
 		owner.getAi2().onCreatureEvent(AIEventType.ATTACK, creature);
 	}
 

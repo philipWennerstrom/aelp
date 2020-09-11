@@ -2,6 +2,7 @@ package com.aionemu.gameserver.fix;
 
 import org.joda.time.Duration;
 
+import com.aionemu.gameserver.ai2.AISubState;
 import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.ai2.event.AIEventType;
 import com.aionemu.gameserver.controllers.movement.NpcMoveController;
@@ -47,12 +48,16 @@ public class AttackEventBugFix {
 	 */
 	private static boolean isFreezing(Player target, Npc npc) {
 	   long attackedAtFromNow =  new Duration(target.getController().getLastAttackedTime(), System.currentTimeMillis()).getStandardSeconds();
+	   long lastPlayerAttack =  new Duration(target.getController().getLastAttackTime(), System.currentTimeMillis()).getMillis();
 	   NpcMoveController moveController = npc.getMoveController();
-	   long secFromLastNpcMove =  new Duration(moveController.getLastMoveUpdate(), System.currentTimeMillis()).getStandardSeconds();
-	   long lastNpcAttack =  new Duration(npc.getLastAttackAt(),System.currentTimeMillis()).getStandardSeconds();
-	   if(lastNpcAttack>2) {
-		   return secFromLastNpcMove > 2 && attackedAtFromNow > 6;
-	   }
+	   long secFromLastNpcMove =  new Duration(moveController.getLastMoveUpdate(), System.currentTimeMillis()).getMillis();
+	   long lastNpcAttack =  new Duration(npc.getLastAttackAt(),System.currentTimeMillis()).getMillis();
+	   
+		if (lastNpcAttack > 2000 && lastPlayerAttack > 2250) {
+			if (npc.getAi2().getSubState() != AISubState.CAST) {
+				return secFromLastNpcMove > 2500 && attackedAtFromNow > 2;
+			}
+		}
 	  return false;
 	}
 
