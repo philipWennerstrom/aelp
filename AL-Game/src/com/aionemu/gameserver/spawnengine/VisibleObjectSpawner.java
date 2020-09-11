@@ -9,6 +9,7 @@ import com.aionemu.gameserver.controllers.*;
 import com.aionemu.gameserver.controllers.effect.EffectController;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.NpcData;
+import com.aionemu.gameserver.fix.npc.ai.AggroFix;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
 import com.aionemu.gameserver.geoEngine.math.Vector3f;
 import com.aionemu.gameserver.model.Race;
@@ -76,6 +77,10 @@ public class VisibleObjectSpawner {
 			log.error("No template for NPC " + String.valueOf(objectId));
 			return null;
 		}
+		
+		//TODO atualiza o range de aggro dos npc
+		AggroFix.fixAggroFromJunkToElite(npcTemplate);
+		
 		IDFactory iDFactory = IDFactory.getInstance();
 		Npc npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
 		npc.setCreatorId(spawn.getCreatorId());

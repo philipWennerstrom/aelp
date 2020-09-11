@@ -11,7 +11,7 @@ echo Starting Aion Ascension Login Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xms64m -Xmx128m -server -cp ./libs/*;AL-Login.jar com.aionemu.loginserver.LoginServer
+java -Xms64m -Xmx256m -server -cp ./libs/*;AL-Login.jar com.aionemu.loginserver.LoginServer
 REM
 REM -------------------------------------
 

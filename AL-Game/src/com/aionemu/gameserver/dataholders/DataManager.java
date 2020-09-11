@@ -5,8 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.dataholders.loadingutils.XmlDataLoader;
 import com.aionemu.gameserver.model.templates.mail.Mails;
-import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.utils.Util;
+
 import pirate.events.xml.EventsData;
 
 /**
