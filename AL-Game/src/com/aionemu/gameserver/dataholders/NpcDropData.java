@@ -191,7 +191,7 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 					for(Drop dropIndex: dropGroup.getDrop()) {
 						if(dropIndex.getChance()>1) {
 							Random r = new Random();
-							float random = (float) (0.55 + r.nextFloat() * (0.8 - 0.55));
+							float random = (float) (0.55 + r.nextFloat() * (0.7 - 0.55));
 							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
 							dropIndex.setChance(bd.floatValue());
 							System.out.println(random);
@@ -203,7 +203,7 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 					for(Drop dropIndex: dropGroup.getDrop()) {
 						if(dropIndex.getChance()>1) {
 							Random r = new Random();
-							float random = (float) (0.2 + r.nextFloat() * (0.6 - 0.2));
+							float random = (float) (0.2 + r.nextFloat() * (0.4 - 0.2));
 							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
 							dropIndex.setChance(bd.floatValue());
 							System.out.println(random);

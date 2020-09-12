@@ -10,7 +10,7 @@ public class AggroFix {
 		case JUNK:
 		case NORMAL:
 		case ELITE:
-			setAggroValue(npcTemplate, 10, 14);
+			setAggroValue(npcTemplate, 10, 13);
 			break;
 
 		default:
@@ -23,7 +23,7 @@ public class AggroFix {
 	 */
 	private static void setAggroValue(NpcTemplate npcTemplate, int actualRange, int newRange) {
 		if (npcTemplate.getAggroRange() <= actualRange) {
-			npcTemplate.setAggroRange(Rnd.get(12,14));
+			npcTemplate.setAggroRange(Rnd.get(actualRange,newRange));
 		}
 	}
 }

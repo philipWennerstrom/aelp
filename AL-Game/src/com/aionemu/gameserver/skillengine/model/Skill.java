@@ -497,6 +497,7 @@ public class Skill {
 	 * Start casting of skill
 	 */
 	private void startCast() {
+
 		int targetObjId = firstTarget != null ? firstTarget.getObjectId() : 0;
 
 		if (skillMethod == SkillMethod.CAST) {
