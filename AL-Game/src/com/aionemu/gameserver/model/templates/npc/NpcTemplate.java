@@ -144,6 +144,8 @@ public class NpcTemplate extends VisibleObjectTemplate {
 	public NpcStatsTemplate getStatsTemplate() {
 		return statsTemplate;
 	}
+	
+	
 
 	public void setStatsTemplate(NpcStatsTemplate statsTemplate) {
 		this.statsTemplate = statsTemplate;
