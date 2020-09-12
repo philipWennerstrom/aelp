@@ -9597,8 +9597,8 @@
     </npcskills>
     <npcskills npcid="212496">
         <npcskill skillid="16522" skilllevel="26" probability="25"/>
-        <npcskill skillid="16981" skilllevel="26" probability="25"/>
-        <npcskill skillid="16997" skilllevel="26" probability="25"/>
+        <npcskill skillid="16981" skilllevel="26" probability="35"/>
+        <npcskill skillid="16997" skilllevel="26" probability="45"/>
     </npcskills>
     <npcskills npcid="212497">
         <npcskill skillid="16522" skilllevel="28" probability="25"/>

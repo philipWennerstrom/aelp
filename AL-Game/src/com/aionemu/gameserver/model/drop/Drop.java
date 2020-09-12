@@ -49,6 +49,10 @@ public class Drop implements DropCalculator {
 		return template == null ? DataManager.ITEM_DATA.getItemTemplate(itemId) : template;
 	}
 
+	public void setChance(float chance) {
+		this.chance = chance;
+	}
+
 	/**
 	 * Gets the value of the itemId property.
 	 *

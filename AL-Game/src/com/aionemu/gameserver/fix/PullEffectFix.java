@@ -23,11 +23,11 @@ public class PullEffectFix {
 						z=npcTargetZ;
 					}
 				}else if(ntzFromEffectorZ >= 2) {
-						z=z - 1.9F;
+						z=z - 1.0F;
 				}
 				else if(ntzFromEffectorZ< 0) {
 					//z = (z - ntzFromEffectorZ)+0.25F;
-					z=z - 1.9F;
+					z=z - 0.75F;
 				}else  {
 					z = (z - ntzFromEffectorZ)- 0.75F;
 				}

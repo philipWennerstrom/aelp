@@ -3,11 +3,15 @@ package com.aionemu.gameserver.dataholders;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -179,8 +183,36 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 		}
 		
 		NpcDropData dropData = new NpcDropData();
-		
+		 DecimalFormat df = new DecimalFormat("0.00");
 		dropData.setNpcDrop(npcDrops);
+		for (NpcDrop drop : npcDrops) {
+			for(DropGroup dropGroup: drop.getDropGroup()) {
+				if(dropGroup.getGroupName().equals("ARMOR_UNIQUE")||dropGroup.getGroupName().equals("WEAPON_UNIQUE")) {
+					for(Drop dropIndex: dropGroup.getDrop()) {
+						if(dropIndex.getChance()>1) {
+							Random r = new Random();
+							float random = (float) (0.55 + r.nextFloat() * (0.8 - 0.55));
+							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
+							dropIndex.setChance(bd.floatValue());
+							System.out.println(random);
+						}
+					}
+				}
+
+				if(dropGroup.getGroupName().equals("GODSTONES")) {
+					for(Drop dropIndex: dropGroup.getDrop()) {
+						if(dropIndex.getChance()>1) {
+							Random r = new Random();
+							float random = (float) (0.2 + r.nextFloat() * (0.6 - 0.2));
+							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
+							dropIndex.setChance(bd.floatValue());
+							System.out.println(random);
+						}
+					}
+				}
+			
+			}
+		}
 		log.info("Drop loader: Npc drops loading done: " + npcDrops.size() +" drops.");
 		return dropData;
 	}
