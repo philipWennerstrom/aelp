@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+import com.aionemu.gameserver.fix.PullEffectFix;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FORCED_MOVE;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_TARGET_IMMOBILIZE;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SkillMoveType;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -41,11 +41,15 @@ public class PulledEffect extends EffectTemplate {
 		effect.setSkillMoveType(SkillMoveType.PULL);
 		final Creature effector = effect.getEffector();
 
-		// Target must be pulled just one meter away from effector, not IN place of effector
+		// Target must be pulled just one meter away from effector, not IN place of
+		// effector
 		double radian = Math.toRadians(MathUtil.convertHeadingToDegree(effector.getHeading()));
 		final float x1 = (float) Math.cos(radian);
 		final float y1 = (float) Math.sin(radian);
-		effect.setTargetLoc(effector.getX() + x1, effector.getY() + y1, effector.getZ() + 0.25F);
+		
+		float f = PullEffectFix.fixZ(effect);
+		
+		effect.setTargetLoc(effector.getX() + x1, effector.getY() + y1, f + 0.25F);
 	}
 
 	@Override

@@ -438,8 +438,7 @@ public abstract class EffectTemplate {
 		if (!effectSubConditionsCheck(effect)) {
 			effect.setSubEffectAborted(true);
 			return;
-		}
-
+		}		
 		// chance to trigger subeffect
 		if (Rnd.get(100) > subEffect.getChance())
 			return;

@@ -15,6 +15,10 @@ public class PlayerMoveController extends PlayableMoveController<Player> {
 	public PlayerMoveController(Player owner) {
 		super(owner);
 	}
+	
+	public float getVectorZ() {
+		return vectorZ;
+	}
 
 	public void updateFalling(float newZ) {
 		if (lastFallZ != 0) {
