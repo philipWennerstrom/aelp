@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.fix.npc.ai.NpcSkillProbabalities;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplate;
 import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplates;
@@ -25,6 +26,7 @@ public class NpcSkillList implements SkillList<Npc> {
 		NpcSkillTemplates npcSkillList = DataManager.NPC_SKILL_DATA.getNpcSkillList(npcId);
 		if (npcSkillList != null) {
 			initSkills();
+		    NpcSkillProbabalities.calc(npcSkillList);
 			for (NpcSkillTemplate template : npcSkillList.getNpcSkills()) {
 				skills.add(new NpcSkillTemplateEntry(template));
 			}
@@ -100,5 +102,9 @@ public class NpcSkillList implements SkillList<Npc> {
 			}
 		}
 		return null;
+	}
+
+	public List<NpcSkillEntry> getSkills() {
+		return skills;
 	}
 }

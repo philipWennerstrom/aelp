@@ -196,7 +196,7 @@ public final class DataManager {
 		NPC_DROP_DATA = NpcDropData.load(data.npcDropData.getNpcDrop());
 		// some sexy time message
 		long seconds = time / 1000;
-
+		
 		String timeMsg = seconds > 0 ? seconds + " seconds" : time + " miliseconds";
 	
 

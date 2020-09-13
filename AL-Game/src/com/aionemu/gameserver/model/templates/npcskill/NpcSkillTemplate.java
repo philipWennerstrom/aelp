@@ -113,4 +113,10 @@ public class NpcSkillTemplate {
 	public boolean getUseInSpawned() {
 		return useinspawned;
 	}
+
+	public void setProbability(int probability) {
+		this.probability = probability;
+	}
+	
+	
 }

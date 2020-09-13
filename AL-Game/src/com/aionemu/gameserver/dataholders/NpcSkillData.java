@@ -36,6 +36,8 @@ public class NpcSkillData {
 		}
 
 	}
+	
+	
 
 	public int size() {
 		return npcSkillData.size();
