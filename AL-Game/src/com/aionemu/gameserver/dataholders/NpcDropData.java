@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.fix.drops.NpcDropsFix;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.drop.Drop;
 import com.aionemu.gameserver.model.drop.DropGroup;
@@ -183,36 +184,9 @@ public static NpcDropData load(List<NpcDrop> staticDrops) {
 		}
 		
 		NpcDropData dropData = new NpcDropData();
-		 DecimalFormat df = new DecimalFormat("0.00");
+		NpcDropsFix.fixRates(npcDrops);
 		dropData.setNpcDrop(npcDrops);
-		for (NpcDrop drop : npcDrops) {
-			for(DropGroup dropGroup: drop.getDropGroup()) {
-				if(dropGroup.getGroupName().equals("ARMOR_UNIQUE")||dropGroup.getGroupName().equals("WEAPON_UNIQUE")) {
-					for(Drop dropIndex: dropGroup.getDrop()) {
-						if(dropIndex.getChance()>1) {
-							Random r = new Random();
-							float random = (float) (0.55 + r.nextFloat() * (0.7 - 0.55));
-							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
-							dropIndex.setChance(bd.floatValue());
-							System.out.println(random);
-						}
-					}
-				}
-
-				if(dropGroup.getGroupName().equals("GODSTONES")) {
-					for(Drop dropIndex: dropGroup.getDrop()) {
-						if(dropIndex.getChance()>1) {
-							Random r = new Random();
-							float random = (float) (0.2 + r.nextFloat() * (0.4 - 0.2));
-							BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
-							dropIndex.setChance(bd.floatValue());
-							System.out.println(random);
-						}
-					}
-				}
-			
-			}
-		}
+		
 		log.info("Drop loader: Npc drops loading done: " + npcDrops.size() +" drops.");
 		return dropData;
 	}

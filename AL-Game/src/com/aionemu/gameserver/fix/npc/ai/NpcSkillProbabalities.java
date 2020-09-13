@@ -6,9 +6,9 @@ import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplates;
 
 public class NpcSkillProbabalities {
  public static void calc (NpcSkillTemplates npcSkillList) {
-	 if(npcSkillList.getNpcSkills().size()>=3) {
+	 if(npcSkillList.getNpcSkills().size()>=2) {
 			for(NpcSkillTemplate nst: npcSkillList.getNpcSkills()) {
-				nst.setProbability(Rnd.get(25, 55));
+				nst.setProbability(Rnd.get(20, 55));
 			}
 		}
  }
