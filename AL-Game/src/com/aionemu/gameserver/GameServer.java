@@ -91,7 +91,7 @@ public class GameServer {
 			public boolean accept(File dir, String name) {
 				return name.endsWith(".log");
 			}
-		}); 
+		});
 
 		if (files != null && files.length > 0) {
 			byte[] buf = new byte[1024];
