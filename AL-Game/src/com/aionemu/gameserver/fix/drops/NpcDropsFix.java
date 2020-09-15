@@ -55,15 +55,12 @@ public class NpcDropsFix {
 		float random = (float) (minRate + r.nextFloat() * (maxRate - minRate));
 		BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
 		dropIndex.setChance(bd.floatValue());
-		System.out.println(bd.floatValue());
 	}
 
 	private static void uniqueAmorAndWeapons(DropGroup dropGroup) {
 		if(dropGroup.getGroupName().equals(ARMOR_UNIQUE)||dropGroup.getGroupName().equals(WEAPON_UNIQUE)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-				if(dropIndex.getChance()>0.5) {
-					setChance(dropIndex, 0.09f, 0.35f);
-				}
+					setChance(dropIndex, 0.15f, 0.35f);
 			}
 		}
 	}
@@ -91,7 +88,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.08f, 0.35f);
+					setChance(dropIndex, 0.03f, 0.35f);
 			}
 		}
 	}

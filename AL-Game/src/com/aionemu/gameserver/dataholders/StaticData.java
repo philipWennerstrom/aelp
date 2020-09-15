@@ -174,9 +174,9 @@ public class StaticData {
 	@XmlElement(name = "cosmetic_items")
 	public CosmeticItemsData cosmeticItemsData;
 
-    @XmlElement(name = "npc_drops")
-    public NpcDropData npcDropData;
-
+   @XmlElement(name = "npc_drops")
+   /** public NpcDropData npcDropData;*/
+	public XmlNpcDropData xmlDropData;
 	@XmlElement(name = "auto_groups")
 	public AutoGroupData autoGroupData;
 
@@ -304,7 +304,7 @@ public class StaticData {
 		DataManager.log.info("Loaded " + windstreamsData.size() + " windstream entries");
 		DataManager.log.info("Loaded " + assembledNpcData.size() + " assembled npcs entries");
 		DataManager.log.info("Loaded " + cosmeticItemsData.size() + " cosmetic items entries");
-		DataManager.log.info("Loaded " + npcDropData.size() + " npc drop entries");
+		DataManager.log.info("Loaded " + xmlDropData.size() + " npc drop entries");
 		DataManager.log.info("Loaded " + autoGroupData.size() + " auto group entries");
 		DataManager.log.info("Loaded " + spawnsData2.size() + " spawn maps entries");
 		DataManager.log.info("Loaded " + eventData.size() + " active events");

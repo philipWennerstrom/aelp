@@ -47,6 +47,8 @@ import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.DropRewardEnum;
+
+import ai.instance.dredgion.SurkanaAI2;
 import javolution.util.FastList;
 
 /**
@@ -54,6 +56,7 @@ import javolution.util.FastList;
  */
 public class DropRegistrationService {
 
+	private static final String SURKANA = "surkana";
 	private Map<Integer, Set<DropItem>> currentDropMap = new FastMap<Integer, Set<DropItem>>().shared();
 	private Map<Integer, DropNpc> dropRegistrationMap = new FastMap<Integer, DropNpc>().shared();
 	private FastList<Integer> noReductionMaps;
@@ -227,12 +230,15 @@ public class DropRegistrationService {
 		for (Player p : dropPlayers) {
 			PacketSendUtility.sendPacket(p, new SM_LOOT_STATUS(npcObjId, 0));
 		}
-
+       
 		if (player.getPet() != null && player.getPet().getPetTemplate().getPetFunction(PetFunctionType.LOOT) != null &&
 				player.getPet().getCommonData().isLooting()) {
 			PacketSendUtility.sendPacket(player, new SM_PET(true, npcObjId));
 			Set<DropItem> drops = geCurrentDropMap().get(npcObjId);
 			if (drops == null || drops.size() == 0) {
+				if ((npc.getAi2().getName().equals(SURKANA))) {
+					npc.getPosition().getWorldMapInstance().getInstanceHandler().onDie(npc);
+				}
 				npc.getController().onDelete();
 			}
 			else {
@@ -242,9 +248,11 @@ public class DropRegistrationService {
 				}
 			}
 			PacketSendUtility.sendPacket(player, new SM_PET(false, npcObjId));
+			
 			// if everything was looted, npc is deleted
-			if (drops == null || drops.size() == 0)
-				return;
+			if (drops == null || drops.size() == 0) {
+					return;
+			}	
 		}
 		DropService.getInstance().scheduleFreeForAll(npcObjId);
 	}

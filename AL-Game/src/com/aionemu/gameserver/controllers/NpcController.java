@@ -121,7 +121,7 @@ public class NpcController extends CreatureController<Npc> {
 				this.doReward();
 			owner.getPosition().getWorldMapInstance().getInstanceHandler().onDie(owner);
 			owner.getAi2().onGeneralEvent(AIEventType.DIED);
-		}
+			}
 		finally { // always make sure npc is schedulled to respawn
 			if (owner.getAi2().poll(AIQuestion.SHOULD_DECAY)) {
 				addTask(TaskId.DECAY, RespawnService.scheduleDecayTask(owner));

@@ -35,6 +35,16 @@ public class Drop implements DropCalculator {
 
     public Drop() {
     }
+    
+	public Drop(int itemId, int minAmount, int maxAmount, float chance, boolean noReduce, boolean eachMember) {
+		this.itemId = itemId;
+		this.minAmount = minAmount;
+		this.maxAmount = maxAmount;
+		this.chance = chance;
+		this.noReduce = noReduce;
+		this.eachMember = eachMember;
+	}
+
 
 	public Drop(int itemId, int minAmount, int maxAmount, float chance, boolean noReduce) {
 		this.itemId = itemId;

@@ -22,6 +22,7 @@ public final class DataManager {
 	static Logger log = LoggerFactory.getLogger(DataManager.class);
 	public static NpcData NPC_DATA;
     public static NpcDropData NPC_DROP_DATA;
+    public static XmlNpcDropData XML_NPC_DROP_DATA;
 	public static NpcShoutData NPC_SHOUT_DATA;
 	public static GatherableData GATHERABLE_DATA;
 	public static WorldMapsData WORLD_MAPS_DATA;
@@ -126,6 +127,7 @@ public final class DataManager {
 		ITEM_DATA = data.itemData;
 		ITEM_RANDOM_BONUSES = data.itemRandomBonuses;
 		NPC_DATA = data.npcData;
+		XML_NPC_DROP_DATA = data.xmlDropData;
 		NPC_SHOUT_DATA = data.npcShoutData;
 		GATHERABLE_DATA = data.gatherableData;
 		PLAYER_INITIAL_DATA = data.playerInitialData;
@@ -193,7 +195,7 @@ public final class DataManager {
 		ITEM_DATA.cleanup();
 		F14_EVENTS_DATA = data.f14_eventsData;
 
-		NPC_DROP_DATA = NpcDropData.load(data.npcDropData.getNpcDrop());
+		NPC_DROP_DATA = NpcDropData.load();
 		// some sexy time message
 		long seconds = time / 1000;
 		
