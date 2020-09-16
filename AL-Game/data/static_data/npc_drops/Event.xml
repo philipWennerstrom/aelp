@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Boss evento-->
+<npc_drops>
+	<npc_drop npc_id="217593"> <!-- rm-1337c-->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="2" min_amount="2" item_id="166000150" eachmember="true"/> <!-- L150 -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="5" min_amount="5" item_id="186000051" eachmember="true"/> <!-- Major Ancient Crown -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="500" min_amount="200" item_id="166100008" eachmember="true"/> <!-- Greater Supplements Eternal -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="5" max_amount="1" min_amount="1" item_id="169610048"/> <!-- Title Card -->
+			<drop chance="5" max_amount="3" min_amount="1" item_id="188020001"/> <!-- Greater Temporal Stone -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002414"/> <!-- Master Elite Spicy Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002415"/> <!-- Master Elite Sweet Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002274"/> <!-- Cippo Aether Jelly -->	
+        </drop_group>
+    </npc_drop> 
+    <npc_drop npc_id="217527"> <!-- Tran of fire -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="2" min_amount="2" item_id="166000150" eachmember="true"/> <!-- L150 -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="5" min_amount="5" item_id="186000051" eachmember="true"/> <!-- Major Ancient Crown -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="500" min_amount="200" item_id="166100008" eachmember="true"/> <!-- Greater Supplements Eternal -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="5" max_amount="1" min_amount="1" item_id="169610048"/> <!-- Title Card -->
+			<drop chance="5" max_amount="3" min_amount="1" item_id="188020001"/> <!-- Greater Temporal Stone -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002414"/> <!-- Master Elite Spicy Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002415"/> <!-- Master Elite Sweet Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002274"/> <!-- Cippo Aether Jelly -->
+		</drop_group>	
+    </npc_drop>
+    <npc_drop npc_id="217528"> <!-- Tran of wind -->
+        <drop_group name="" use_category="false">
+            <drop chance="100" max_amount="2" min_amount="2" item_id="166000150" eachmember="true"/> <!-- L150 -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="5" min_amount="5" item_id="186000051" eachmember="true"/> <!-- Major Ancient Crown -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="100" max_amount="500" min_amount="200" item_id="166100008" eachmember="true"/> <!-- Greater Supplements Eternal -->
+        </drop_group>
+		<drop_group name="" use_category="false">
+            <drop chance="5" max_amount="1" min_amount="1" item_id="169610048"/> <!-- Title Card -->
+			<drop chance="5" max_amount="3" min_amount="1" item_id="188020001"/> <!-- Greater Temporal Stone -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002414"/> <!-- Master Elite Spicy Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002415"/> <!-- Master Elite Sweet Banquet Food -->
+			<drop chance="5" max_amount="2" min_amount="1" item_id="160002274"/> <!-- Cippo Aether Jelly -->
+		</drop_group>	
+    </npc_drop>
+</npc_drops>
