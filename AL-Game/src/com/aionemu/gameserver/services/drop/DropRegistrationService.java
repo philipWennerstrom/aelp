@@ -234,7 +234,7 @@ public class DropRegistrationService {
 		if (player.getPet() != null && player.getPet().getPetTemplate().getPetFunction(PetFunctionType.LOOT) != null &&
 				player.getPet().getCommonData().isLooting()) {
 			PacketSendUtility.sendPacket(player, new SM_PET(true, npcObjId));
-			Set<DropItem> drops = geCurrentDropMap().get(npcObjId);
+			Set<DropItem> drops = getCurrentDropMap().get(npcObjId);
 			if (drops == null || drops.size() == 0) {
 				if ((npc.getAi2().getName().equals(SURKANA))) {
 					npc.getPosition().getWorldMapInstance().getInstanceHandler().onDie(npc);
@@ -284,7 +284,7 @@ public class DropRegistrationService {
 	/**
 	 * @return currentDropMap
 	 */
-	public Map<Integer, Set<DropItem>> geCurrentDropMap() {
+	public Map<Integer, Set<DropItem>> getCurrentDropMap() {
 		return currentDropMap;
 	}
 

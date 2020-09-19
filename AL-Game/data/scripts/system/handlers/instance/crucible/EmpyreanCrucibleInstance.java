@@ -1394,7 +1394,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance {
 
 	@Override
 	public void onDropRegistered(Npc npc) {
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().geCurrentDropMap().get(npc.getObjectId());
+		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		int npcId = npc.getNpcId();
 		int itemId = 0;
 		switch (npcId) {

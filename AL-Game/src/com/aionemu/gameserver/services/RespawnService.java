@@ -27,7 +27,7 @@ public class RespawnService {
 	 */
 	public static Future<?> scheduleDecayTask(Npc npc) {
 		int decayInterval;
-		Set<DropItem> drop = DropRegistrationService.getInstance().geCurrentDropMap().get(npc.getObjectId());
+		Set<DropItem> drop = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 
 		if(drop == null)
 			decayInterval = IMMEDIATE_DECAY;

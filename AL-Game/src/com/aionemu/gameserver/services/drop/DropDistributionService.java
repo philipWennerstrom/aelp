@@ -117,7 +117,7 @@ public class DropDistributionService {
 	 */
 	private void distributeLoot(Player player, long luckyPlayer, int itemId, int npcId) {
 		DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npcId);
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().geCurrentDropMap().get(npcId);
+		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npcId);
 		DropItem requestedItem = null;
 
 		if (dropItems == null)

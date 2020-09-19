@@ -81,7 +81,7 @@ public class DropService {
 	public void unregisterDrop(Npc npc) {
 		Integer npcObjId = npc.getObjectId();
 		Map<Integer, DropNpc> dropRegmap = DropRegistrationService.getInstance().getDropRegistrationMap();
-		DropRegistrationService.getInstance().geCurrentDropMap().remove(npcObjId);
+		DropRegistrationService.getInstance().getCurrentDropMap().remove(npcObjId);
 
 		if (dropRegmap.containsKey(npcObjId)) {
 			dropRegmap.remove(npcObjId);
@@ -121,7 +121,7 @@ public class DropService {
 			}
 		}
 
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().geCurrentDropMap().get(npcId);
+		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npcId);
 
 		if (dropItems == null) {
 			dropItems = Collections.emptySet();
@@ -155,7 +155,7 @@ public class DropService {
 		if (dropNpc.getBeingLooted() != player)
 			return;// cheater :)
 
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().geCurrentDropMap().get(npcId);
+		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npcId);
 		dropNpc.setBeingLooted(null);
 
 		Npc npc = (Npc) World.getInstance().findVisibleObject(npcId);
@@ -292,7 +292,7 @@ public class DropService {
 
 	public void requestDropItem(Player player, int npcId, int itemIndex, boolean autoLoot) {
 
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().geCurrentDropMap().get(npcId);
+		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npcId);
 		DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npcId);
 		DropItem requestedItem = null;
 		// drop was unregistered
