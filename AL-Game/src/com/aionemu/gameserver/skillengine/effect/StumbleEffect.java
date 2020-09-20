@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+import com.aionemu.gameserver.controllers.movement.MoveController;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
 import com.aionemu.gameserver.geoEngine.math.Vector3f;
 import com.aionemu.gameserver.model.gameobjects.Creature;
@@ -62,6 +63,32 @@ public class StumbleEffect extends EffectTemplate {
 		x1 = closestCollision.x;
 		y1 = closestCollision.y;
 		z = closestCollision.z;
+		
+		final float effectorZ = effector.getZ();
+		System.out.println("z: " + z);
+		final float diff = z - effectorZ;
+		System.out.println(diff);
+		if(diff>0.093) {
+			z = z - diff + 1f;
+			System.out.println("new z: " + z);
+		}
+		
+		if(diff<-0.093) {
+			z = diff + z + 1f;
+			System.out.println("negative diff new z: " + z);
+		}
+		MoveController moveController = effected.getMoveController();
+		if(moveController.getLastStumbleZ()==0) {
+			moveController.setLastStumbleZ(z);
+		}else {
+			final float lastDiff = z - moveController.getLastStumbleZ();
+			System.out.println("lastDiff: " + lastDiff);
+			if(lastDiff>0.5 && moveController.getLastStumbleFromNow()<6000) {
+				z = moveController.getLastStumbleZ();
+			}
+			moveController.setLastStumbleZ(z);
+		}
+		
 		effect.setTargetLoc(x1, y1, z);
 	}
 

@@ -666,10 +666,10 @@
 		<spawn npc_id="213779">
 			<spot x="186.182" y="720.86" z="529.764" h="99"/>
 		</spawn>
-		<!-- Commander Bakarma -->
+		<!-- Commander Bakarma 
 		<spawn npc_id="213780">
 			<spot x="813.189" y="432.255" z="318.928" h="30"/>
-		</spawn>
+		</spawn>-->
 		<!-- Bakarma Lifecrusher -->
 		<spawn npc_id="213552">
 			<spot x="477.828" y="604.859" z="512.722" h="18"/>

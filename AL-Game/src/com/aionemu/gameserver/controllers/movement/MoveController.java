@@ -8,10 +8,16 @@ public interface MoveController {
 	void moveToDestination();
 
 	float getTargetX2();
+	
+	float getLastStumbleZ();
+	long getLastStumbleFromNow();
+	long getLastStumbleUpdate();
 
 	float getTargetY2();
 
 	float getTargetZ2();
+	
+	void setLastStumbleZ(float z);
 
 	void setNewDirection(float x, float y, float z, byte heading);
 

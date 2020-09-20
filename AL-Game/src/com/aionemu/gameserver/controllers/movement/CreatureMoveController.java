@@ -2,6 +2,8 @@ package com.aionemu.gameserver.controllers.movement;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import org.joda.time.Duration;
+
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOVE;
@@ -22,6 +24,8 @@ public abstract class CreatureMoveController<T extends VisibleObject> implements
 	protected float targetDestX;
 	protected float targetDestY;
 	protected float targetDestZ;
+	protected float lastStumbleZ;
+	protected long lastStumbleUpdate;
 
 	public CreatureMoveController(T owner) {
 		this.owner = owner;
@@ -29,6 +33,28 @@ public abstract class CreatureMoveController<T extends VisibleObject> implements
 
 	@Override
 	public void moveToDestination() {
+	}
+	
+	public long getLastStumbleFromNow() {
+		return new Duration(lastStumbleUpdate, System.currentTimeMillis()).getMillis();
+	}
+	public long getLastStumbleUpdate() {
+		return lastStumbleUpdate;
+	}
+
+	public void setLastStumbleUpdate(long lastStumbleUpdate) {
+		this.lastStumbleUpdate = lastStumbleUpdate;
+	}
+
+	@Override
+	public void setLastStumbleZ(float z) {
+		lastStumbleUpdate = System.currentTimeMillis();
+		this.lastStumbleZ = z;
+	}
+
+	@Override
+	public float getLastStumbleZ() {
+		return lastStumbleZ;
 	}
 
 	@Override

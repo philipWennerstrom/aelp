@@ -1,6 +1,5 @@
 package instance;
 
-import java.util.Set;
 import java.util.concurrent.Future;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
@@ -11,12 +10,10 @@ import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
 import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
@@ -27,8 +24,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @InstanceID(320080000)
 public class DraupnirCaveInstance extends GeneralInstanceHandler {
     protected boolean isInstanceDestroyed = false;
-    //**Npc 4.9**//
-    private Race spawnRace;
     private int bakarmaCharger;
     private int adjutantsKilled;
     private Future<?> abyssGateTask;
@@ -38,61 +33,6 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler {
         super.onInstanceCreate(instance);
         //You must kill Afrane, Saraswati, Lakshmi, and Nimbarka to make Commander Bakarma appear.
         sendMsgByRace(1400757, Race.PC_ALL, 10000);
-        ThreadPoolManager.getInstance().schedule(new Runnable() {
-            @Override
-            public void run() {
-                spawn(237276, 495.48535f, 392.0867f, 616.5717f, (byte) 89); //Akhal's Phantasm.
-            }
-        }, 10000);
-        if (spawnRace == null) {
-            spawnRace = player.getRace();
-            SpawnIDDF3DragonSP();
-        }
-    }
-
-    private void SpawnIDDF3DragonSP() {
-        final int npc1 = spawnRace == Race.ASMODIANS ? 805737 : 805736;
-        spawn(npc1, 498.74973f, 379.33267f, 621.2866f, (byte) 54);
-    }
-
-    public void onDropRegistered(Npc npc) {
-        Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
-        int npcId = npc.getNpcId();
-        int index = dropItems.size() + 1;
-        switch (npcId) {
-            case 702658: //Abbey Box.
-                dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); //[Event] Abbey Bundle.
-                break;
-            case 702659: //Noble Abbey Box.
-                dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); //[Event] Noble Abbey Bundle.
-                break;
-            case 213780: //Commander Bakarma.
-                for (Player player : instance.getPlayersInside()) {
-                    if (player.isOnline()) {
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053787, 1)); //Stigma Support Bundle.
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053083, 1)); //Tempering Solution Chest.
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052951, 1)); //[Event] Prestige Supplies.
-                    }
-                    switch (Rnd.get(1, 2)) {
-                        case 1:
-                            dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053265, 1)); //Bakarma's Fabled Weapon Box.
-                            break;
-                        case 2:
-                            dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053271, 1)); //Bakarma's Weapon Box.
-                            break;
-                    }
-                }
-                break;
-            case 237275: //Akhal.
-                for (Player player : instance.getPlayersInside()) {
-                    if (player.isOnline()) {
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053787, 1)); //Stigma Support Bundle.
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053083, 1)); //Tempering Solution Chest.
-                        dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054175, 1)); //Master Bakarma's Weapon Box.
-                    }
-                }
-                break;
-        }
     }
 
     @Override
@@ -257,15 +197,6 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler {
         if (getNpc(npcId) != null) {
             getNpc(npcId).getController().onDelete();
         }
-    }
-
-    private void sendMsg(final String str) {
-        instance.doOnAllPlayers(new Visitor<Player>() {
-            @Override
-            public void visit(Player player) {
-                PacketSendUtility.sendWhiteMessageOnCenter(player, str);
-            }
-        });
     }
 
     protected void sendMsgByRace(final int msg, final Race race, int time) {
