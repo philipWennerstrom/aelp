@@ -96,7 +96,8 @@ public class DialogService {
 				break;
 			}
 			case 3: {
-				PacketSendUtility.sendPacket(player, new SM_SELL_ITEM(targetObjectId, PricesService.getVendorSellModifier(player.getRace())));
+				int vendorSellModifier = PricesService.getVendorSellModifier(player.getRace());
+				PacketSendUtility.sendPacket(player, new SM_SELL_ITEM(targetObjectId, vendorSellModifier));
 				break;
 			}
 			case 4: { // stigma

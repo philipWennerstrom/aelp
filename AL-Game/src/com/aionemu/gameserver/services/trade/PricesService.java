@@ -102,9 +102,11 @@ public class PricesService {
 	 * @return sellingModifier
 	 */
 	public static final int getVendorSellModifier(Race playerRace) {
-		return (int) ((int) ((int) (PricesConfig.VENDOR_SELL_MODIFIER * getGlobalPrices(playerRace) / 100F)
+		int vendorSellMod = (int) ((int) ((int) (PricesConfig.VENDOR_SELL_MODIFIER * getGlobalPrices(playerRace) / 100F)
 			* getGlobalPricesModifier() / 100F)
 			* getTaxes(playerRace) / 100F);
+		vendorSellMod = vendorSellMod /2;
+		return vendorSellMod;
 	}
 
 	/**
@@ -135,6 +137,7 @@ public class PricesService {
 	 * @return
 	 */
 	public static final long getKinahForSell(long kinahReward, Race playerRace) {
-		return (long) (kinahReward * getVendorSellModifier(playerRace) / 100D);
+		int vendorSellModifier = getVendorSellModifier(playerRace);
+		return (long) (kinahReward * vendorSellModifier / 100D);
 	}
 }

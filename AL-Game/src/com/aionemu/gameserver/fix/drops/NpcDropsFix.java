@@ -44,7 +44,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(GODSTONES)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
 				if(dropIndex.getChance()>1) {
-					setChance(dropIndex, 0.001f, 0.25f);
+					setChance(dropIndex, 0.001f, 0.19f);
 				}
 			}
 		}
@@ -60,7 +60,7 @@ public class NpcDropsFix {
 	private static void uniqueAmorAndWeapons(DropGroup dropGroup) {
 		if(dropGroup.getGroupName().equals(ARMOR_UNIQUE)||dropGroup.getGroupName().equals(WEAPON_UNIQUE)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.15f, 0.35f);
+					setChance(dropIndex, 0.15f, 0.29f);
 			}
 		}
 	}
@@ -76,7 +76,7 @@ public class NpcDropsFix {
 	private static void namedLegendAmorAndWeapons(DropGroup dropGroup) {
 		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.5f, 0.8f);
+					setChance(dropIndex, 0.5f, 0.7f);
 			}
 		}
 	}
