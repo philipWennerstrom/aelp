@@ -43,8 +43,8 @@ public class NpcDropsFix {
 	private static void godstones(DropGroup dropGroup) {
 		if(dropGroup.getGroupName().equals(GODSTONES)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-				if(dropIndex.getChance()>1) {
-					setChance(dropIndex, 0.001f, 0.19f);
+				if(dropIndex.getChance()>0.5) {
+					setChance(dropIndex, 0.001f, 0.12f);
 				}
 			}
 		}
@@ -53,30 +53,33 @@ public class NpcDropsFix {
 	private static void setChance(Drop dropIndex, float minRate, float maxRate) {
 		Random r = new Random();
 		float random = (float) (minRate + r.nextFloat() * (maxRate - minRate));
-		BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
+		BigDecimal bd = new BigDecimal(random).setScale(3, RoundingMode.DOWN);
 		dropIndex.setChance(bd.floatValue());
 	}
 
 	private static void uniqueAmorAndWeapons(DropGroup dropGroup) {
-		if(dropGroup.getGroupName().equals(ARMOR_UNIQUE)||dropGroup.getGroupName().equals(WEAPON_UNIQUE)) {
+		if(dropGroup.getGroupName().equals(ARMOR_UNIQUE)||
+		   dropGroup.getGroupName().equals(WEAPON_UNIQUE)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.15f, 0.29f);
+					setChance(dropIndex, 0.15f, 0.25f);
 			}
 		}
 	}
 	
 	private static void legendAmorAndWeapons(DropGroup dropGroup) {
-		if(dropGroup.getGroupName().equals(WEAPON_LEGEND)||dropGroup.getGroupName().equals(ACCESSORY_LEGEND)) {
+		if(dropGroup.getGroupName().equals(WEAPON_LEGEND)||
+		   dropGroup.getGroupName().equals(ACCESSORY_LEGEND)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.3f, 0.65f);
+					setChance(dropIndex, 0.3f, 0.55f);
 			}
 		}
 	}
 	
 	private static void namedLegendAmorAndWeapons(DropGroup dropGroup) {
-		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
+		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||
+		   dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.5f, 0.7f);
+					setChance(dropIndex, 0.6f, 0.8f);
 			}
 		}
 	}
@@ -88,7 +91,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.03f, 0.35f);
+					setChance(dropIndex, 0.03f, 0.4f);
 			}
 		}
 	}
