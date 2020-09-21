@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <guides xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="guide.xsd">
 	<!-- Asmodians -->
-	<guide title="adventurers_guide2_asmo" level="2" race="ASMODIANS" rewardCount="5">
+	<guide title="adventurers_guide2_asmo" level="2" race="ASMODIANS" rewardCount="6">
 		<message>
 			<![CDATA[<BR><BR>
 			You are starting your journey! I will be offering you support and so you can defend Atreia from the dangers that are to come!
@@ -10,58 +10,59 @@
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002011" count="20"/>
+		<survey itemId="182400001" count="500000"/>
+		<survey itemId="164002011" count="5"/>
 		<survey itemId="190100055" count="1"/>
-		<survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="162000046" count="50"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="162000046" count="15"/>
 	</guide>	
 	<guide title="adventurers_guide10_asmo" level="10" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002011" count="20"/>
-		<survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="162000046" count="50"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="162000046" count="15"/>
 		<survey itemId="190000022" count="1"/>
 	</guide>
 	<guide title="adventurers_guide15_asmo" level="15" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="164002011" count="20"/>
-		<survey itemId="162000047" count="50"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000047" count="15"/>
 		<survey itemId="186000006" count="25"/>
 	</guide>
 	<guide title="adventurers_guide20_asmo" level="20" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -74,11 +75,11 @@
 	<guide title="adventurers_guide25_asmo" level="25" race="ASMODIANS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select your gift!</reward_info>
@@ -97,11 +98,11 @@
 	<guide title="adventurers_guide30.1_asmo" level="30" race="ASMODIANS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -113,11 +114,11 @@
 	<guide title="adventurers_guide30.2_asmo" level="30" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select 5 gifts, press the Ctrl key!</reward_info>
@@ -146,11 +147,11 @@
 	<guide title="adventurers_guide35_asmo" level="35" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -163,11 +164,11 @@
 	<guide title="adventurers_guide40.1_asmo" level="40" race="ASMODIANS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -179,11 +180,11 @@
 	<guide title="adventurers_guide40.2_asmo" level="40" race="ASMODIANS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -193,11 +194,11 @@
 	<guide title="adventurers_guide45_asmo" level="45" race="ASMODIANS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -209,11 +210,11 @@
 	<guide title="adventurers_guide50.1_asmo" level="50" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<Br><BR>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -226,11 +227,11 @@
 	<guide title="adventurers_guide50.2_asmo" level="50" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<Br><BR>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -258,11 +259,11 @@
 	<guide title="adventurers_guide50.3_asmo" level="50" race="ASMODIANS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<Br><BR>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -279,11 +280,11 @@
 	<guide title="adventurers_guide55.1_asmo" level="55" race="ASMODIANS" rewardCount="3">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select 3 gifts, press the Ctrl key!</reward_info>
@@ -296,11 +297,11 @@
 	<guide title="adventurers_guide55.2_asmo" level="55" race="ASMODIANS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select your gift!</reward_info>
@@ -310,7 +311,7 @@
 		<survey itemId="169600062" count="1"/>
 	</guide>	
 	<!-- Elyos -->
-	<guide title="adventurers_guide2_ely" level="2" race="ELYOS" rewardCount="5">
+	<guide title="adventurers_guide2_ely" level="2" race="ELYOS" rewardCount="6">
 		<message>
 			<![CDATA[<BR><BR>
 			You are starting your journey! I will be offering you support and so you can defend Atreia from the dangers that are to come!
@@ -319,58 +320,59 @@
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002011" count="20"/>
+		<survey itemId="182400001" count="500000"/>
+		<survey itemId="164002011" count="5"/>
 		<survey itemId="190100055" count="1"/>
-		<survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="162000046" count="50"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="162000046" count="15"/>
 	</guide>	
 	<guide title="adventurers_guide10_ely" level="10" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002011" count="20"/>
-		<survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="162000046" count="50"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="162000046" count="15"/>
 		<survey itemId="190000022" count="1"/>
 	</guide>
 	<guide title="adventurers_guide15_ely" level="15" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-        <survey itemId="164002010" count="20"/>
-		<survey itemId="164002057" count="20"/>
-		<survey itemId="164002011" count="20"/>
-        <survey itemId="162000047" count="50"/>
+        <survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+        <survey itemId="162000047" count="15"/>
         <survey itemId="186000001" count="25"/>		
 	</guide>
 	<guide title="adventurers_guide20_ely" level="20" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -383,11 +385,11 @@
 	<guide title="adventurers_guide25_ely" level="25" race="ELYOS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select your gift!</reward_info>
@@ -406,11 +408,11 @@
 	<guide title="adventurers_guide30.1_ely" level="30" race="ELYOS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -422,11 +424,11 @@
 	<guide title="adventurers_guide30.2_ely" level="30" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select 5 gifts, press the Ctrl key!</reward_info>
@@ -455,11 +457,11 @@
 	<guide title="adventurers_guide35_ely" level="35" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -472,11 +474,11 @@
 	<guide title="adventurers_guide40.1_ely" level="40" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -489,11 +491,11 @@
 	<guide title="adventurers_guide40.2_ely" level="40" race="ELYOS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
@@ -503,11 +505,11 @@
 	<guide title="adventurers_guide45_ely" level="45" race="ELYOS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -519,11 +521,11 @@
 	<guide title="adventurers_guide50.1_ely" level="50" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -536,11 +538,11 @@
 	<guide title="adventurers_guide50.2_ely" level="50" race="ELYOS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -568,11 +570,11 @@
 	<guide title="adventurers_guide50.3_ely" level="50" race="ELYOS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
@@ -589,11 +591,11 @@
 	<guide title="adventurers_guide55.1_ely" level="55" race="ELYOS" rewardCount="3">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select 3 gifts, press the Ctrl key!</reward_info>
@@ -606,11 +608,11 @@
 	<guide title="adventurers_guide55.2_ely" level="55" race="ELYOS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
-			Aion Ascension is offering you a free gift!
+			Aion Edge is offering you a free gift!
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Ascension
+			Aion Edge
 			<br><br>]]>
 		</message>
 		<reward_info>Please select your gift!</reward_info>
