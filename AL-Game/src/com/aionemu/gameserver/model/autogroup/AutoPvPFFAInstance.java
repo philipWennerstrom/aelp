@@ -1,16 +1,11 @@
 package com.aionemu.gameserver.model.autogroup;
 
-import java.util.Map.Entry;
-
 import com.aionemu.gameserver.fix.ArenaOfDisciplineRestrictions;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.instancereward.PvPArenaReward;
-import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_AUTO_GROUP;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.utils.Util;
-import com.aionemu.gameserver.utils.audit.AuditLogger;
 
 /**
  *
