@@ -106,10 +106,10 @@
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="30"/>
-		<survey itemId="164002057" count="30"/>
-		<survey itemId="164002011" count="30"/>
-		<survey itemId="162000048" count="50"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 	</guide>
 	<guide title="adventurers_guide30.2_asmo" level="30" race="ASMODIANS" rewardCount="5">
 		<message>
@@ -155,11 +155,11 @@
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="30"/>
-		<survey itemId="164002057" count="30"/>
-		<survey itemId="164002011" count="30"/>
-		<survey itemId="162000048" count="50"/>
-		<survey itemId="169620054" count="5"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
+		<survey itemId="169620054" count="3"/>
 	</guide>
 	<guide title="adventurers_guide40.1_asmo" level="40" race="ASMODIANS" rewardCount="4">
 		<message>
@@ -172,12 +172,13 @@
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
+		<survey itemId="169620015" count="3"/>
 	</guide>
-	<guide title="adventurers_guide40.2_asmo" level="40" race="ASMODIANS" rewardCount="1">
+		<guide title="adventurers_guide41.1_asmo" level="41" race="ASMODIANS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
 			Aion Edge is offering you a free gift!
@@ -187,9 +188,8 @@
 			Aion Edge
 			<br><br>]]>
 		</message>
-		<select>Blood for blood!</select>
-		<survey itemId="167000519" count="10"/>
-		<survey itemId="167000522" count="10"/>
+		<select>Faith and arms!</select>
+		<survey itemId="186000009" count="700"/>
 	</guide>
 	<guide title="adventurers_guide45_asmo" level="45" race="ASMODIANS" rewardCount="4">
 		<message>
@@ -416,10 +416,10 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002010" count="30"/>
-		<survey itemId="164002057" count="30"/>
-		<survey itemId="164002011" count="30"/>
-		<survey itemId="162000048" count="50"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 	</guide>
 	<guide title="adventurers_guide30.2_ely" level="30" race="ELYOS" rewardCount="5">
 		<message>
@@ -465,11 +465,11 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002010" count="30"/>
-		<survey itemId="164002057" count="30"/>
-		<survey itemId="164002011" count="30"/>
-		<survey itemId="162000048" count="50"/>
-		<survey itemId="169620054" count="5"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
+		<survey itemId="169620054" count="3"/>
 	</guide>
 	<guide title="adventurers_guide40.1_ely" level="40" race="ELYOS" rewardCount="5">
 		<message>
@@ -486,9 +486,9 @@
 		<survey itemId="164002057" count="40"/>
 		<survey itemId="164002011" count="40"/>
 		<survey itemId="162000048" count="60"/>
-		<survey itemId="169620015" count="5"/>
-	</guide>
-	<guide title="adventurers_guide40.2_ely" level="40" race="ELYOS" rewardCount="1">
+		<survey itemId="169620015" count="3"/>
+	</guide>	
+	<guide title="adventurers_guide41.1_ely" level="41" race="ELYOS" rewardCount="1">
 		<message>
 			<![CDATA[<BR><BR>
 			Aion Edge is offering you a free gift!
@@ -498,10 +498,9 @@
 			Aion Edge
 			<br><br>]]>
 		</message>
-		<select>Blood for blood!</select>
-		<survey itemId="167000519" count="10"/>
-		<survey itemId="167000522" count="10"/>
-	</guide>	
+		<select>Faith and arms!</select>
+		<survey itemId="186000004" count="700"/>
+	</guide>
 	<guide title="adventurers_guide45_ely" level="45" race="ELYOS" rewardCount="4">
 		<message>
 			<![CDATA[<BR><BR>
