@@ -145,7 +145,7 @@
 		<survey itemId="162000048" count="15"/>
 		<survey itemId="169620054" count="3"/>
 	</guide>
-	<guide title="adventurers_guide40.1_asmo" level="40" race="ASMODIANS" rewardCount="4">
+	<guide title="adventurers_guide40.1_asmo" level="40" race="ASMODIANS" rewardCount="5">
 		<message>
 			<![CDATA[<BR><BR>
 			Aion Edge is offering you a free gift!
@@ -373,7 +373,7 @@
 			<br><br><br><br>
 			127.0.0.1
 			<br><br><br><br>
-			Aion Edge
+			Aion Edge 
 			<br><br>]]>
 		</message>
 		<reward_info>Please select your gift!</reward_info>
