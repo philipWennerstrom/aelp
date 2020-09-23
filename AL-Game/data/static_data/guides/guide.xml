@@ -202,10 +202,10 @@
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 	</guide>
 	<guide title="adventurers_guide50.1_asmo" level="50" race="ASMODIANS" rewardCount="5">
 		<message>
@@ -218,10 +218,10 @@
 			<Br><BR>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 		<survey itemId="187000017" count="1"/>
 	</guide>
 	<guide title="adventurers_guide50.2_asmo" level="50" race="ASMODIANS" rewardCount="5">
@@ -482,10 +482,10 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 		<survey itemId="169620015" count="3"/>
 	</guide>	
 	<guide title="adventurers_guide41.1_ely" level="41" race="ELYOS" rewardCount="1">
@@ -512,10 +512,10 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 	</guide>
 	<guide title="adventurers_guide50.1_ely" level="50" race="ELYOS" rewardCount="5">
 		<message>
@@ -528,10 +528,10 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="164002010" count="40"/>
-		<survey itemId="164002057" count="40"/>
-		<survey itemId="164002011" count="40"/>
-		<survey itemId="162000048" count="60"/>
+		<survey itemId="164002010" count="5"/>
+		<survey itemId="164002057" count="5"/>
+		<survey itemId="164002011" count="5"/>
+		<survey itemId="162000048" count="15"/>
 		<survey itemId="187000016" count="1"/>
 	</guide>
 	<guide title="adventurers_guide50.2_ely" level="50" race="ELYOS" rewardCount="5">
