@@ -10,11 +10,11 @@
 			<spot x="414.794" y="492.802" z="393.677" h="43"/>
 		</spawn>
 		<!-- Armory Maintenance Surkana -->
-		<spawn npc_id="700485">
+		<spawn npc_id="700486">
 			<spot x="553.403" y="279.284" z="409.749" static_id="30"/>
 		</spawn>
 		<!-- Armory Maintenance Surkana -->
-		<spawn npc_id="700486">
+		<spawn npc_id="700485">
 			<spot x="418.588" y="281.89" z="409.692" static_id="21"/>
 		</spawn>
 		<!-- Assistant Malakun -->
