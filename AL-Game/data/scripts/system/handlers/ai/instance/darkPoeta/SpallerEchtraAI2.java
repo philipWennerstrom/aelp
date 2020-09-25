@@ -52,7 +52,7 @@ public class SpallerEchtraAI2 extends AggressiveNpcAI2
 			{
 				int npcId = npc.getNpcId();
 				double distance = MathUtil.getDistance(getOwner(), npc);
-				if(distance <= 3.5)
+				if(distance <= 4.5)
 				{
 					if(isParalyzed) {
 						long paralyzedDuration =  new Duration(paralyzedAt, System.currentTimeMillis()).getMillis();
