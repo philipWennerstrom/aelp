@@ -72,7 +72,7 @@ import pirate.events.EventManager;
  *
  * @author -Nemesiss-
  * @author SoulKeeper
- * @author cura
+ * @author cura 
  */
 public class GameServer {
 	private static final Logger log = LoggerFactory.getLogger(GameServer.class);

@@ -24,13 +24,12 @@ import com.aionemu.gameserver.utils.MathUtil;
  * @author Ritsu
  */
 
-@AIName("spaller_echtra")
-public class SpallerEchtraAI2 extends AggressiveNpcAI2
+@AIName("spaller_rakanatra")
+public class SpallerRakanatraAI2 extends AggressiveNpcAI2
 {
 	private long paralyzedAt;
 	private boolean isParalyzed = false;
 	private int paralyzedHits = 0;
-	private int aoeHits = 0;
 	private Future<?> skillTask;
 	private Future<?> skill2Task;
 	
@@ -38,10 +37,10 @@ public class SpallerEchtraAI2 extends AggressiveNpcAI2
 	protected void handleAttack(Creature creature)
 	{
 		super.handleAttack(creature);
-		checkDirection(creature);
+		checkDirection();
 	}
 
-	private void checkDirection(Creature creature)
+	private void checkDirection()
 	{
 		List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(281178);
 		//SkillData data = new SkillData();
@@ -59,33 +58,31 @@ public class SpallerEchtraAI2 extends AggressiveNpcAI2
 						if(paralyzedDuration>=5000) {
 							isParalyzed = false;
 							paralyzedHits = 0;
-							aoeHits = 0;
-							npc.getSpawn().getSpawnGroup().setRespawnTime(45);
-							npc.getController().onDie(creature);
+							npc.getSpawn().getSpawnGroup().setRespawnTime(10000);
+							npc.getController().onDie(this.getOwner());
 							break;
 						}
 					}
 					TalkEventHandler.onTalk(this, npc);
 					applyParalyzeEffect(paralyze);
-					Npc owner = this.getOwner();
-					owner.setTarget(creature);
-					if (aoeHits <= 3) {
-						aoeHits++;
-						skillTask = ThreadPoolManager.getInstance().schedule(new Runnable() {
+					skillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					{
 
-							@Override
-							public void run() {
-								//getOwner().setTarget(getOwner().getAggroList().getMostHated());
-								SkillEngine.getInstance().getSkill(getOwner(), 18534, 50, getOwner()).useSkill();
-								/**
-								 * skillTask = ThreadPoolManager.getInstance().schedule(new Runnable() {
-								 * 
-								 * @Override public void run() { SkillEngine.getInstance().getSkill(getOwner(),
-								 *           18574, 50, getOwner()).useSkill(); } }, 3000);
-								 **/
-							}
-						}, 7500);// 28000
-					}
+						@Override
+						public void run() 
+						{
+							SkillEngine.getInstance().getSkill(getOwner(), 18534, 50, getOwner()).useSkill();
+							/**skillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+							{
+
+								@Override
+								public void run() 
+								{
+									SkillEngine.getInstance().getSkill(getOwner(), 18574, 50, getOwner()).useSkill();
+								}
+							}, 3000);**/
+						}
+					},5000);//28000
 				}
 			}
 		}

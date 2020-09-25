@@ -67,6 +67,10 @@ public class SpawnTemplate {
 		spawnGroup.addSpawnTemplate(this);
 	}
 
+	public SpawnGroup2 getSpawnGroup() {
+		return spawnGroup;
+	}
+
 	public float getX() {
 		return x;
 	}

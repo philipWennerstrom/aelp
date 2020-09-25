@@ -8,6 +8,10 @@ import com.aionemu.gameserver.model.templates.npcshout.ShoutEventType;
  * @author ATracer
  */
 public abstract class AITemplate extends AbstractAI {
+	
+	 public AITemplate() {
+		super();
+	}
 
 	@Override
 	public void think() {

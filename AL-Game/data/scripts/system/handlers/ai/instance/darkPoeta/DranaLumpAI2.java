@@ -1,10 +1,10 @@
 package ai.instance.darkPoeta;
 
-import ai.ActionItemNpcAI2;
-
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.SkillEngine;
+
+import ai.ActionItemNpcAI2;
 
 
 /**
@@ -18,10 +18,10 @@ public class DranaLumpAI2 extends ActionItemNpcAI2 {
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		// final Creature effected = getOwner().getEffected();
-		// effected.getController().cancelCurrentSkill();
-	    // effected.getMoveController().abortMove();
-	    // effect.setAbnormal(AbnormalState.PARALYZE.getId());
+		//final Creature effected = getOwner().getEffected();
+		//effected.getController().cancelCurrentSkill();
+		//effected.getMoveController().abortMove();
+		//effect.setAbnormal(AbnormalState.PARALYZE.getId());
 		int skillId = 0;
 		int level = 0;
 		switch (getNpcId()) {

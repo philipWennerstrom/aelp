@@ -30,6 +30,10 @@ import com.aionemu.gameserver.world.knownlist.KnownList;
 @AIName("npc")
 public class NpcAI2 extends AITemplate {
 	
+	 public NpcAI2() {
+		super();
+	}
+	
 	@Override
 	public Npc getOwner() {
 		return (Npc) super.getOwner();
