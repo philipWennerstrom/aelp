@@ -40,8 +40,8 @@ public class EnchantsConfig {
 	 */
 	@Property(key = "gameserver.enchant.stone.reduce", defaultValue = "false")
 	public static boolean ECHANT_STONE_REDUCED;
-	@Property(key = "gameserver.enchant.stone.reduce.value1", defaultValue = "2")
+	@Property(key = "gameserver.enchant.stone.reduce.value1", defaultValue = "8")
 	public static int ECHANT_STONE_REDUCED_VALUE1;
-	@Property(key = "gameserver.enchant.stone.reduce.value2", defaultValue = "1")
+	@Property(key = "gameserver.enchant.stone.reduce.value2", defaultValue = "5")
 	public static int ECHANT_STONE_REDUCED_VALUE2;
 }
