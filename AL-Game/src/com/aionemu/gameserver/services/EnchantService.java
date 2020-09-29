@@ -340,7 +340,7 @@ public class EnchantService {
             		 currentEnchant = currentEnchant - i;
             	}else {
             		int i = Rnd.get(1,3);
-           		    currentEnchant = currentEnchant - i;
+           		    currentEnchant = 10;
             	}
             } else if (currentEnchant > 0) {
                 currentEnchant -= 1;

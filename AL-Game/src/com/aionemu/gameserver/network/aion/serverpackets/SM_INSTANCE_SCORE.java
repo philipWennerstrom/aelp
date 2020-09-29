@@ -173,7 +173,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket {
 				writeD(instanceScoreType.isEndProgress() ? (asmosScore > elyosScore ? 1 : 0) : 255);
 				writeD(elyosScore);
 				writeD(asmosScore);
-				writeH(0); // [3.5]
+				//writeH(0);  [3.5]
 				for (DredgionReward.DredgionRooms dredgionRoom : dredgionReward.getDredgionRooms()) {
 					writeC(dredgionRoom.getState());
 				}
