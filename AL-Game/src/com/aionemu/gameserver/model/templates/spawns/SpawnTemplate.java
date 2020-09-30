@@ -63,6 +63,10 @@ public class SpawnTemplate {
 		addTemplate();
 	}
 
+	public SpawnGroup2 getSpawnGroup() {
+		return spawnGroup;
+	}
+
 	private void addTemplate() {
 		spawnGroup.addSpawnTemplate(this);
 	}
