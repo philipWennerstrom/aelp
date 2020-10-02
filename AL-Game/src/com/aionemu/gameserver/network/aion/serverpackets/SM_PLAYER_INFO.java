@@ -126,7 +126,8 @@ public class SM_PLAYER_INFO extends AionServerPacket {
             {
                 if (player.getClientConnection().getAccount().getMembership() == 1)
                 {
-                    advancedTagFormat = " \uE02D";
+                    //advancedTagFormat = " \uE02D";
+                	 advancedTagFormat = " \uE02E";
                 }
                 else if (player.getClientConnection().getAccount().getMembership() == 2)
                 {

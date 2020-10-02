@@ -79,7 +79,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||
 		   dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.6f, 0.8f);
+					setChance(dropIndex, 0.7f, 0.85f);
 			}
 		}
 	}
@@ -91,7 +91,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.03f, 0.4f);
+					setChance(dropIndex, 0.1f, 0.4f);
 			}
 		}
 	}
