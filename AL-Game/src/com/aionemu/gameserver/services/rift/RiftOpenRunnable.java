@@ -3,6 +3,8 @@ package com.aionemu.gameserver.services.rift;
 import com.aionemu.gameserver.model.rift.RiftLocation;
 import com.aionemu.gameserver.services.RiftService;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
+import com.aionemu.gameserver.world.exceptions.WorldMapNotExistException;
+
 import java.util.Map;
 
 /**
@@ -36,6 +38,10 @@ public class RiftOpenRunnable implements Runnable {
 
 		}, RiftService.getInstance().getDuration() * 3540 * 1000);
 		// Broadcast rift spawn on map
-		RiftInformer.sendRiftsInfo(worldId);
+		try {
+			RiftInformer.sendRiftsInfo(worldId);
+		}catch (WorldMapNotExistException e) {
+			System.out.println("rift nao existe mapa: "+worldId);
+		}
 	}
 }

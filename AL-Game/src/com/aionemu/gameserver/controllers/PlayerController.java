@@ -74,6 +74,7 @@ public class PlayerController extends CreatureController<Player> {
 	private Logger log = LoggerFactory.getLogger(PlayerController.class);
 	private boolean isInShutdownProgress;
 	private long lastAttackMilis = 0;
+	private long lastPhysicalAttackMilis = 0;
 	private long lastAttackedMilis = 0;
 	private int stance = 0;
 	private Skill lastUsedSkill;
@@ -428,11 +429,12 @@ public class PlayerController extends CreatureController<Player> {
 
 		long milis = System.currentTimeMillis();
 		// network ping..
-		if (milis - lastAttackMilis + 300 < attackSpeed) {
+		if (milis - lastPhysicalAttackMilis + 300 < attackSpeed) {
 			// hack
 			return;
 		}
 		lastAttackMilis = milis;
+		lastPhysicalAttackMilis = milis;
 
 		/**
 		 * notify attack observers

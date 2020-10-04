@@ -21,6 +21,7 @@ import com.aionemu.gameserver.model.templates.world.WorldMapTemplate;
 import com.aionemu.gameserver.services.HousingService;
 import com.aionemu.gameserver.services.rift.RiftManager;
 import com.aionemu.gameserver.world.World;
+import com.aionemu.gameserver.world.exceptions.WorldMapNotExistException;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
@@ -156,10 +157,14 @@ public class SpawnEngine {
 
 	public static void bringIntoWorld(VisibleObject visibleObject, int worldId, int instanceIndex, float x, float y,
 			float z, byte h) {
-		World world = World.getInstance();
-		world.storeObject(visibleObject);
-		world.setPosition(visibleObject, worldId, instanceIndex, x, y, z, h);
-		world.spawn(visibleObject);
+		try {
+			World world = World.getInstance();
+			world.storeObject(visibleObject);
+			world.setPosition(visibleObject, worldId, instanceIndex, x, y, z, h);
+			world.spawn(visibleObject);
+		} catch (WorldMapNotExistException e) {
+			log.info("npcspaw skip for map: " + worldId);
+		}
 	}
 
 	public static void bringIntoWorld(VisibleObject visibleObject) {

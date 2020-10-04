@@ -109,7 +109,8 @@ public class Drop implements DropCalculator {
 		if (!noReduce) {
 			percent *= dropModifier;
 		}
-		if (Rnd.get() * 100 < percent) {
+		float f = Rnd.get() * 100;
+		if (f < percent) {
 			if (eachMember && groupMembers != null && !groupMembers.isEmpty()) {
 				for (Player player : groupMembers) {
 					DropItem dropitem = new DropItem(this);
