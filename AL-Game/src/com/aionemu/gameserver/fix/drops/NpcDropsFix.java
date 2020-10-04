@@ -41,11 +41,9 @@ public class NpcDropsFix {
 	}
 
 	private static void godstones(DropGroup dropGroup) {
-		if(dropGroup.getGroupName().equals(GODSTONES)) {
-			for(Drop dropIndex: dropGroup.getDrop()) {
-				if(dropIndex.getChance()>0.5) {
-					setChance(dropIndex, 0.001f, 0.12f);
-				}
+		if (dropGroup.getGroupName().equals(GODSTONES)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 0.001f, 0.15f);
 			}
 		}
 	}
@@ -53,7 +51,7 @@ public class NpcDropsFix {
 	private static void setChance(Drop dropIndex, float minRate, float maxRate) {
 		Random r = new Random();
 		float random = (float) (minRate + r.nextFloat() * (maxRate - minRate));
-		BigDecimal bd = new BigDecimal(random).setScale(3, RoundingMode.DOWN);
+		BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
 		dropIndex.setChance(bd.floatValue());
 	}
 
@@ -61,7 +59,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(ARMOR_UNIQUE)||
 		   dropGroup.getGroupName().equals(WEAPON_UNIQUE)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.15f, 0.25f);
+					setChance(dropIndex, 0.01f, 0.4f);
 			}
 		}
 	}
@@ -70,7 +68,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(WEAPON_LEGEND)||
 		   dropGroup.getGroupName().equals(ACCESSORY_LEGEND)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.3f, 0.55f);
+					setChance(dropIndex, 0.25f, 1.1f);
 			}
 		}
 	}
@@ -79,7 +77,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||
 		   dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.7f, 0.85f);
+					setChance(dropIndex, 0.7f, 2.5f);
 			}
 		}
 	}
@@ -91,7 +89,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.1f, 0.4f);
+					setChance(dropIndex, 0.1f, 1.6f);
 			}
 		}
 	}

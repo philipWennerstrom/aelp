@@ -142,10 +142,8 @@ public final class PlayerEnterWorldService {
 			alBuffer += "Please enjoy your stay on our server.";
 		}else {
 			infoBuffer = "Announcement : " + GSConfig.SERVER_NAME + " Staff will never ask for your password.\n";
-			infoBuffer += "Announcement : Advertising for another server is prohibited.";
-			alBuffer += "Core Version: AionLighting NA 3.5 \n ";
-			alBuffer += "Reworked by G-Robson26 \n ";
-			alBuffer += "Copyright 2012 - 2019 \n";
+			alBuffer += "Core Version: Aion Edge NA 3.5 \n ";
+			alBuffer += "Copyright 2012 - 2020 \n";
 
 			if (GSConfig.SERVER_MOTD_DISPLAYREV) {
 				alBuffer += "-----------------------------\n";

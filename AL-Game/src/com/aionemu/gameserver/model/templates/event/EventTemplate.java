@@ -33,6 +33,7 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.gametime.DateTimeUtil;
 import com.aionemu.gameserver.world.World;
+import com.aionemu.gameserver.world.exceptions.WorldMapNotExistException;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
@@ -136,6 +137,7 @@ public class EventTemplate {
 			if (spawnedObjects == null)
 				spawnedObjects = new ArrayList<VisibleObject>();
 			for (SpawnMap map : spawns.getTemplates()) {
+				try {
 				DataManager.SPAWNS_DATA2.addNewSpawnMap(map);
 				Collection<Integer> instanceIds = World.getInstance().getWorldMap(map.getMapId()).getAvailableInstanceIds();
 				for (Integer instanceId : instanceIds) {
@@ -151,6 +153,9 @@ public class EventTemplate {
 						}
 					}
 					log.info("Spawned event objects in " + map.getMapId() + " [" + instanceId + "] : " + spawnCount + " (" + this.getName() + ")");
+				}
+				}catch (WorldMapNotExistException e) {
+					log.info("Skip Spawn event objects in " + map.getMapId() );
 				}
 			}
 			DataManager.SPAWNS_DATA2.afterUnmarshal(null, null);
