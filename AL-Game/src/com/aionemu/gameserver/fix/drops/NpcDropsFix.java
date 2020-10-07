@@ -10,6 +10,15 @@ import com.aionemu.gameserver.model.drop.DropGroup;
 import com.aionemu.gameserver.model.drop.NpcDrop;
 
 public class NpcDropsFix {
+	private static final String MANASTONE_RARE = "MANASTONE_RARE";
+	private static final String ARMOR_RARE = "ARMOR_RARE";
+	private static final String WEAPON_RARE = "WEAPON_RARE";
+	private static final String ACCESSORY_COMMON = "ACCESSORY_COMMON";
+	private static final String ARMOR_COMMON = "ARMOR_COMMON";
+	private static final String MANASTONE_COMMON = "MANASTONE_COMMON";
+	private static final String FLUX_RARE = "FLUX_RARE";
+	private static final String ARMOR_LEGEND = "ARMOR_LEGEND";
+	private static final String ACCESSORY_RARE = "ACCESSORY_RARE";
 	private static final String NAMED_UNIQUE_WEAPON = "NAMED_UNIQUE_WEAPON";
 	private static final String NAMED_UNIQUE_ARMOR = "NAMED_UNIQUE_ARMOR";
 	private static final String NAMED_UNIQUE_ACCESSORY = "NAMED_UNIQUE_ACCESSORY";
@@ -30,6 +39,8 @@ public class NpcDropsFix {
 
 	private static void forEachDropGroup(NpcDrop drop) {
 		for(DropGroup dropGroup: drop.getDropGroup()) {
+			generalItens(dropGroup);
+			
 			godstones(dropGroup);
 			
 			uniqueAmorAndWeapons(dropGroup);
@@ -40,10 +51,61 @@ public class NpcDropsFix {
 		}
 	}
 
+	private static void generalItens(DropGroup dropGroup) {
+		accessoryRare(dropGroup);
+		fluxRare(dropGroup);
+		manastoneCommon(dropGroup);
+		armorCommon(dropGroup);
+		rareItens(dropGroup);
+	}
+
 	private static void godstones(DropGroup dropGroup) {
 		if (dropGroup.getGroupName().equals(GODSTONES)) {
 			for (Drop dropIndex : dropGroup.getDrop()) {
-				setChance(dropIndex, 0.001f, 0.15f);
+				setChance(dropIndex, 0.001f, 0.1f);
+			}
+		}
+	}
+	
+	private static void armorCommon(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().equals(ARMOR_COMMON)||
+			dropGroup.getGroupName().equals(ACCESSORY_COMMON)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 1f, 3f);
+			}
+		}
+	}
+	
+	private static void rareItens(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().equals(WEAPON_RARE)||
+			dropGroup.getGroupName().equals(ARMOR_RARE)||
+			dropGroup.getGroupName().equals(MANASTONE_RARE)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 1f, 3f);
+			}
+		}
+	}
+	
+	private static void accessoryRare(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().equals(ACCESSORY_RARE)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 0.7f, 1.2f);
+			}
+		}
+	}
+	
+	private static void manastoneCommon(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().equals(MANASTONE_COMMON)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 0.8f, 2.5f);
+			}
+		}
+	}
+	
+	private static void fluxRare(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().equals(FLUX_RARE)) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				setChance(dropIndex, 0.9f, 2.2f);
 			}
 		}
 	}
@@ -66,9 +128,10 @@ public class NpcDropsFix {
 	
 	private static void legendAmorAndWeapons(DropGroup dropGroup) {
 		if(dropGroup.getGroupName().equals(WEAPON_LEGEND)||
+		   dropGroup.getGroupName().equals(ARMOR_LEGEND)||
 		   dropGroup.getGroupName().equals(ACCESSORY_LEGEND)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.25f, 0.9f);
+					setChance(dropIndex, 0.25f, 0.7f);
 			}
 		}
 	}
@@ -89,7 +152,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.1f, 1.6f);
+					setChance(dropIndex, 0.1f, 0.8f);
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,8 +66,11 @@ public class CM_CHAT_MESSAGE_WHISPER extends AionClientPacket {
 	 */
 	@Override
 	protected void runImpl() {
-
-		name = ChatUtil.getRealAdminName(name);
+		String newName= name;
+		if(name.lastIndexOf(" ") != -1) {
+			 newName= StringUtils.substringBefore(name, " ");
+		}
+		name = ChatUtil.getRealAdminName(newName);
 		
 		String formatname = Util.convertName(name);
 

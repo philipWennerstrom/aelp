@@ -104,7 +104,11 @@ public final class Ray implements Cloneable, Collidable {
 	 * @return true if the ray collides.
 	 */
 	public boolean intersectWhere(Vector3f v0, Vector3f v1, Vector3f v2, Vector3f loc) {
-		return intersects(v0, v1, v2, loc, false, false);
+		try {
+			return intersects(v0, v1, v2, loc, false, false);
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	/**

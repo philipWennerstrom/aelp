@@ -29,6 +29,7 @@ public class ChatUtil {
 	}
 	
 	public static String getRealAdminName(String name) {
+		
 		int index = name.lastIndexOf(" ");
 		if (index == -1)
 			return name;

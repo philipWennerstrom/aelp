@@ -103,15 +103,21 @@ public class GeoService {
 	 * @return
 	 */
 	public boolean canSee(VisibleObject object, VisibleObject target) {
-		if (!GeoDataConfig.CANSEE_ENABLE) {
-			return true;
+		try {
+
+			if (!GeoDataConfig.CANSEE_ENABLE) {
+				return true;
+			}
+			float limit = (float) (MathUtil.getDistance(object, target) - target.getObjectTemplate().getBoundRadius().getCollision());
+			if (limit <= 0)
+				return true;
+			return geoData.getMap(object.getWorldId()).canSee(object.getX(), object.getY(),
+				object.getZ() + object.getObjectTemplate().getBoundRadius().getUpper() / 2, target.getX(), target.getY(),
+				target.getZ() + target.getObjectTemplate().getBoundRadius().getUpper() / 2, limit, object.getInstanceId());
+		
+		}catch (Exception e) {
+			return false;
 		}
-		float limit = (float) (MathUtil.getDistance(object, target) - target.getObjectTemplate().getBoundRadius().getCollision());
-		if (limit <= 0)
-			return true;
-		return geoData.getMap(object.getWorldId()).canSee(object.getX(), object.getY(),
-			object.getZ() + object.getObjectTemplate().getBoundRadius().getUpper() / 2, target.getX(), target.getY(),
-			target.getZ() + target.getObjectTemplate().getBoundRadius().getUpper() / 2, limit, object.getInstanceId());
 	}
 
 	public boolean canSee(int worldId, float x, float y, float z, float x1, float y1, float z1, float limit, int instanceId) {

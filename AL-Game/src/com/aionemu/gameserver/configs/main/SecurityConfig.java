@@ -37,7 +37,7 @@ public class SecurityConfig {
 	@Property(key = "gameserver.security.noanimation.value", defaultValue = "0.1")
 	public static float NO_ANIMATION_VALUE;
 	
-        @Property(key = "gameserver.security.motion.time.enable", defaultValue = "true")
+    @Property(key = "gameserver.security.motion.time.enable", defaultValue = "true")
 	public static boolean MOTION_TIME;
 	
 	@Property(key = "gameserver.security.captcha.enable", defaultValue = "false")

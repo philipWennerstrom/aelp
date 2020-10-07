@@ -106,7 +106,7 @@ public class RiftInformer {
 	}
 
 	private static void syncRiftsState(int worldId, final List<AionServerPacket> packets, final boolean isDespawnInfo) {
-
+		try {
 		World.getInstance().getWorldMap(worldId).getWorldMapInstance().doOnAllPlayers(new Visitor<Player>() {
 			@Override
 			public void visit(Player player) {
@@ -114,6 +114,9 @@ public class RiftInformer {
 			}
 
 		});
+		}catch (WorldMapNotExistException e) {
+			System.out.println("Mapa nao existe: "+ worldId);
+		}
 	}
 
 	private static FastMap<Integer, Integer> getAnnounceData(int worldId) {

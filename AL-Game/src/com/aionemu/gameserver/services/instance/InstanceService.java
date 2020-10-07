@@ -34,6 +34,7 @@ import com.aionemu.gameserver.world.WorldMap2DInstance;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldMapInstanceFactory;
 import com.aionemu.gameserver.world.WorldMapType;
+import com.aionemu.gameserver.world.exceptions.WorldMapNotExistException;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import pirate.events.holders.IEventHolder;
 
@@ -196,17 +197,24 @@ public class InstanceService {
      * @param objectId
      * @return instance or null
      */
-    public static WorldMapInstance getRegisteredInstance(int worldId, int objectId) {
-        Iterator<WorldMapInstance> iterator = World.getInstance().getWorldMap(worldId).iterator();
-        while (iterator.hasNext()) {
-            WorldMapInstance instance = iterator.next();
+	public static WorldMapInstance getRegisteredInstance(int worldId, int objectId) {
+		try {
 
-            if (instance.isRegistered(objectId)) {
-                return instance;
-            }
-        }
-        return null;
-    }
+			Iterator<WorldMapInstance> iterator = World.getInstance().getWorldMap(worldId).iterator();
+			while (iterator.hasNext()) {
+				WorldMapInstance instance = iterator.next();
+
+				if (instance.isRegistered(objectId)) {
+					return instance;
+				}
+			}
+			return null;
+
+		} catch (WorldMapNotExistException e) {
+			System.out.println("mapa nao existe:" + worldId);
+			return null;
+		}
+	}
 
     public static WorldMapInstance getPersonalInstance(int worldId, int ownerId) {
         if (ownerId == 0) {

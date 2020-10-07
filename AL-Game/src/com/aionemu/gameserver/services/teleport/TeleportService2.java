@@ -59,101 +59,108 @@ public class TeleportService2 {
 	 * @param player
 	 */
 	public static void teleport(TeleporterTemplate template, int locId, Player player, Npc npc, TeleportAnimation animation) {
-		TribeClass tribe = npc.getTribe();
-		Race race = player.getRace();
-		if (tribe.equals(TribeClass.FIELD_OBJECT_LIGHT) && race.equals(Race.ASMODIANS) ||
-				(tribe.equals(TribeClass.FIELD_OBJECT_DARK) && race.equals(Race.ELYOS))) {
-			return;
-		}
+		try {
 
-		if (template.getTeleLocIdData() == null) {
-			log.info(String.format("Missing locId for this teleporter at teleporter_templates.xml with locId: %d", locId));
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-			if (player.isGM())
-				PacketSendUtility.sendMessage(player,
-						"Missing locId for this teleporter at teleporter_templates.xml with locId: " + locId);
-			return;
-		}
-
-		TeleportLocation location = template.getTeleLocIdData().getTeleportLocation(locId);
-		if (location == null) {
-			log.info(String.format("Missing locId for this teleporter at teleporter_templates.xml with locId: %d", locId));
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-			if (player.isGM())
-				PacketSendUtility.sendMessage(player,
-						"Missing locId for this teleporter at teleporter_templates.xml with locId: " + locId);
-			return;
-		}
-
-		TelelocationTemplate locationTemplate = DataManager.TELELOCATION_DATA.getTelelocationTemplate(locId);
-		if (locationTemplate == null) {
-			log.info(String.format("Missing info at teleport_location.xml with locId: %d", locId));
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-			if (player.isGM())
-				PacketSendUtility.sendMessage(player, "Missing info at teleport_location.xml with locId: " + locId);
-			return;
-		}
-
-		if (location.getRequiredQuest() > 0) {
-			QuestState qs = player.getQuestStateList().getQuestState(location.getRequiredQuest());
-			if (qs == null || qs.getStatus() != QuestStatus.COMPLETE) {
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NEED_FINISH_QUEST);
+			TribeClass tribe = npc.getTribe();
+			Race race = player.getRace();
+			if (tribe.equals(TribeClass.FIELD_OBJECT_LIGHT) && race.equals(Race.ASMODIANS) ||
+					(tribe.equals(TribeClass.FIELD_OBJECT_DARK) && race.equals(Race.ELYOS))) {
 				return;
 			}
-		}
 
-		// TODO: remove teleportation route if it's enemy fortress (1221, 1231, 1241)
-		int id = SiegeService.getInstance().getFortressId(locId);
-		if (id > 0 && !SiegeService.getInstance().getFortress(id).isCanTeleport(player)) {
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-			PacketSendUtility.sendMessage(player, "Teleporter is dead"); // TODO retail chk
-			return;
-		}
-
-		if (!checkKinahForTransportation(location, player))
-			return;
-
-		if (location.getType().equals(TeleportType.FLIGHT)) {
-			if (SecurityConfig.ENABLE_FLYPATH_VALIDATOR) {
-				FlyPathEntry flypath = DataManager.FLY_PATH.getPathTemplate((short) location.getLocId());
-				if (flypath == null) {
-					AuditLogger.info(player, "Try to use null flyPath #" + location.getLocId());
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-					return;
-				}
-
-				double dist = MathUtil.getDistance(player, flypath.getStartX(), flypath.getStartY(), flypath.getStartZ());
-				if (dist > 7) {
-					AuditLogger.info(player, "Try to use flyPath #" + location.getLocId() + " but hes too far "
-							+ dist);
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-					return;
-				}
-
-				if (player.getWorldId() != flypath.getStartWorldId()) {
-					AuditLogger.info(player, "Try to use flyPath #" + location.getLocId()
-							+ " from not native start world " + player.getWorldId() + ". expected " + flypath.getStartWorldId());
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
-					return;
-				}
-
-				player.setCurrentFlypath(flypath);
+			if (template.getTeleLocIdData() == null) {
+				log.info(String.format("Missing locId for this teleporter at teleporter_templates.xml with locId: %d", locId));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+				if (player.isGM())
+					PacketSendUtility.sendMessage(player,
+							"Missing locId for this teleporter at teleporter_templates.xml with locId: " + locId);
+				return;
 			}
-			player.unsetPlayerMode(PlayerMode.RIDE);
-			player.setState(CreatureState.FLIGHT_TELEPORT);
-			player.unsetState(CreatureState.ACTIVE);
-			player.setFlightTeleportId(location.getTeleportId());
-			PacketSendUtility.broadcastPacket(player,
-					new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, location.getTeleportId(), 0), true);
-		}
-		else {
-			int instanceId = 1;
-			int mapId = locationTemplate.getMapId();
-			if (player.getWorldId() == mapId) {
-				instanceId = player.getInstanceId();
+
+			TeleportLocation location = template.getTeleLocIdData().getTeleportLocation(locId);
+			if (location == null) {
+				log.info(String.format("Missing locId for this teleporter at teleporter_templates.xml with locId: %d", locId));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+				if (player.isGM())
+					PacketSendUtility.sendMessage(player,
+							"Missing locId for this teleporter at teleporter_templates.xml with locId: " + locId);
+				return;
 			}
-			sendLoc(player, mapId, instanceId, locationTemplate.getX(), locationTemplate.getY(),
-					locationTemplate.getZ(), (byte) locationTemplate.getHeading(), animation);
+
+			TelelocationTemplate locationTemplate = DataManager.TELELOCATION_DATA.getTelelocationTemplate(locId);
+			if (locationTemplate == null) {
+				log.info(String.format("Missing info at teleport_location.xml with locId: %d", locId));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+				if (player.isGM())
+					PacketSendUtility.sendMessage(player, "Missing info at teleport_location.xml with locId: " + locId);
+				return;
+			}
+
+			if (location.getRequiredQuest() > 0) {
+				QuestState qs = player.getQuestStateList().getQuestState(location.getRequiredQuest());
+				if (qs == null || qs.getStatus() != QuestStatus.COMPLETE) {
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NEED_FINISH_QUEST);
+					return;
+				}
+			}
+
+			// TODO: remove teleportation route if it's enemy fortress (1221, 1231, 1241)
+			int id = SiegeService.getInstance().getFortressId(locId);
+			if (id > 0 && !SiegeService.getInstance().getFortress(id).isCanTeleport(player)) {
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+				PacketSendUtility.sendMessage(player, "Teleporter is dead"); // TODO retail chk
+				return;
+			}
+
+			if (!checkKinahForTransportation(location, player))
+				return;
+
+			if (location.getType().equals(TeleportType.FLIGHT)) {
+				if (SecurityConfig.ENABLE_FLYPATH_VALIDATOR) {
+					FlyPathEntry flypath = DataManager.FLY_PATH.getPathTemplate((short) location.getLocId());
+					if (flypath == null) {
+						AuditLogger.info(player, "Try to use null flyPath #" + location.getLocId());
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+						return;
+					}
+
+					double dist = MathUtil.getDistance(player, flypath.getStartX(), flypath.getStartY(), flypath.getStartZ());
+					if (dist > 7) {
+						AuditLogger.info(player, "Try to use flyPath #" + location.getLocId() + " but hes too far "
+								+ dist);
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+						return;
+					}
+
+					if (player.getWorldId() != flypath.getStartWorldId()) {
+						AuditLogger.info(player, "Try to use flyPath #" + location.getLocId()
+								+ " from not native start world " + player.getWorldId() + ". expected " + flypath.getStartWorldId());
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_MOVE_TO_AIRPORT_NO_ROUTE);
+						return;
+					}
+
+					player.setCurrentFlypath(flypath);
+				}
+				player.unsetPlayerMode(PlayerMode.RIDE);
+				player.setState(CreatureState.FLIGHT_TELEPORT);
+				player.unsetState(CreatureState.ACTIVE);
+				player.setFlightTeleportId(location.getTeleportId());
+				PacketSendUtility.broadcastPacket(player,
+						new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, location.getTeleportId(), 0), true);
+			}
+			else {
+				int instanceId = 1;
+				int mapId = locationTemplate.getMapId();
+				if (player.getWorldId() == mapId) {
+					instanceId = player.getInstanceId();
+				}
+				sendLoc(player, mapId, instanceId, locationTemplate.getX(), locationTemplate.getY(),
+						locationTemplate.getZ(), (byte) locationTemplate.getHeading(), animation);
+			}
+		
+		}catch (Exception e) {
+			System.out.println("capturando erro de Teloport : "+ TeleportService2.class.getName());
+			System.out.println("capturando erro de Teloport motivo : "+ e.getMessage());
 		}
 	}
 
