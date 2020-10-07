@@ -2,10 +2,10 @@
 <world_maps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="world_maps.xsd">
 	<map id="110010000" name="Sanctum" death_level="400" water_level="16" world_type="ELYSEA" world_size="3072" flags="RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
 	<map id="110020000" name="Kaisinel" death_level="0" water_level="16" world_type="ELYSEA" world_size="3072" flags="RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
-	<map id="110070000" name="Kaisinel Academy" death_level="0" water_level="16" world_type="ELYSEA" world_size="1024" flags="RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
+	<!--<map id="110070000" name="Kaisinel Academy" death_level="0" water_level="16" world_type="ELYSEA" world_size="1024" flags="RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>-->
 	<map id="120010000" name="Pandaemonium" death_level="150" water_level="16" world_type="ASMODAE" world_size="3072" flags="RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
 	<map id="120020000" name="Marchutan" death_level="0" water_level="16" world_type="ASMODAE" world_size="3072" flags="RECALL RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
-	<map id="120080000" name="Marchutan Priory" death_level="0" water_level="3" world_type="ASMODAE" world_size="1024" flags="RECALL RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
+	<!--<map id="120080000" name="Marchutan Priory" death_level="0" water_level="3" world_type="ASMODAE" world_size="1024" flags="RECALL RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>-->
 	<map id="210010000" name="Poeta" max_user="200" twin_count="1" death_level="0" water_level="100" world_type="ELYSEA" world_size="3072" flags="BIND RECALL GLIDE PVP DUEL_SAME_RACE"/>
 	<map id="210020000" name="Eltnen" death_level="0" water_level="6" world_type="ELYSEA" world_size="3072" flags="BIND RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>
 	<map id="210030000" name="Verteron" max_user="200" death_level="0" water_level="100" world_type="ELYSEA" world_size="3072" flags="BIND RECALL GLIDE RIDE FLY_RIDE PVP DUEL_SAME_RACE"/>

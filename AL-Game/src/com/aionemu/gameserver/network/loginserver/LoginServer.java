@@ -308,6 +308,7 @@ public class LoginServer {
 	 */
 	public void kickAccount(int accountId) {
 		synchronized (this) {
+			System.out.println("Fui pelo login server");
 			AionConnection client = loggedInAccounts.get(accountId);
 			if (client != null) {
 				closeClientWithCheck(client, accountId);

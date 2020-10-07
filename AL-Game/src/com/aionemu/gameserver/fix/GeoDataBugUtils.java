@@ -27,7 +27,7 @@ public class GeoDataBugUtils {
 			return true;
 
 		} catch (Exception e) {
-			Util.printSection("GeoDataBugUtils Error: "+ e);
+			Util.printSection("GeoDataBugUtils Error - returning false");
 			return false;
 		}
 	}

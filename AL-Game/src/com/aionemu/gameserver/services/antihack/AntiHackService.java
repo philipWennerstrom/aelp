@@ -145,6 +145,7 @@ public class AntiHackService {
 		switch (SecurityConfig.PUNISH) {
 			case 1:
 				AuditLogger.info(player, message);
+				AuditLogger.info(player, "Antihack Moveback: "+ message);
 				moveBack(player, x, y, type, pkt);
 				return false;
 			case 2:
@@ -152,10 +153,14 @@ public class AntiHackService {
 				moveBack(player, x, y, type, pkt);
 				if (player.speedHackCounter > SecurityConfig.SPEEDHACK_COUNTER * 3
 						|| player.abnormalHackCounter > SecurityConfig.ABNORMAL_COUNTER * 3)
+					AuditLogger.info(player, "Antihack kick: "+ message);
+				    AuditLogger.info(player, "Antihack speedHackCounter: "+ player.speedHackCounter);
+				    AuditLogger.info(player, "Antihack abnormalHackCounter: "+ player.abnormalHackCounter);
 					player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 				return false;
 			case 3:
 				AuditLogger.info(player, message);
+				AuditLogger.info(player, "Antihack kick: "+ message);
 				player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 				return false;
 			default:
