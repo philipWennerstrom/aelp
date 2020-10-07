@@ -10,10 +10,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 @AIName("aggressive")
 public class AggressiveNpcAI2 extends GeneralNpcAI2 {
-	
-	public AggressiveNpcAI2() {
-		super();
-	}
 
 	@Override
 	protected void handleCreatureSee(Creature creature) {

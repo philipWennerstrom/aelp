@@ -26,10 +26,6 @@ import com.aionemu.gameserver.model.templates.npcshout.ShoutEventType;
  */
 @AIName("general")
 public class GeneralNpcAI2 extends NpcAI2 {
-	
-	public GeneralNpcAI2()  {
-		super();
-	}
 
 	@Override
 	public void think() {

@@ -1,0 +1,96 @@
+11:58:50.686 INFO [main]: org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1175] - Using default implementation for ThreadExecutor
+11:58:50.701 INFO [main]: org.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:58:50.702 INFO [main]: org.quartz.core.QuartzScheduler [QuartzScheduler.java:243] - Quartz Scheduler v.2.1.7 created.
+11:58:50.703 INFO [main]: org.quartz.simpl.RAMJobStore [RAMJobStore.java:154] - RAMJobStore initialized.
+11:58:50.704 INFO [main]: org.quartz.core.QuartzScheduler [QuartzScheduler.java:268] - Scheduler meta-data: Quartz Scheduler (v2.1.7) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+11:58:50.704 INFO [main]: org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1324] - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
+11:58:50.704 INFO [main]: org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1328] - Quartz scheduler version: 2.1.7
+11:58:50.704 INFO [main]: org.quartz.core.QuartzScheduler [QuartzScheduler.java:534] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+11:58:50.705 INFO [main]: com.aionemu.loginserver.LoginServer [LoginServer.java:102] - 2020-10-07 11-58-50
+11:58:50.705 INFO [main]: com.aionemu.loginserver.configs.Config [Config.java:124] - Loading: myls.properties
+11:58:50.706 INFO [main]: com.aionemu.loginserver.configs.Config [Config.java:128] - No override properties found
+11:58:50.713 INFO [main]: com.aionemu.loginserver.configs.Config [Config.java:135] - Loading: ./config/network/network.properties
+11:58:50.723 INFO [main]: com.aionemu.loginserver.configs.Config [Config.java:137] - Loading: ./config/network/commons.properties
+11:58:50.723 INFO [main]: com.aionemu.loginserver.configs.Config [Config.java:139] - Loading: ./config/network/database.properties
+11:58:50.915 INFO [main]: com.aionemu.commons.database.DatabaseFactory [DatabaseFactory.java:123] - Successfully connected to database
+11:58:51.414 INFO [main]: com.aionemu.commons.database.dao.DAOManager [DAOManager.java:85] - Loaded 8 DAO implementations.
+11:58:51.420 INFO [main]: com.aionemu.loginserver.utils.ThreadPoolManager [ThreadPoolManager.java:54] - ThreadPoolManager: Initialized with 18 scheduler, 8 instant, 0 long running thread(s).
+11:58:51.420 INFO [main]: com.aionemu.loginserver.network.ncrypt.KeyGen [KeyGen.java:43] - Initializing Key Generator...
+11:58:52.287 INFO [main]: com.aionemu.loginserver.GameServerTable [GameServerTable.java:51] - GameServerTable loaded 1 registered GameServers.
+11:58:52.320 INFO [main]: com.aionemu.loginserver.controller.BannedIpController [BannedIpController.java:53] - BannedIpController loaded 0 IP bans.
+11:58:52.388 INFO [main]: com.aionemu.commons.network.NioServer [NioServer.java:117] - Server listening on all available IPs on Port 9014 for Gs Connections
+11:58:52.389 INFO [main]: com.aionemu.commons.network.NioServer [NioServer.java:117] - Server listening on all available IPs on Port 2106 for Aion Connections
+11:58:52.410 INFO [main]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:49] - PlayerTransferService will be initialized in 10 sec.
+11:58:52.417 ERROR[main]: mysql5.MySQL5TaskFromDBDAO [MySQL5TaskFromDBDAO.java]:70] - Loading tasks failed: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'al_server_ls.tasks' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.7.0_80]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57) ~[na:1.7.0_80]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.7.0_80]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526) ~[na:1.7.0_80]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2002) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2163) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2624) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2127) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2293) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.jolbox.bonecp.PreparedStatementHandle.executeQuery(PreparedStatementHandle.java:172) ~[bonecp-0.7.1.RELEASE.jar:0.7.1.RELEASE]
+	at mysql5.MySQL5TaskFromDBDAO.getAllTasks(MySQL5TaskFromDBDAO.java]:37) ~[na:na]
+	at com.aionemu.loginserver.taskmanager.TaskFromDBManager.<init>(TaskFromDBManager.java:20) [AL-Login.jar:na]
+	at com.aionemu.loginserver.taskmanager.TaskFromDBManager.<init>(TaskFromDBManager.java:19) [AL-Login.jar:na]
+	at com.aionemu.loginserver.taskmanager.TaskFromDBManager$SingletonHolder.<clinit>(TaskFromDBManager.java:63) [AL-Login.jar:na]
+	at com.aionemu.loginserver.taskmanager.TaskFromDBManager.getInstance(TaskFromDBManager.java:55) [AL-Login.jar:na]
+	at com.aionemu.loginserver.LoginServer.main(LoginServer.java:129) [AL-Login.jar:na]
+11:58:52.417 INFO [main]: com.aionemu.loginserver.taskmanager.TaskFromDBManager [TaskFromDBManager.java:21] - Loaded 0 task from the database
+11:58:52.418 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - OS: Windows 7 Build: 6.1
+11:58:52.418 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - OS Arch: amd64
+11:58:52.418 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - ..................................................
+11:58:52.419 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - ..................................................
+11:58:52.420 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - Available CPU(s): 6
+11:58:52.420 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - Processor(s) Identifier: Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+11:58:52.420 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - ..................................................
+11:58:52.420 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - ..................................................
+11:58:52.420 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Platform Information
+11:58:52.421 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Runtime  Name: Java(TM) SE Runtime Environment
+11:58:52.421 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Version: 1.7.0_80
+11:58:52.421 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Class Version: 51.0
+11:58:52.421 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - ..................................................
+11:58:52.421 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - ..................................................
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - Virtual Machine Information (JVM)
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Name: Java HotSpot(TM) 64-Bit Server VM
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM installation directory: C:\Program Files\Java\jdk1.7.0_80\jre
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM version: 24.80-b11
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Vendor: Oracle Corporation
+11:58:52.422 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Info: mixed mode
+11:58:52.423 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - ..................................................
+11:58:52.423 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - ..................................................
+11:58:52.423 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - +----
+11:58:52.423 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Global Memory Informations at 11:58:52:
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Allowed Memory: 232960 KB
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Allocated Memory: 80384 KB (34,5055%)
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Non-Allocated Memory: 152576 KB (65,4945%)
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Allocated Memory: 80384 KB
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Used Memory: 37163 KB (15,9525%)
+11:58:52.424 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Unused (cached) Memory: 43221 KB (18,5530%)
+11:58:52.425 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Useable Memory: 195797 KB (84,0475%)
+11:58:52.425 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - +----
+11:58:52.425 INFO [main]: PREMIUM_CTRL [PremiumController.java:31] - PremiumController is ready for requests.
+11:58:52.426 INFO [main]: com.aionemu.loginserver.LoginServer [LoginServer.java:136] - AL Login Server started in 1 seconds.
+11:59:02.422 INFO [pool-3-thread-2]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+12:02:04.950 INFO [AcceptReadWrite Dispatcher]: com.aionemu.loginserver.network.gameserver.GsConnection [GsConnection.java:251] - Gameserver connection attemp from: 127.0.0.1
+12:02:05.509 INFO [pool-4-thread-1]: com.aionemu.loginserver.network.gameserver.clientpackets.CM_GS_AUTH [CM_GS_AUTH.java:87] - Gameserver #1 is now online.
+12:02:10.511 INFO [pool-3-thread-7]: com.aionemu.loginserver.PingPongThread [PingPongThread.java:35] - PingPong for gameserver #1 has started.
+12:06:02.438 INFO [pool-3-thread-5]: com.aionemu.loginserver.service.PlayerTransferService [PlayerTransferService.java:57] - PlayerTransfer perform task init. 0 new tasks.
+12:09:30.274 INFO [pool-6-thread-1]: com.aionemu.loginserver.network.gameserver.GsConnection [GsConnection.java:126] - GameServer [ID:1] 127.0.0.1 disconnected
+12:09:31.536 WARN [pool-3-thread-7]: com.aionemu.commons.utils.concurrent.ExecuteWrapper [ExecuteWrapper.java:67] - class com.aionemu.loginserver.PingPongThread - execution time: 440988msec

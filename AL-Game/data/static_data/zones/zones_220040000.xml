@@ -967,7 +967,7 @@
             <point x="2767.576" y="2154.024"/>
         </points>
     </zone>
-    <zone mapid="220040000" name="DF3_C6_3_RECALLAREA_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="52">
+    <zone mapid="220040000" name="DF3_C6_3_RECALLAREA_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="55">
         <points bottom="385.89" top="585.89">
             <point x="1718.43" y="1348.61"/>
             <point x="1738.8295" y="1303.5166"/>
@@ -996,7 +996,7 @@
             <point x="1710.1987" y="1356.1256"/>
         </points>
     </zone>
-    <zone mapid="220040000" name="DF3_E5_RECALLAREA_1_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="52">
+    <zone mapid="220040000" name="DF3_E5_RECALLAREA_1_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="55">
         <points bottom="122.27529" top="622.27527">
             <point x="564.1527" y="2531.142"/>
             <point x="604.7103" y="2492.0198"/>
@@ -1426,7 +1426,7 @@
             <point x="1592.6627" y="734.6945"/>
         </points>
     </zone>
-    <zone mapid="220040000" name="DF3_NOBINDAREA_E5_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="52">
+    <zone mapid="220040000" name="DF3_NOBINDAREA_E5_LIMIT" area_type="POLYGON" zone_type="LIMIT" flags="55">
         <points bottom="1.1" top="501.1">
             <point x="381.13675" y="2859.1846"/>
             <point x="349.93774" y="2848.2375"/>
@@ -2728,7 +2728,7 @@
             <point x="2648.6714" y="2874.9504"/>
         </points>
     </zone>
-    <zone mapid="220040000" name="LIMITAREADF3_LIMITAREA_22" area_type="POLYGON" zone_type="LIMIT" flags="52">
+    <zone mapid="220040000" name="LIMITAREADF3_LIMITAREA_22" area_type="POLYGON" zone_type="LIMIT" flags="55">
         <points bottom="1.0" top="801.0">
             <point x="1091.2524" y="2007.9872"/>
             <point x="1100.4194" y="2058.6067"/>

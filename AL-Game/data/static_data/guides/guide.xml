@@ -14,7 +14,7 @@
 			<br><br>]]>
 		</message>
 		<select>Blood for blood!</select>
-		<survey itemId="182400001" count="500000"/>
+		<survey itemId="182400001" count="900000"/>
 		<survey itemId="164002011" count="5"/>
 		<survey itemId="190100055" count="1"/>
 		<survey itemId="164002010" count="5"/>
@@ -208,59 +208,6 @@
 		<survey itemId="162000048" count="15"/>
 		<survey itemId="187000017" count="1"/>
 	</guide>
-	<guide title="adventurers_guide50.2_asmo" level="50" race="ASMODIANS" rewardCount="5">
-		<message>
-			<![CDATA[<BR><BR>
-			Aion Edge is offering you a free gift!
-			<br><br><br><br>
-			127.0.0.1
-			<br><br><br><br>
-			Aion Edge
-			<Br><BR>]]>
-		</message>
-		<select>Blood for blood!</select>
-		<survey itemId="110300873" count="1"/>
-		<survey itemId="112300777" count="1"/>
-		<survey itemId="111300826" count="1"/>
-		<survey itemId="113300848" count="1"/>
-		<survey itemId="114300884" count="1"/>		
-		<survey itemId="110600828" count="1"/>
-		<survey itemId="112600776" count="1"/>
-		<survey itemId="111600801" count="1"/>
-		<survey itemId="113600792" count="1"/>
-		<survey itemId="114600787" count="1"/>		
-		<survey itemId="110100918" count="1"/>
-		<survey itemId="112100780" count="1"/>
-		<survey itemId="111100822" count="1"/>
-		<survey itemId="113100830" count="1"/>
-		<survey itemId="114100858" count="1"/>		
-		<survey itemId="110500843" count="1"/>
-		<survey itemId="112500765" count="1"/>
-		<survey itemId="111500809" count="1"/>
-		<survey itemId="113500819" count="1"/>
-		<survey itemId="114500830" count="1"/>
-	</guide>
-	<guide title="adventurers_guide50.3_asmo" level="50" race="ASMODIANS" rewardCount="1">
-		<message>
-			<![CDATA[<BR><BR>
-			Aion Edge is offering you a free gift!
-			<br><br><br><br>
-			127.0.0.1
-			<br><br><br><br>
-			Aion Edge
-			<Br><BR>]]>
-		</message>
-		<select>Blood for blood!</select>
-		<survey itemId="100200664" count="1"/>
-		<survey itemId="100900541" count="1"/>
-		<survey itemId="100500559" count="1"/>
-		<survey itemId="101700579" count="1"/>
-		<survey itemId="101300531" count="1"/>		
-		<survey itemId="101500557" count="1"/>
-		<survey itemId="100000709" count="1"/>
-		<survey itemId="100600596" count="1"/>
-		<survey itemId="100100557" count="1"/>
-	</guide>	
 	<guide title="adventurers_guide55.1_asmo" level="55" race="ASMODIANS" rewardCount="3">
 		<message>
 			<![CDATA[<BR><BR>
@@ -308,7 +255,7 @@
 			<br><br>]]>
 		</message>
 		<select>Faith and arms!</select>
-		<survey itemId="182400001" count="500000"/>
+		<survey itemId="182400001" count="900000"/>
 		<survey itemId="164002011" count="5"/>
 		<survey itemId="190100055" count="1"/>
 		<survey itemId="164002010" count="5"/>
@@ -502,59 +449,6 @@
 		<survey itemId="162000048" count="15"/>
 		<survey itemId="187000016" count="1"/>
 	</guide>
-	<guide title="adventurers_guide50.2_ely" level="50" race="ELYOS" rewardCount="5">
-		<message>
-			<![CDATA[<BR><BR>
-			Aion Edge is offering you a free gift!
-			<br><br><br><br>
-			127.0.0.1
-			<br><br><br><br>
-			Aion Edge
-			<br><br>]]>
-		</message>
-		<select>Faith and arms!</select>
-		<survey itemId="110300872" count="1"/>
-		<survey itemId="112300776" count="1"/>
-		<survey itemId="111300825" count="1"/>
-		<survey itemId="113300847" count="1"/>
-		<survey itemId="114300883" count="1"/>		
-		<survey itemId="110600827" count="1"/>
-		<survey itemId="112600775" count="1"/>
-		<survey itemId="111600800" count="1"/>
-		<survey itemId="113600791" count="1"/>
-		<survey itemId="114600786" count="1"/>		
-		<survey itemId="110100917" count="1"/>
-		<survey itemId="112100779" count="1"/>
-		<survey itemId="111100821" count="1"/>		
-		<survey itemId="113100829" count="1"/>		
-		<survey itemId="114100857" count="1"/>		
-		<survey itemId="110500842" count="1"/>
-		<survey itemId="112500764" count="1"/>
-		<survey itemId="111500808" count="1"/>
-		<survey itemId="113500818" count="1"/>
-		<survey itemId="114500829" count="1"/>
-	</guide>
-	<guide title="adventurers_guide50.3_ely" level="50" race="ELYOS" rewardCount="1">
-		<message>
-			<![CDATA[<BR><BR>
-			Aion Edge is offering you a free gift!
-			<br><br><br><br>
-			127.0.0.1
-			<br><br><br><br>
-			Aion Edge
-			<br><br>]]>
-		</message>
-		<select>Faith and arms!</select>
-		<survey itemId="100600595" count="1"/>
-		<survey itemId="100500558" count="1"/>
-		<survey itemId="101300530" count="1"/>
-		<survey itemId="101500556" count="1"/>
-		<survey itemId="100000708" count="1"/>		
-		<survey itemId="100200663" count="1"/>
-		<survey itemId="101700578" count="1"/>
-		<survey itemId="100100556" count="1"/>
-		<survey itemId="100900540" count="1"/>
-	</guide>	
 	<guide title="adventurers_guide55.1_ely" level="55" race="ELYOS" rewardCount="3">
 		<message>
 			<![CDATA[<BR><BR>
