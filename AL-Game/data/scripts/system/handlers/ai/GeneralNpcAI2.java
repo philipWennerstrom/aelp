@@ -137,24 +137,30 @@ public class GeneralNpcAI2 extends NpcAI2 {
 
 	@Override
 	public AttackIntention chooseAttackIntention() {
-		VisibleObject currentTarget = getTarget();
-		Creature mostHated = getAggroList().getMostHated();
+		try {
 
-		if (mostHated == null || mostHated.getLifeStats().isAlreadyDead()) {
+			VisibleObject currentTarget = getTarget();
+			Creature mostHated = getAggroList().getMostHated();
+
+			if (mostHated == null || mostHated.getLifeStats().isAlreadyDead()) {
+				return AttackIntention.FINISH_ATTACK;
+			}
+
+			if (currentTarget == null || !currentTarget.getObjectId().equals(mostHated.getObjectId())) {
+				onCreatureEvent(AIEventType.TARGET_CHANGED, mostHated);
+				return AttackIntention.SWITCH_TARGET;
+			}
+
+			NpcSkillEntry skill = SkillAttackManager.chooseNextSkill(this);
+			if (skill != null) {
+				skillId = skill.getSkillId();
+				skillLevel = skill.getSkillLevel();
+				return AttackIntention.SKILL_ATTACK;
+			}
+			return AttackIntention.SIMPLE_ATTACK;
+		
+		}catch (Exception e) {
 			return AttackIntention.FINISH_ATTACK;
 		}
-
-		if (currentTarget == null || !currentTarget.getObjectId().equals(mostHated.getObjectId())) {
-			onCreatureEvent(AIEventType.TARGET_CHANGED, mostHated);
-			return AttackIntention.SWITCH_TARGET;
-		}
-
-		NpcSkillEntry skill = SkillAttackManager.chooseNextSkill(this);
-		if (skill != null) {
-			skillId = skill.getSkillId();
-			skillLevel = skill.getSkillLevel();
-			return AttackIntention.SKILL_ATTACK;
-		}
-		return AttackIntention.SIMPLE_ATTACK;
 	}
 }

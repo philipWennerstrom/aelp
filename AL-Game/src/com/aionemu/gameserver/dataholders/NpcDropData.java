@@ -34,7 +34,8 @@ import gnu.trove.procedure.TObjectProcedure;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "npcDropData", propOrder = { "npcDrop" }) */
 public class NpcDropData {
-
+	public static final String GODSTONES = "GODSTONES";
+	public static final Map<Integer, Drop> godstoneDrops = new HashMap<Integer, Drop>();
 	private static Logger log = LoggerFactory.getLogger(DataManager.class);
     //@XmlElement(name = "npc_drop")
     protected List<NpcDrop> npcDrop;
@@ -189,6 +190,18 @@ public class NpcDropData {
    		final NpcDropData dropData = new NpcDropData();
    		NpcDropsFix.fixRates(npcDrops);
    		NpcDropData.log.info("Drop loader: Npc drops loading done. Total loaded: "+ npcDrops.size());
+		for (NpcDrop npcDrop2 : npcDrops) {
+			for (DropGroup dropGroup : npcDrop2.getDropGroup()) {
+				if (dropGroup.getGroupName().equals(GODSTONES)) {
+					for (Drop godDrop : dropGroup.getDrop()) {
+						int itemId = godDrop.getItemId();
+						if (!godstoneDrops.containsKey(itemId)) {
+							godstoneDrops.put(itemId, godDrop);
+						}
+					}
+				}
+			}
+		}
    		dropData.setNpcDrop(npcDrops);
    		return dropData;
    	}

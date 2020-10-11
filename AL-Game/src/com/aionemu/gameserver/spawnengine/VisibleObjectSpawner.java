@@ -1,6 +1,10 @@
 package com.aionemu.gameserver.spawnengine;
 
 import com.aionemu.gameserver.configs.main.CustomConfig;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,11 +13,16 @@ import com.aionemu.gameserver.controllers.*;
 import com.aionemu.gameserver.controllers.effect.EffectController;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.NpcData;
+import com.aionemu.gameserver.dataholders.NpcDropData;
+import com.aionemu.gameserver.fix.drops.HeroAndLegendaryFixes;
 import com.aionemu.gameserver.fix.npc.ai.AggroFix;
 import com.aionemu.gameserver.fix.npc.ai.NpcStatsFlix;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
 import com.aionemu.gameserver.geoEngine.math.Vector3f;
 import com.aionemu.gameserver.model.Race;
+import com.aionemu.gameserver.model.drop.Drop;
+import com.aionemu.gameserver.model.drop.DropGroup;
+import com.aionemu.gameserver.model.drop.NpcDrop;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
 import com.aionemu.gameserver.model.gameobjects.GroupGate;
@@ -38,6 +47,7 @@ import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.skill.NpcSkillEntry;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
+import com.aionemu.gameserver.model.templates.npc.NpcRating;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.pet.PetTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
@@ -92,6 +102,8 @@ public class VisibleObjectSpawner {
 		npc.setMasterName(spawn.getMasterName());
 		npc.setKnownlist(new NpcKnownList(npc));
 		npc.setEffectController(new EffectController(npc));
+		
+		HeroAndLegendaryFixes.fixDrops(spawn, npcTemplate);
 
 		if (WalkerFormator.getInstance().processClusteredNpc(npc, instanceIndex))
 			return npc;
@@ -107,6 +119,8 @@ public class VisibleObjectSpawner {
 		}
 		return npc;
 	}
+
+
 
 	public static SummonedHouseNpc spawnHouseNpc(SpawnTemplate spawn, int instanceIndex, House creator, String masterName) {
 		int npcId = spawn.getNpcId();

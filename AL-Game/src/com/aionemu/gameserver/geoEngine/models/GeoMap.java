@@ -315,35 +315,39 @@ public class GeoMap extends Node {
 	}
 
 	public boolean canSee(float x, float y, float z, float targetX, float targetY, float targetZ, float limit, int instanceId) {
-		targetZ += 1;
-		z += 1;
-		// Another fix can see in instances
-		// if (getZ(targetX, targetY) > targetZ)
-		// return false;
+		try {
+			targetZ += 1;
+			z += 1;
+			// Another fix can see in instances
+			// if (getZ(targetX, targetY) > targetZ)
+			// return false;
 
-		float x2 = x - targetX;
-		float y2 = y - targetY;
-		float distance = (float) Math.sqrt(x2 * x2 + y2 * y2);
-		if (distance > 80f)
-			return false;
-		int intD = (int) Math.abs(distance);
-
-		Vector3f pos = new Vector3f(x, y, z);
-		Vector3f dir = new Vector3f(targetX, targetY, targetZ);
-		dir.subtractLocal(pos).normalizeLocal();
-		Ray r = new Ray(pos, dir);
-		r.setLimit(limit);
-		for (float s = 2; s < intD; s += 2) {
-			float tempX = targetX + (x2 * s / distance);
-			float tempY = targetY + (y2 * s / distance);
-			Vector3f result = terraionCollision(tempX, tempY, r);
-			if (result != null)
+			float x2 = x - targetX;
+			float y2 = y - targetY;
+			float distance = (float) Math.sqrt(x2 * x2 + y2 * y2);
+			if (distance > 80f)
 				return false;
+			int intD = (int) Math.abs(distance);
+
+			Vector3f pos = new Vector3f(x, y, z);
+			Vector3f dir = new Vector3f(targetX, targetY, targetZ);
+			dir.subtractLocal(pos).normalizeLocal();
+			Ray r = new Ray(pos, dir);
+			r.setLimit(limit);
+			for (float s = 2; s < intD; s += 2) {
+				float tempX = targetX + (x2 * s / distance);
+				float tempY = targetY + (y2 * s / distance);
+				Vector3f result = terraionCollision(tempX, tempY, r);
+				if (result != null)
+					return false;
+			}
+			CollisionResults results = new CollisionResults((byte) (CollisionIntention.PHYSICAL.getId() | CollisionIntention.DOOR.getId()), false,
+				instanceId);
+			int collisions = this.collideWith(r, results);
+			return (results.size() == 0 && collisions == 0);
+		}catch (Exception e) {
+			return false;
 		}
-		CollisionResults results = new CollisionResults((byte) (CollisionIntention.PHYSICAL.getId() | CollisionIntention.DOOR.getId()), false,
-			instanceId);
-		int collisions = this.collideWith(r, results);
-		return (results.size() == 0 && collisions == 0);
 	}
 
 	/*

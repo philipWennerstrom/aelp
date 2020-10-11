@@ -321,4 +321,8 @@ public class CustomConfig {
 	
 	@Property(key = "gameserver.aion.version", defaultValue = "3.5")
 	public static String GAMESERVER_AION_VERSION;
+	
+
+	@Property(key = "gameserver.doublexp", defaultValue = "1")
+	public static int DOUBLE_XP;
 }

@@ -260,31 +260,57 @@ public class TeleportService2 {
 	}
 
 	public static boolean teleportTo(Player player, int worldId, float x, float y, float z) {
-		return teleportTo(player, worldId, x, y, z, player.getHeading());
+		try {
+
+			return teleportTo(player, worldId, x, y, z, player.getHeading());
+
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	public static boolean teleportTo(Player player, int worldId, float x, float y, float z, byte h) {
-		int instanceId = 1;
-		if (player.getWorldId() == worldId) {
-			instanceId = player.getInstanceId();
+		try {
+
+			int instanceId = 1;
+			if (player.getWorldId() == worldId) {
+				instanceId = player.getInstanceId();
+			}
+			return teleportTo(player, worldId, instanceId, x, y, z, h, TeleportAnimation.NO_ANIMATION);
+		
+		}catch (Exception e) {
+			return false;
 		}
-		return teleportTo(player, worldId, instanceId, x, y, z, h, TeleportAnimation.NO_ANIMATION);
 	}
 
 	public static boolean teleportTo(Player player, int worldId, float x, float y, float z, byte h, TeleportAnimation animation) {
-		int instanceId = 1;
-		if (player.getWorldId() == worldId) {
-			instanceId = player.getInstanceId();
+		try {
+			int instanceId = 1;
+			if (player.getWorldId() == worldId) {
+				instanceId = player.getInstanceId();
+			}
+			return teleportTo(player, worldId, instanceId, x, y, z, h, animation);
+		}catch (Exception e) {
+			return false;
 		}
-		return teleportTo(player, worldId, instanceId, x, y, z, h, animation);
 	}
 
 	public static boolean teleportTo(Player player, int worldId, int instanceId, float x, float y, float z, byte h) {
+		try {
 		return teleportTo(player, worldId, instanceId, x, y, z, h, TeleportAnimation.NO_ANIMATION);
+		}catch (Exception e) {
+			return false;
+		}
 	}
 
 	public static boolean teleportTo(Player player, int worldId, int instanceId, float x, float y, float z) {
-		return teleportTo(player, worldId, instanceId, x, y, z, player.getHeading(), TeleportAnimation.NO_ANIMATION);
+		try {
+			return teleportTo(player, worldId, instanceId, x, y, z, player.getHeading(),
+					TeleportAnimation.NO_ANIMATION);
+		} catch (Exception e) {
+			return false;
+		}
+
 	}
 
 	/**

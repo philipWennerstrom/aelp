@@ -24,13 +24,17 @@ public class AntiHackService {
 		AionServerPacket normalMove = new SM_MOVE(player);
 
 		if (SecurityConfig.ABNORMAL) {
-			if (!player.canPerformMove() && !player.getEffectController().isAbnormalSet(AbnormalState.CANNOT_MOVE) && (type & MovementMask.GLIDE) != MovementMask.GLIDE) {
+			boolean canPerformMove = player.canPerformMove();
+			if (!canPerformMove && !player.getEffectController().isAbnormalSet(AbnormalState.CANNOT_MOVE) && (type & MovementMask.GLIDE) != MovementMask.GLIDE) {
 				if (player.abnormalHackCounter > SecurityConfig.ABNORMAL_COUNTER) {
 					punish(player, x, y, type, forcedMove, "Detected illegal Action (Anti-Abnormal Hack)");
 					return false;
 				}
-				else
-					player.abnormalHackCounter++;
+				else {
+					//AuditLogger.info(player, "MyCustom: Aumentando o valor de hack count !!! Player Abnormals value: "+ player.getEffectController().getAbnormals());
+					//2097156 valor quando o player pula
+ 					player.abnormalHackCounter++;
+				}
 			}
 			else
 				player.abnormalHackCounter = 0;
