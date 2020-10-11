@@ -19,32 +19,69 @@ import com.aionemu.gameserver.spawnengine.VisibleObjectSpawner;
 
 public class HeroAndLegendaryFixes {
 	private static final Logger log = LoggerFactory.getLogger(VisibleObjectSpawner.class);
-	
+
+	private HeroAndLegendaryFixes() {
+		super();
+	}
+
 	public static void fixDrops(SpawnTemplate spawn, NpcTemplate npcTemplate) {
 		NpcRating npcRating = npcTemplate.getRating();
+		byte level = npcTemplate.getLevel();
 		switch (npcRating) {
 		case HERO:
 		case LEGENDARY:
-			fix(spawn, npcTemplate, npcRating);
-			addEchantStone(spawn, npcTemplate, npcRating);
+			fixBoss(spawn, npcTemplate, npcRating, level);
 			break;
-
 		default:
+			fixNamedKey(spawn, npcTemplate, npcRating);
 			break;
 		}
 	}
 
-	private static void fix(SpawnTemplate spawn, NpcTemplate npcTemplate, NpcRating npcRating) {
-		byte level = npcTemplate.getLevel();
+	/**
+	 * @param spawn
+	 * @param npcTemplate
+	 * @param npcRating
+	 * @param level
+	 */
+	private static void fixBoss(SpawnTemplate spawn, NpcTemplate npcTemplate, NpcRating npcRating, byte level) {
+		fixGostones(spawn, npcTemplate, npcRating);
+		addEchantStone(spawn, npcTemplate, npcRating);
+		fixNamedKey(spawn, npcTemplate, npcRating);
+		StringBuilder sb = new StringBuilder("Npc Name: ");
+		sb.append(npcTemplate.getName());
+		sb.append(" | Level: ");
+		sb.append(level);
+		sb.append(" | Rating: ");
+		sb.append(npcRating.name());
+		sb.append(" | local: ");
+		sb.append(spawn.getWorldId());
+		
+		log.info(sb.toString());
+	}
+
+	private static void fixGostones(SpawnTemplate spawn, NpcTemplate npcTemplate, NpcRating npcRating) {
 		NpcDrop npcDrop = npcTemplate.getNpcDrop();
 		if(npcDrop!=null) {
 			addGodstoneDrops(new ArrayList<Drop>(), npcDrop);
-			log.info("Npc Name: "+ npcTemplate.getName()+ " | Level: "+level+ " | Rating: "+ npcRating.name() + " | local: "+spawn.getWorldId());
+		}
+	}
+	
+	private static void fixNamedKey(SpawnTemplate spawn, NpcTemplate npcTemplate, NpcRating npcRating) {
+		NpcDrop npcDrop = npcTemplate.getNpcDrop();
+		if(npcDrop!=null) {
+			for(DropGroup dg:npcDrop.getDropGroup()) {
+				if(dg.getGroupName().equals("NAMED_KEY_ALONE")) {
+					for(Drop keyDrop:dg.getDrop()) {
+						NpcDropsFix.setChance(keyDrop, 99f, 120f);
+					}
+				}
+			}
+			
 		}
 	}
 	
 	private static void addEchantStone(SpawnTemplate spawn, NpcTemplate npcTemplate, NpcRating npcRating) {
-		byte level = npcTemplate.getLevel();
 		NpcDrop npcDrop = npcTemplate.getNpcDrop();
 		if(npcDrop!=null) {
 			for(DropGroup dg:npcDrop.getDropGroup()) {
@@ -68,13 +105,12 @@ public class HeroAndLegendaryFixes {
 					addEnchant(dg, 166000095);
 				}
 			}
-			log.info("Npc Name: "+ npcTemplate.getName()+ " | Level: "+level+ " | Rating: "+ npcRating.name() + " | local: "+spawn.getWorldId());
 		}
 	}
 
 	private static void addEnchant(DropGroup dg, int itemId) {
 		Drop nde1 = new Drop(itemId, 1, 3, 0.1f, false);
-		NpcDropsFix.setChance(nde1, 0.4f, 0.9f);
+		NpcDropsFix.setChance(nde1, 0.4f, 1.5f);
 		dg.getDrop().add(nde1);
 	}
 
@@ -86,7 +122,7 @@ public class HeroAndLegendaryFixes {
 		    godstoneDropList.add(gdrop);
 		}
 		List<DropGroup> dropGroup = npcDrop.getDropGroup();
-		if( dropGroup.size()!=0) {
+		if(!dropGroup.isEmpty()) {
 			dropGroup.add(ddgp);
 		}
 	}
