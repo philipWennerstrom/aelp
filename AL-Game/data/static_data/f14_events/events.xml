@@ -24,29 +24,29 @@ author: flashman
         <reward_info>
             <rank id="1" ap="7500" gp="20">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="1"/>
-                    <item item_id="186000130" count="1000"/>
-                    <item item_id="186000137" count="20"/>                    
+                    <!--<item item_id="186000147" count="1"/>-->
+                    <!--<item item_id="186000130" count="1000"/>-->
+                    <!--<item item_id="186000137" count="20"/>-->                    
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
-                    <item item_id="166000183" count="5"/>
+                <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
+                    <item item_id="166000095" count="3"/>
                 </reward_item_group>
             </rank>
             <rank id="2" ap="3500">
                 <reward_item_group random="false">
-                    <item item_id="186000096" count="3"/>
-                    <item item_id="186000130" count="500"/>
-                    <item item_id="186000137" count="10"/>  
+                   <!--<item item_id="186000096" count="3"/>-->
+                    <!--<item item_id="186000130" count="500"/>-->
+                    <!--<item item_id="186000137" count="10"/>-->  
                 </reward_item_group>
                 <reward_item_group random="true" random_count="2">
-                    <item item_id="166000140" count="3"/>
-                    <item item_id="166000150" count="3"/>
-                    <item item_id="166000151" count="3"/>
-                    <item item_id="166000152" count="3"/>
+                    <item item_id="166000080" count="2"/>
+                    <item item_id="166000085" count="2"/>
+                    <item item_id="166000090" count="2"/>
+                    <item item_id="166000095" count="2"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -74,15 +74,15 @@ author: flashman
         <reward_info>
             <rank id="1" ap="7500" gp="20">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="1"/>
-                    <item item_id="186000130" count="1000"/>
-                    <item item_id="186000137" count="20"/>                    
+                    <!--<item item_id="186000147" count="1"/>-->
+                    <!--<item item_id="186000130" count="1000"/>-->
+                    <!--<item item_id="186000137" count="20"/>-->                    
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -112,15 +112,15 @@ author: flashman
         <reward_info>
             <rank id="1" ap="7500" gp="20">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="1"/>
-                    <item item_id="186000130" count="1000"/>
-                    <item item_id="186000137" count="20"/>                    
+                    <!--<item item_id="186000147" count="1"/>-->
+                    <!--<item item_id="186000130" count="1000"/>-->
+                    <!--<item item_id="186000137" count="20"/>-->                    
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -152,15 +152,15 @@ author: flashman
         <reward_info>
             <rank id="1" ap="7500" gp="20">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="1"/>
-                    <item item_id="186000130" count="1000"/>
-                    <item item_id="186000137" count="20"/>                    
+                    <!--<item item_id="186000147" count="1"/>-->
+                    <!--<item item_id="186000130" count="1000"/>-->
+                    <!--<item item_id="186000137" count="20"/>-->                    
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -196,15 +196,15 @@ author: flashman
         <reward_info>
             <rank id="1" ap="7500" gp="20">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="1"/>
-                    <item item_id="186000130" count="1000"/>
-                    <item item_id="186000137" count="20"/>                    
+                    <!--<item item_id="186000147" count="1"/>-->
+                    <!--<item item_id="186000130" count="1000"/>-->
+                    <!--<item item_id="186000137" count="20"/>-->                    
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -232,32 +232,32 @@ author: flashman
         <reward_info>
             <rank id="1" ap="20000" gp="75">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="10"/>
-                    <item item_id="186000130" count="3000"/>
-                    <item item_id="186000137" count="100"/>                      
+                    <!--<item item_id="186000147" count="10"/>-->
+                    <!--<item item_id="186000130" count="3000"/>-->
+                    <!--<item item_id="186000137" count="100"/>-->                      
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
-                    <item item_id="166000183" count="5"/>
-                    <item item_id="166000184" count="5"/>
-                    <item item_id="166000185" count="5"/>
-                    <item item_id="166000186" count="5"/>
-                    <item item_id="166000187" count="5"/>
-                    <item item_id="166000188" count="5"/>
-                    <item item_id="166000189" count="5"/>                    
-                    <item item_id="166000170" count="5"/>
-                    <item item_id="166000171" count="5"/>
-                    <item item_id="166000172" count="5"/>
-                    <item item_id="166000173" count="5"/>
-                    <item item_id="166000174" count="5"/>
-                    <item item_id="166000175" count="5"/>
-                    <item item_id="166000176" count="5"/>
-                    <item item_id="166000177" count="5"/>
-                    <item item_id="166000178" count="5"/>
-                    <item item_id="166000179" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
+                    <item item_id="166000083" count="3"/>
+                    <item item_id="166000084" count="3"/>
+                    <item item_id="166000085" count="3"/>
+                    <item item_id="166000086" count="3"/>
+                    <item item_id="166000087" count="3"/>
+                    <item item_id="166000088" count="3"/>
+                    <item item_id="166000089" count="3"/>                    
+                    <item item_id="166000070" count="3"/>
+                    <item item_id="166000071" count="3"/>
+                    <item item_id="166000072" count="3"/>
+                    <item item_id="166000073" count="3"/>
+                    <item item_id="166000074" count="3"/>
+                    <item item_id="166000075" count="3"/>
+                    <item item_id="166000076" count="3"/>
+                    <item item_id="166000077" count="3"/>
+                    <item item_id="166000078" count="3"/>
+                    <item item_id="166000079" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>
@@ -285,92 +285,92 @@ author: flashman
         <reward_info>
             <rank id="1" ap="20000" gp="75">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="10"/>
-                    <item item_id="186000130" count="3000"/>
-                    <item item_id="186000137" count="100"/>                      
+                    <!--<item item_id="186000147" count="10"/>-->
+                    <!--<item item_id="186000130" count="3000"/>-->
+                    <!--<item item_id="186000137" count="100"/>-->                      
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
-                    <item item_id="166000183" count="5"/>
-                    <item item_id="166000184" count="5"/>
-                    <item item_id="166000185" count="5"/>
-                    <item item_id="166000186" count="5"/>
-                    <item item_id="166000187" count="5"/>
-                    <item item_id="166000188" count="5"/>
-                    <item item_id="166000189" count="5"/>                    
-                    <item item_id="166000170" count="5"/>
-                    <item item_id="166000171" count="5"/>
-                    <item item_id="166000172" count="5"/>
-                    <item item_id="166000173" count="5"/>
-                    <item item_id="166000174" count="5"/>
-                    <item item_id="166000175" count="5"/>
-                    <item item_id="166000176" count="5"/>
-                    <item item_id="166000177" count="5"/>
-                    <item item_id="166000178" count="5"/>
-                    <item item_id="166000179" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
+                    <item item_id="166000083" count="3"/>
+                    <item item_id="166000084" count="3"/>
+                    <item item_id="166000085" count="3"/>
+                    <item item_id="166000086" count="3"/>
+                    <item item_id="166000087" count="3"/>
+                    <item item_id="166000088" count="3"/>
+                    <item item_id="166000089" count="3"/>                    
+                    <item item_id="166000070" count="3"/>
+                    <item item_id="166000071" count="3"/>
+                    <item item_id="166000072" count="3"/>
+                    <item item_id="166000073" count="3"/>
+                    <item item_id="166000074" count="3"/>
+                    <item item_id="166000075" count="3"/>
+                    <item item_id="166000076" count="3"/>
+                    <item item_id="166000077" count="3"/>
+                    <item item_id="166000078" count="3"/>
+                    <item item_id="166000079" count="3"/>
                 </reward_item_group>
             </rank>
             <rank id="2" ap="10000">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="10"/>
-                    <item item_id="186000130" count="3000"/>
-                    <item item_id="186000137" count="100"/>                      
+                    <!--<item item_id="186000147" count="10"/>-->
+                    <!--<item item_id="186000130" count="3000"/>-->
+                    <!--<item item_id="186000137" count="100"/>-->                      
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
-                    <item item_id="166000183" count="5"/>
-                    <item item_id="166000184" count="5"/>
-                    <item item_id="166000185" count="5"/>
-                    <item item_id="166000186" count="5"/>
-                    <item item_id="166000187" count="5"/>
-                    <item item_id="166000188" count="5"/>
-                    <item item_id="166000189" count="5"/>                    
-                    <item item_id="166000170" count="5"/>
-                    <item item_id="166000171" count="5"/>
-                    <item item_id="166000172" count="5"/>
-                    <item item_id="166000173" count="5"/>
-                    <item item_id="166000174" count="5"/>
-                    <item item_id="166000175" count="5"/>
-                    <item item_id="166000176" count="5"/>
-                    <item item_id="166000177" count="5"/>
-                    <item item_id="166000178" count="5"/>
-                    <item item_id="166000179" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
+                    <item item_id="166000083" count="3"/>
+                    <item item_id="166000084" count="3"/>
+                    <item item_id="166000085" count="3"/>
+                    <item item_id="166000086" count="3"/>
+                    <item item_id="166000087" count="3"/>
+                    <item item_id="166000088" count="3"/>
+                    <item item_id="166000089" count="3"/>                    
+                    <item item_id="166000070" count="3"/>
+                    <item item_id="166000071" count="3"/>
+                    <item item_id="166000072" count="3"/>
+                    <item item_id="166000073" count="3"/>
+                    <item item_id="166000074" count="3"/>
+                    <item item_id="166000075" count="3"/>
+                    <item item_id="166000076" count="3"/>
+                    <item item_id="166000077" count="3"/>
+                    <item item_id="166000078" count="3"/>
+                    <item item_id="166000079" count="3"/>
                 </reward_item_group>
             </rank>
             <rank id="2" ap="5000">
                 <reward_item_group random="false">
-                    <item item_id="186000147" count="10"/>
-                    <item item_id="186000130" count="3000"/>
-                    <item item_id="186000137" count="100"/>                      
+                    <!--<item item_id="186000147" count="10"/>-->
+                    <!--<item item_id="186000130" count="3000"/>-->
+                    <!--<item item_id="186000137" count="100"/>-->                      
                 </reward_item_group>
                 <reward_item_group random="true" random_count="4">
-                    <item item_id="166000190" count="5"/>
-                    <item item_id="166000180" count="5"/>
-                    <item item_id="166000181" count="5"/>
-                    <item item_id="166000182" count="5"/>
-                    <item item_id="166000183" count="5"/>
-                    <item item_id="166000184" count="5"/>
-                    <item item_id="166000185" count="5"/>
-                    <item item_id="166000186" count="5"/>
-                    <item item_id="166000187" count="5"/>
-                    <item item_id="166000188" count="5"/>
-                    <item item_id="166000189" count="5"/>                    
-                    <item item_id="166000170" count="5"/>
-                    <item item_id="166000171" count="5"/>
-                    <item item_id="166000172" count="5"/>
-                    <item item_id="166000173" count="5"/>
-                    <item item_id="166000174" count="5"/>
-                    <item item_id="166000175" count="5"/>
-                    <item item_id="166000176" count="5"/>
-                    <item item_id="166000177" count="5"/>
-                    <item item_id="166000178" count="5"/>
-                    <item item_id="166000179" count="5"/>
+                    <!--<item item_id="166000190" count="3"/>-->
+                    <item item_id="166000080" count="3"/>
+                    <item item_id="166000081" count="3"/>
+                    <item item_id="166000082" count="3"/>
+                    <item item_id="166000083" count="3"/>
+                    <item item_id="166000084" count="3"/>
+                    <item item_id="166000085" count="3"/>
+                    <item item_id="166000086" count="3"/>
+                    <item item_id="166000087" count="3"/>
+                    <item item_id="166000088" count="3"/>
+                    <item item_id="166000089" count="3"/>                    
+                    <item item_id="166000070" count="3"/>
+                    <item item_id="166000071" count="3"/>
+                    <item item_id="166000072" count="3"/>
+                    <item item_id="166000073" count="3"/>
+                    <item item_id="166000074" count="3"/>
+                    <item item_id="166000075" count="3"/>
+                    <item item_id="166000076" count="3"/>
+                    <item item_id="166000077" count="3"/>
+                    <item item_id="166000078" count="3"/>
+                    <item item_id="166000079" count="3"/>
                 </reward_item_group>
             </rank>
         </reward_info>

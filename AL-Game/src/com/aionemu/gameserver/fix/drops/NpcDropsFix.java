@@ -2,14 +2,18 @@ package com.aionemu.gameserver.fix.drops;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
+import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.model.drop.Drop;
 import com.aionemu.gameserver.model.drop.DropGroup;
 import com.aionemu.gameserver.model.drop.NpcDrop;
 
 public class NpcDropsFix {
+	private static final Map<Integer, Drop> godstoneDrops = new HashMap<Integer, Drop>();
 	private static final String MANASTONE_RARE = "MANASTONE_RARE";
 	private static final String ARMOR_RARE = "ARMOR_RARE";
 	private static final String WEAPON_RARE = "WEAPON_RARE";
@@ -110,11 +114,13 @@ public class NpcDropsFix {
 		}
 	}
 
-	private static void setChance(Drop dropIndex, float minRate, float maxRate) {
+	public static void setChance(Drop dropIndex, float minRate, float maxRate) {
 		Random r = new Random();
 		float random = (float) (minRate + r.nextFloat() * (maxRate - minRate));
 		BigDecimal bd = new BigDecimal(random).setScale(2, RoundingMode.DOWN);
-		dropIndex.setChance(bd.floatValue());
+		float originalFloat = bd.floatValue();
+		float floatValue = originalFloat*CustomConfig.DOUBLE_XP;
+		dropIndex.setChance(floatValue);
 	}
 
 	private static void uniqueAmorAndWeapons(DropGroup dropGroup) {
@@ -140,7 +146,7 @@ public class NpcDropsFix {
 		if(dropGroup.getGroupName().equals(NAMED_LEGEND_ARMOR)||
 		   dropGroup.getGroupName().equals(NAMED_LEGEND_WEAPON)) {
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.7f, 2.5f);
+					setChance(dropIndex, 0.7f, 3.5f);
 			}
 		}
 	}
@@ -152,7 +158,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 0.1f, 0.8f);
+					setChance(dropIndex, 0.5f, 2.1f);
 			}
 		}
 	}

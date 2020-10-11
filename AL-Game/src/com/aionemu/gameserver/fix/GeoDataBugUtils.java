@@ -16,12 +16,13 @@ public class GeoDataBugUtils {
 	 */
 	public static boolean canSee(Creature attacked, Creature attacker) {
 		try {
-
 			if (attacked != null && attacked.getTarget() != null && !(attacked instanceof Player)) {
 				MapRegion map = attacker.getActiveRegion();
-				if (map != null && !GeoService.getInstance().canSee(attacked, attacker)
-						&& !MathUtil.isInRange(attacked, attacker, 15)) {
-					return false;
+				if(attacker!= null) {
+					if (map != null && !GeoService.getInstance().canSee(attacked, attacker)
+							&& !MathUtil.isInRange(attacked, attacker, 15)) {
+						return false;
+					}
 				}
 			}
 			return true;
