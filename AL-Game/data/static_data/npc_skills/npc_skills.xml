@@ -17913,9 +17913,9 @@
         <npcskill skillid="17342" skilllevel="39" probability="25"/>
     </npcskills>
     <npcskills npcid="214306">
-        <!--<npcskill skillid="16545" skilllevel="40" probability="25"/>
+       <npcskill skillid="16545" skilllevel="40" probability="25"/>
         <npcskill skillid="16570" skilllevel="40" probability="25"/>
-        <npcskill skillid="16574" skilllevel="40" probability="25"/>-->
+        <npcskill skillid="16574" skilllevel="40" probability="25"/>
         <npcskill skillid="17342" skilllevel="40" probability="25"/>
     </npcskills>
     <npcskills npcid="214307">
