@@ -73,7 +73,7 @@ public class HeroAndLegendaryFixes {
 	}
 
 	private static void addEnchant(DropGroup dg, int itemId) {
-		Drop nde1 = new Drop(itemId, 1, 3, 0.1f, false);
+		Drop nde1 = new Drop(itemId, 1, 4, 0.1f, false);
 		NpcDropsFix.setChance(nde1, 0.4f, 0.9f);
 		dg.getDrop().add(nde1);
 	}
