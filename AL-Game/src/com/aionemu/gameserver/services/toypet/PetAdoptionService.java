@@ -8,6 +8,7 @@ import com.aionemu.gameserver.model.gameobjects.player.PetCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
+import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
@@ -31,7 +32,12 @@ public class PetAdoptionService {
 		if (!validateEgg(player, eggObjId, petId)) {
 			return;
 		}
-		addPet(player, petId, name, decorationId);
+		int eggId = player.getInventory().getItemByObjId(eggObjId).getItemId();
+		ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(eggId);
+		int expireTime = template.getActions().getAdoptPetAction().getExpireMinutes() != 0
+	                ? (int) ((System.currentTimeMillis() / 1000) + template.getActions().getAdoptPetAction().getExpireMinutes() * 60) : 0;
+
+	    addPet(player, petId, name, decorationId, expireTime);
 	}
 
 	/**
@@ -42,7 +48,7 @@ public class PetAdoptionService {
 	 * @param name
 	 * @param decorationId
 	 */
-	public static void addPet(Player player, int petId, String name, int decorationId) {
+	public static void addPet(Player player, int petId, String name, int decorationId, int expireTime) {
 		if (player.getPetList().hasPet(petId)) {
 			log.warn("Duplicate pet adoption");
 			return;
@@ -51,10 +57,13 @@ public class PetAdoptionService {
           log.warn("Trying adopt pet without template. PetId:" + petId);
           return;
         }
-		PetCommonData petCommonData = player.getPetList().addPet(player, petId, decorationId, name);
-		if (petCommonData != null) {
-			PacketSendUtility.sendPacket(player, new SM_PET(1, petCommonData));
-		}
+        PetCommonData petCommonData = player.getPetList().addPet(player, petId, decorationId, name, expireTime);
+        if (petCommonData != null) {
+            PacketSendUtility.sendPacket(player, new SM_PET(1, petCommonData));
+            if (expireTime > 0) {
+                ExpireTimerTask.getInstance().addTask(petCommonData, player);
+            }
+        }
 	}
 
 	private static boolean validateEgg(Player player, int eggObjId, int petId) {

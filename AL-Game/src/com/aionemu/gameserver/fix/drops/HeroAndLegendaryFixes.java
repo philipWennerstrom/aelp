@@ -110,7 +110,7 @@ public class HeroAndLegendaryFixes {
 
 	private static void addEnchant(DropGroup dg, int itemId) {
 		Drop nde1 = new Drop(itemId, 1, 4, 0.1f, false);
-		NpcDropsFix.setChance(nde1, 0.4f, 1.3f);
+		NpcDropsFix.setChance(nde1, 1.4f, 3.1f);
 		dg.getDrop().add(nde1);
 	}
 
@@ -118,7 +118,7 @@ public class HeroAndLegendaryFixes {
 		DropGroup ddgp = new DropGroup(godstoneDropList, Race.PC_ALL, true, NpcDropData.GODSTONES);
 		for (Map.Entry<Integer,Drop> pair : NpcDropData.godstoneDrops.entrySet()) {
 		    Drop gdrop = pair.getValue();
-			NpcDropsFix.setChance(gdrop, 0.4f, 0.9f);
+			NpcDropsFix.setChance(gdrop, 1.1f, 2.7f);
 		    godstoneDropList.add(gdrop);
 		}
 		List<DropGroup> dropGroup = npcDrop.getDropGroup();

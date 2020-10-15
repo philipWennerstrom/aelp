@@ -1,5 +1,7 @@
 package pirate.events;
 
+import java.util.Random;
+
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.ingameshop.InGameShopEn;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
@@ -34,7 +36,12 @@ public class EventRewardHelper {
         }
         for (EventRewardItemGroup gr : rw.getRewards()) { // items reward
             for (EventRewardItem item : gr.getItems()) {
-                ItemService.addItem(player, item.getItemId(), item.getCount());
+            	Random random = new Random();
+            	int nextInt = random.nextInt(2);
+            	if(nextInt==0) {
+            		nextInt = 1;
+            	}
+                ItemService.addItem(player, item.getItemId(), nextInt);
             }
         }
     }

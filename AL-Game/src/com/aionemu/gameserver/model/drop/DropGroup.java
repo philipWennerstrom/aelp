@@ -36,7 +36,14 @@ public class DropGroup implements DropCalculator {
 		this.useCategory = dropGroup.useCategory;
 		this.group_name = dropGroup.group_name;
     }
-    /**
+    
+    
+    
+    public void setDrop(List<Drop> drop) {
+		this.drop = drop;
+	}
+
+	/**
 	 * @param drop
 	 * @param race
 	 * @param useCategory

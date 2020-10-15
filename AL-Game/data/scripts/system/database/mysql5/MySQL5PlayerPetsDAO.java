@@ -99,12 +99,13 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO {
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con
-				.prepareStatement("INSERT INTO player_pets(player_id, pet_id, decoration, name, despawn_time) VALUES(?, ?, ?, ?, ?)");
+				.prepareStatement("INSERT INTO player_pets(player_id, pet_id, decoration, name, despawn_time, expire_time) VALUES(?, ?, ?, ?, ?, ?)");
 			stmt.setInt(1, petCommonData.getMasterObjectId());
 			stmt.setInt(2, petCommonData.getPetId());
 			stmt.setInt(3, petCommonData.getDecoration());
 			stmt.setString(4, petCommonData.getName());
 			stmt.setTimestamp(5, petCommonData.getDespawnTime());
+			stmt.setInt(6, petCommonData.getExpireTime());
 			stmt.execute();
 			stmt.close();
 		}
@@ -145,7 +146,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO {
 			stmt.setInt(1, player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				PetCommonData petCommonData = new PetCommonData(rs.getInt("pet_id"), player.getObjectId());
+				PetCommonData petCommonData = new PetCommonData(rs.getInt("pet_id"), player.getObjectId(), rs.getInt("expire_time"));
 				petCommonData.setName(rs.getString("name"));
 				petCommonData.setDecoration(rs.getInt("decoration"));
 				if (petCommonData.getFeedProgress() != null) {
