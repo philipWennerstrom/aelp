@@ -28,12 +28,12 @@ public class PetAdoptionService {
 	 * @param decorationId
 	 */
 	public static final void adoptPet(Player player, int eggObjId, int petId, String name, int decorationId) {
-
-		if (!validateEgg(player, eggObjId, petId)) {
-			return;
-		}
 		int eggId = player.getInventory().getItemByObjId(eggObjId).getItemId();
 		ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(eggId);
+		if (!validateEgg(player, eggObjId, petId, template)) {
+			return;
+		}
+		
 		int expireTime = template.getActions().getAdoptPetAction().getExpireMinutes() != 0
 	                ? (int) ((System.currentTimeMillis() / 1000) + template.getActions().getAdoptPetAction().getExpireMinutes() * 60) : 0;
 
@@ -66,9 +66,8 @@ public class PetAdoptionService {
         }
 	}
 
-	private static boolean validateEgg(Player player, int eggObjId, int petId) {
-		int eggId = player.getInventory().getItemByObjId(eggObjId).getItemId();
-		ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(eggId);
+	private static boolean validateEgg(Player player, int eggObjId, int petId, ItemTemplate template) {
+		
 		if (template == null || template.getActions() == null || template.getActions().getAdoptPetAction() == null ||
 			template.getActions().getAdoptPetAction().getPetId() != petId) {
 			return false;
