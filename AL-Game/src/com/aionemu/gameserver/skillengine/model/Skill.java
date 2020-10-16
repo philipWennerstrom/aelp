@@ -48,6 +48,7 @@ import com.aionemu.gameserver.skillengine.action.Action;
 import com.aionemu.gameserver.skillengine.action.Actions;
 import com.aionemu.gameserver.skillengine.condition.Conditions;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
+import com.aionemu.gameserver.skillengine.effect.EffectType;
 import com.aionemu.gameserver.skillengine.properties.FirstTargetAttribute;
 import com.aionemu.gameserver.skillengine.properties.Properties;
 import com.aionemu.gameserver.skillengine.properties.TargetRangeAttribute;
@@ -166,13 +167,19 @@ public class Skill {
 	 */
 	public boolean canUseSkill() {
 		Properties properties = skillTemplate.getProperties();
+		
 		if (properties != null && !properties.validate(this)) {
 			log.debug("properties failed");
 			return false;
 		}
 
-		if (!preCastCheck())
+		if (!preCastCheck()) {
+			if(skillTemplate.getName().contains("Hide")||skillTemplate.getName().contains("Shadow Walk")) {
+				return true;
+			}
 			return false;
+		}
+			
 
 		// check for counter skill
 		if (effector instanceof Player) {
@@ -241,7 +248,9 @@ public class Skill {
 	}
 
 	private boolean useSkill(boolean checkAnimation, boolean checkproperties) {
-		if (checkproperties && !canUseSkill())
+		boolean canUseSkill = canUseSkill();
+		//System.out.println("pode usar skill: " + canUseSkill);
+		if (checkproperties && !canUseSkill)
 			return false;
 
 		calculateSkillDuration();

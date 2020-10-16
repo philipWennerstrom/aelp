@@ -106,6 +106,10 @@ public class PricesService {
 			* getGlobalPricesModifier() / 100F)
 			* getTaxes(playerRace) / 100F);
 		vendorSellMod = vendorSellMod /2;
+		vendorSellMod = vendorSellMod - 5;
+		if(vendorSellMod==0) {
+			vendorSellMod = 2;
+		}
 		return vendorSellMod;
 	}
 

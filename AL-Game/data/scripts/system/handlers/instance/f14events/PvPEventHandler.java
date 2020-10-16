@@ -282,8 +282,8 @@ public class PvPEventHandler extends BaseEventHandler {
                     this.stopTimer(player);
                 }
                 if(!names[0].equals("")&& !names[1].equals("")) {
-                Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento %s concluido, ganhador(а): %s, perdedor(а): %s",
-                        eType.getEventTemplate().getEventName(), names));
+                //Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento %s concluido, ganhador(а): %s, perdedor(а): %s",
+                  //      eType.getEventTemplate().getEventName(), names));
                 }else if(!names[0].equals("")) {
                 	   Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento %s concluido, ganhador(а): %s",
                                eType.getEventTemplate().getEventName(), names));

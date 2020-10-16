@@ -58,10 +58,13 @@ public class StigmaService {
 				}
 			} else if (ItemSlot.isAdvancedStigma(slot)) {
 				// check the number of advenced stigma wearing
-				if (getPossibleAdvencedStigmaCount(player) <= player.getEquipment().getEquippedItemsAdvencedStigma().size()) {
-					AuditLogger.info(player, "Possible client hack advenced stigma count big :O");
-					return false;
+				if(!CustomConfig.GAMESERVER_AION_VERSION.equals("1.9")) {
+					if (getPossibleAdvencedStigmaCount(player) <= player.getEquipment().getEquippedItemsAdvencedStigma().size()) {
+						AuditLogger.info(player, "Possible client hack advenced stigma count big :O");
+						return false;
+					}
 				}
+				
 			}
 
 			if (!resultItem.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass())) {
@@ -167,6 +170,10 @@ public class StigmaService {
 		for (Item item : equippedItems) {
 			if (item.getItemTemplate().isStigma()) {
 				if (!isPossibleEquippedStigma(player, item)) {
+					//TODO remover depois
+					if(CustomConfig.GAMESERVER_AION_VERSION.equals("1.9")) {
+						continue;
+					}
 					AuditLogger.info(player, "Possible client hack stigma count big :O");
 					player.getEquipment().unEquipItem(item.getObjectId(), 0);
 					continue;
