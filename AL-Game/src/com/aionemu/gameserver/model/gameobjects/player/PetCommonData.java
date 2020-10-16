@@ -4,21 +4,25 @@ import java.sql.Timestamp;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerPetsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.AdoptPetAction;
 import com.aionemu.gameserver.model.templates.pet.PetDopingBag;
 import com.aionemu.gameserver.model.templates.pet.PetFunctionType;
 import com.aionemu.gameserver.model.templates.pet.PetTemplate;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.toypet.PetAdoptionService;
 import com.aionemu.gameserver.services.toypet.PetFeedProgress;
 import com.aionemu.gameserver.services.toypet.PetHungryLevel;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
 /**
  * @author ATracer
  */
-public class PetCommonData extends VisibleObjectTemplate {
+public class PetCommonData extends VisibleObjectTemplate implements IExpirable{
 
 	private int decoration;
 	private String name;
@@ -39,25 +43,36 @@ public class PetCommonData extends VisibleObjectTemplate {
 	private int lastSentPoints;
 	private long moodCdStarted;
 	private long giftCdStarted;
+	private int expireTime;
+	
+	public int getExpireTime() {
+		return expireTime;
+	}
+
+	public void setExpireTime(int expireTime) {
+		this.expireTime = expireTime;
+	}
+
 	private Timestamp despawnTime;
 
 	private boolean isLooting = false;
 	private boolean isBuffing = false;
 
-	public PetCommonData(int petId, int masterObjectId) {
-		this.petObjectId = IDFactory.getInstance().nextId();
-		this.petId = petId;
-		this.masterObjectId = masterObjectId;
-		PetTemplate template = DataManager.PET_DATA.getPetTemplate(petId);
-		if (template.ContainsFunction(PetFunctionType.FOOD)) {
-			int flavourId = template.getPetFunction(PetFunctionType.FOOD).getId();
-			int lovedLimit = DataManager.PET_FEED_DATA.getFlavourById(flavourId).getLovedFoodLimit();
-			feedProgress = new PetFeedProgress((byte) (lovedLimit & 0xFF));
-		}
-		if (template.ContainsFunction(PetFunctionType.DOPING)) {
-			dopingBag = new PetDopingBag();
-		}
-	}
+	   public PetCommonData(int petId, int masterObjectId, int expireTime) {
+	        this.petObjectId = IDFactory.getInstance().nextId();
+	        this.petId = petId;
+	        this.masterObjectId = masterObjectId;
+	        this.expireTime = expireTime;
+	        PetTemplate template = DataManager.PET_DATA.getPetTemplate(petId);
+	        if (template.ContainsFunction(PetFunctionType.FOOD)) {
+	            int flavourId = template.getPetFunction(PetFunctionType.FOOD).getId();
+	            int lovedLimit = DataManager.PET_FEED_DATA.getFlavourById(flavourId).getLovedFoodLimit();
+	            feedProgress = new PetFeedProgress((byte) (lovedLimit & 0xFF));
+	        }
+	        if (template.ContainsFunction(PetFunctionType.DOPING)) {
+	            dopingBag = new PetDopingBag();
+	        }
+	    }
 
 	public final int getDecoration() {
 		return decoration;
@@ -320,4 +335,22 @@ public class PetCommonData extends VisibleObjectTemplate {
 			return null;
 		return eggTemplate.getActions().getAdoptPetAction();
 	}
+
+    @Override
+    public void expireEnd(Player player) {
+        if (player == null) {
+            return;
+        }
+        PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_PET_ABANDON_EXPIRE_TIME_COMPLETE(name));
+        PetAdoptionService.surrenderPet(player, petId);
+    }
+
+    @Override
+    public boolean canExpireNow() {
+        return true;
+    }
+
+    @Override
+    public void expireMessage(Player player, int time) {
+    }
 }

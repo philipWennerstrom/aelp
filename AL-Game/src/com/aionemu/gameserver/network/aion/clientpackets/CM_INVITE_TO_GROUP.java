@@ -1,5 +1,7 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.aionemu.gameserver.model.gameobjects.player.DeniedStatus;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAllianceService;
@@ -39,8 +41,12 @@ public class CM_INVITE_TO_GROUP extends AionClientPacket {
 	 */
 	@Override
 	protected void runImpl() {
+		String newName= name;
+		if(name.lastIndexOf(" ") != -1) {
+			 newName= StringUtils.substringBefore(name, " ");
+		}
 		
-		name = ChatUtil.getRealAdminName(name);
+		name = ChatUtil.getRealAdminName(newName);
 		
 		final String playerName = Util.convertName(name);
 

@@ -348,7 +348,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 				long bday = readQ();
 				if(bday == 0)
 					bday = System.currentTimeMillis();
-				player.getPetList().addPet(player, petId, decorationId, bday, readS());
+				player.getPetList().addPet(player, petId, decorationId, bday, readS(),0);
 			}
 			else {
 				readB(16); readS();

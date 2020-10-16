@@ -23,6 +23,13 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket {
 		return new DescriptionId(id * 2 + 1);
 	}
 	
+	  /**
+     * Your pet's time is up. %0 has gone.
+     */
+    public static SM_SYSTEM_MESSAGE STR_MSG_PET_ABANDON_EXPIRE_TIME_COMPLETE(String value0) {
+        return new SM_SYSTEM_MESSAGE(1401194, value0);
+    }
+	
 	/**
 	* You inflicted %num1 damage on %0.
 	*/

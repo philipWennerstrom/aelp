@@ -36,7 +36,7 @@ import pirate.events.EventScore;
 public class BaseEventHandler extends GeneralEventHandler {
 
     protected static final Logger log = LoggerFactory.getLogger(BaseEventHandler.class);
-    public final String EventManager = "EventManager";
+    public final String EventManager = "Evento PvP";
     protected int round = 1;
     protected int winNeeded = 0;
     protected int waitingTime = 0;
