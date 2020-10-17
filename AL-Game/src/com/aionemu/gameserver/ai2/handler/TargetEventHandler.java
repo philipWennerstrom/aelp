@@ -99,12 +99,18 @@ public class TargetEventHandler {
 	 * @param npcAI
 	 */
 	public static void onTargetChange(NpcAI2 npcAI, Creature creature) {
-		if (npcAI.isLogging()) {
-			AI2Logger.info(npcAI, "onTargetChange");
-		}
-		if (npcAI.isInState(AIState.FIGHT)) {
-			npcAI.getOwner().setTarget(creature);
-			AttackManager.scheduleNextAttack(npcAI);
+		try {
+
+			if (npcAI.isLogging()) {
+				AI2Logger.info(npcAI, "onTargetChange");
+			}
+			if (npcAI.isInState(AIState.FIGHT)) {
+				npcAI.getOwner().setTarget(creature);
+				AttackManager.scheduleNextAttack(npcAI);
+			}
+		
+		}catch (Exception e) {
+			// TODO: handle exception
 		}
 	}
 

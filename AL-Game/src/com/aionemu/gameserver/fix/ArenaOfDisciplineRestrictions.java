@@ -24,7 +24,13 @@ public class ArenaOfDisciplineRestrictions {
 		case ARENA_OF_CHAOS_1:
 		case ARENA_OF_CHAOS_2:
 		case ARENA_OF_CHAOS_3:
+		case ARENA_OF_DISCIPLINE_1:
+		case ARENA_OF_DISCIPLINE_2:
 		case ARENA_OF_DISCIPLINE_3:
+		case ARENA_OF_HARMONY_1:
+		case ARENA_OF_HARMONY_2:
+		case ARENA_OF_HARMONY_3:
+		case ARENA_OF_GLORY:
 
 			AionConnection connectionToAdd = player.getClientConnection();
 			if(!players.isEmpty()) {
