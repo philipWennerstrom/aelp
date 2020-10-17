@@ -342,9 +342,12 @@ public class BaseEventHandler extends GeneralEventHandler {
         return null;
     }
 
-    protected Player getWinnerFromScoreByKills() {
-        int kills = -1;
+    public Player getWinnerFromScoreByKills() {
+        int kills = 0;
         Player winner = null;
+        if(this.players.size()==1) {
+        	return players.get(0);
+        }
         for (Player p : this.players) {
             EventScore es = this.getScore(p.getObjectId());
             if (es.getKills() > kills) {
@@ -357,12 +360,24 @@ public class BaseEventHandler extends GeneralEventHandler {
 
     protected boolean ifOnePlayer() {
         if (this.players.size() == 1) {
-            EventScore es = this.score.get(0);
-            es.setWins(this.winNeeded);
-            es.setLoses(0);
-            es.isWinner = true;
-            DoReward();
-            return true;
+        	Player winnerPlayer = this.getWinnerFromScoreByKills();
+        	if(winnerPlayer!=null) {
+        		EventScore es = null;
+            	for(EventScore esp:this.score) {
+            		if(esp.PlayerObjectId==winnerPlayer.getObjectId()) {
+            			es = esp;
+            		}
+            	}
+               // EventScore es = this.score.get(0);
+            	if(es!=null) {
+            		 es.setWins(this.winNeeded);
+                     es.setLoses(0);
+                     es.isWinner = true;
+                     DoReward();
+                     return true;
+            	}
+        	}
+           return false;
         }
         return false;
     }

@@ -202,7 +202,7 @@ public class CommandEventHandler extends BaseEventHandler {
             } else {
                 this.winnerGroupId = winner.getObjectId();
             }
-            Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento: %s concluído, o grupo com o líder %s ganhou.",
+            Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento: %s concluído, o grupo com o lider  %s ganhou.",
                     this.eType.getEventTemplate().getEventName(), winner.getLeaderObject().getName()));
             this.DoReward();
         }

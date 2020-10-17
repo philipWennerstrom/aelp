@@ -118,8 +118,9 @@ public class HeroAndLegendaryFixes {
 		DropGroup ddgp = new DropGroup(godstoneDropList, Race.PC_ALL, true, NpcDropData.GODSTONES);
 		for (Map.Entry<Integer,Drop> pair : NpcDropData.godstoneDrops.entrySet()) {
 		    Drop gdrop = pair.getValue();
-			NpcDropsFix.setChance(gdrop, 1.1f, 2.7f);
-		    godstoneDropList.add(gdrop);
+			Drop ndrop = new Drop(gdrop.getItemId(), gdrop.getMinAmount(), gdrop.getMaxAmount(), gdrop.getChance(), gdrop.isNoReduction());
+			NpcDropsFix.setChance(ndrop, 1.1f, 2.7f);
+		    godstoneDropList.add(ndrop);
 		}
 		List<DropGroup> dropGroup = npcDrop.getDropGroup();
 		if(!dropGroup.isEmpty()) {

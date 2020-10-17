@@ -81,7 +81,7 @@ public class PvPEventHandler extends BaseEventHandler {
         SkillEngine.getInstance().applyEffectDirectly(18191, player, player, 10000);
         SkillEngine.getInstance().applyEffectDirectly(10380, player, player, 10000);
         this.HealPlayer(player);
-        this.sendSpecMessage(EventManager, "O evento irá iniciar em : " + this.waitingTime + " seg.");
+        this.sendSpecMessage(EventManager, "O evento vai inicias em 5 segundos");
         if (!this.containsInScoreList(player.getObjectId())) {
             this.addToScoreList(player);
         }
@@ -174,7 +174,7 @@ public class PvPEventHandler extends BaseEventHandler {
                     return;
                 } else {
                     this.moveToStartPosition();
-                    this.sendSpecMessage(EventManager, "O tempo terminou, o vencedor deste round é: " + winner.getName());
+                    this.sendSpecMessage(EventManager, "O tempo terminou, o vencedor deste round foi: " + winner.getName());
                 }
             } else {
                 this.DoReward();
@@ -225,7 +225,7 @@ public class PvPEventHandler extends BaseEventHandler {
 
             this.stopTimer();
 
-            this.sendSpecMessage(EventManager, "Round: " + round + " finalizado, o vencedor é: " + winner.getName());
+            this.sendSpecMessage(EventManager, "Round: " + round + " finalizado, o vencedor foi: " + winner.getName());
 
             ThreadPoolManager.getInstance().schedule(new Runnable() {
                 @Override
@@ -268,7 +268,7 @@ public class PvPEventHandler extends BaseEventHandler {
                     } else {
                         rank = 2;
                     }
-                    this.sendSpecMessage(EventManager, String.format("Sua colocação no evento é:  %s", rank), player);
+                    this.sendSpecMessage(EventManager, String.format("Seu rank no evento foi:  %s", rank), player);
                     EventRewardHelper.GiveRewardFor(player, EventType.E_1x1, es, rank);
                     moveToEntry(player);
                     switch (rank) {
@@ -286,7 +286,7 @@ public class PvPEventHandler extends BaseEventHandler {
                   //      eType.getEventTemplate().getEventName(), names));
                 }else if(!names[0].equals("")) {
                 	   Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento %s concluido, ganhador(а): %s",
-                               eType.getEventTemplate().getEventName(), names));
+                               eType.getEventTemplate().getEventName(), this.getWinnerFromScoreByKills().getName()));
                 }
             } else {
                 for (Player player : this.players) {

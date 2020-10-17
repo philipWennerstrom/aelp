@@ -146,7 +146,7 @@ public class FFAEventHandler extends BaseEventHandler {
                 }
             }, battle_time * 1000);
             this.startTimer(this.battle_time);
-            this.sendSpecMessage(EventManager, "Поехали!");
+            this.sendSpecMessage(EventManager, "Go!!!!!!");
         }
     }
 
@@ -175,8 +175,8 @@ public class FFAEventHandler extends BaseEventHandler {
             }
             winnerScore.incPoints(winnerPoints);
             loserScore.incPoints(-loserPoints);
-            PacketSendUtility.sendMessage(winner, String.format("Você está ganhando com %s pontos.", winnerPoints));
-            PacketSendUtility.sendMessage(victim, String.format("Você está perdendo com %s pontos.", loserPoints));
+            PacketSendUtility.sendMessage(winner, String.format("Vencendo no momento com %s pontos.", winnerPoints));
+            PacketSendUtility.sendMessage(victim, String.format("Perdendo no momento com %s pontos.", loserPoints));
 
             //PacketSendUtility.sendPacket(winner, new SM_SYSTEM_MESSAGE(1360001, victim.getName()));
         }
@@ -211,7 +211,7 @@ public class FFAEventHandler extends BaseEventHandler {
                 rank++;
             }
 
-            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Evento: %s finalizado,o primeiro lugar é: %s .",
+            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Evento: %s finalizado. Primeiro lugar: %s .",
                     eType.getEventTemplate().getEventName(), this.getPlayerFromEventList(this.score.get(0).PlayerObjectId).getName()), 3);
 
             this.players.clear();

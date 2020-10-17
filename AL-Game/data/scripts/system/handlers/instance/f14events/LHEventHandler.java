@@ -195,10 +195,22 @@ public class LHEventHandler extends BaseEventHandler {
     @Override
     protected boolean ifOnePlayer() {
         if (this.players.size() == 1) {
-            EventScore es = this.score.get(0);
-            es.isWinner = true;
-            DoReward();
-            return true;
+        	Player winnerPlayer = this.getWinnerFromScoreByKills();
+        	EventScore es = null;
+        	for(EventScore esp:this.score) {
+        		if(esp.PlayerObjectId==winnerPlayer.getObjectId()) {
+        			es = esp;
+        		}
+        	}
+           // EventScore es = this.score.get(0);
+        	if(es!=null) {
+        		 es.setWins(this.winNeeded);
+                 es.setLoses(0);
+                 es.isWinner = true;
+                 DoReward();
+                 return true;
+        	}
+           return false;
         }
         return false;
     }

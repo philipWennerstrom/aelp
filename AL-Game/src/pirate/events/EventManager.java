@@ -134,12 +134,16 @@ public class EventManager {
         if (holder == null) {
             holderCounter += 1;
             holder = this.createEventHolder(holderCounter, etype, epl);
+          
             holder.addPlayer(player);
             this.holders.add(holder);
             registerMsg = String.format("You have successfully registered with the registrar of the new group.\nEvent: %s\nLevels: %s - %s", etype.name(), epl.getMin(), epl.getMax());
             log.info("[EventManager] Create new {} with index: {}", holder.getClass().getName(), holder.Index());
             log.info("[EventManager] Add {} to {} with index: {}", new Object[]{player.getName(), holder.getClass().getSimpleName(), holder.Index()});
         } else {
+        	if(!holder.canAddPlayer(player)) {
+              	return new EventRegisterInfo(EventRergisterState.ALREADY_REGISTRED, "You are already registered event. If you want to create another event, you must first exit the current.");
+          	}
             holder.addPlayer(player);
             registerMsg = String.format("Are you a member in the group waiting registrar.\nEvent: %s\nLevels: %s - %s", etype.name(), epl.getMin(), epl.getMax());
             log.info("[EventManager] Add {} to {} with index: {}", new Object[]{player.getName(), holder.getClass().getSimpleName(), holder.Index()});
@@ -572,7 +576,7 @@ public class EventManager {
             return new EventRegisterInfo(EventRergisterState.CRITICAL_ERROR, String.format("Event: %s not listed Events.", etype.name()));
         }
         if (!this.eventIsActive(etype)) {
-            //return new EventRegisterInfo(EventRergisterState.EVENT_NOT_START, "This event has not yet started.");
+           return new EventRegisterInfo(EventRergisterState.EVENT_NOT_START, "This event has not yet started.");
         }
         return null;
     }
