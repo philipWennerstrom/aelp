@@ -23,6 +23,11 @@ public class SimpleSinglePlayerEventHolder extends SinglePlayerHolder {
         if (this.allPlayers.size() == this.getStartCondition().getSinglePlayersToStart()) {
             return false;
         }
+        for(Player p:allPlayers) {
+        	if(p.getClientConnection().getMacAddress().equals(player.getClientConnection().getMacAddress())) {
+        		return false;
+        	}
+        }
         return true;
     }
 

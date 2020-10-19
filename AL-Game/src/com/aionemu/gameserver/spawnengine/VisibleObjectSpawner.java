@@ -15,6 +15,7 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.NpcData;
 import com.aionemu.gameserver.dataholders.NpcDropData;
 import com.aionemu.gameserver.fix.drops.HeroAndLegendaryFixes;
+import com.aionemu.gameserver.fix.drops.NormalAndEliteFixes;
 import com.aionemu.gameserver.fix.npc.ai.AggroFix;
 import com.aionemu.gameserver.fix.npc.ai.NpcStatsFlix;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
@@ -104,7 +105,7 @@ public class VisibleObjectSpawner {
 		npc.setEffectController(new EffectController(npc));
 		
 		HeroAndLegendaryFixes.fixDrops(spawn, npcTemplate);
-
+		NormalAndEliteFixes.fixDrops(spawn, npcTemplate);
 		if (WalkerFormator.getInstance().processClusteredNpc(npc, instanceIndex))
 			return npc;
 

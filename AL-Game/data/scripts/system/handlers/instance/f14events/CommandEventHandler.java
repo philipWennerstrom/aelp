@@ -193,7 +193,7 @@ public class CommandEventHandler extends BaseEventHandler {
                 if (winner != null) {
                     this.winnerGroupId = winner.getObjectId();
                 } else {
-                    Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Ивент: %s завершен, ничья.", this.eType.getEventTemplate().getEventName()));
+                    Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento: %s finalizado, vencedor.", this.eType.getEventTemplate().getEventName()));
                     for (Player p : this.players) {
                         this.moveToEntry(p);
                     }
@@ -202,7 +202,7 @@ public class CommandEventHandler extends BaseEventHandler {
             } else {
                 this.winnerGroupId = winner.getObjectId();
             }
-            Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Ивент: %s завершен, победила группа с лидером группы: %s.",
+            Balalaka.sayInWorldOrangeTextCenter(EventManager, String.format("Evento: %s concluído, o grupo com o lider  %s ganhou.",
                     this.eType.getEventTemplate().getEventName(), winner.getLeaderObject().getName()));
             this.DoReward();
         }

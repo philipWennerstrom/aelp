@@ -14,6 +14,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
+
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumMap;
 import java.util.List;
@@ -28,6 +30,7 @@ import org.slf4j.LoggerFactory;
 import pirate.events.enums.EventPlayerLevel;
 import pirate.events.enums.EventRergisterState;
 import pirate.events.holders.IEventHolder;
+import pirate.events.holders.MultiPlayerEventHolder;
 import pirate.events.holders.PlayerGroupEventHolder;
 import pirate.events.holders.SimpleSinglePlayerEventHolder;
 import pirate.events.holders.SinglePlayerHolder;
@@ -131,17 +134,21 @@ public class EventManager {
         if (holder == null) {
             holderCounter += 1;
             holder = this.createEventHolder(holderCounter, etype, epl);
+          
             holder.addPlayer(player);
             this.holders.add(holder);
             registerMsg = String.format("You have successfully registered with the registrar of the new group.\nEvent: %s\nLevels: %s - %s", etype.name(), epl.getMin(), epl.getMax());
             log.info("[EventManager] Create new {} with index: {}", holder.getClass().getName(), holder.Index());
             log.info("[EventManager] Add {} to {} with index: {}", new Object[]{player.getName(), holder.getClass().getSimpleName(), holder.Index()});
         } else {
+        	if(!holder.canAddPlayer(player)) {
+              	return new EventRegisterInfo(EventRergisterState.ALREADY_REGISTRED, "You are already registered event. If you want to create another event, you must first exit the current.");
+          	}
             holder.addPlayer(player);
             registerMsg = String.format("Are you a member in the group waiting registrar.\nEvent: %s\nLevels: %s - %s", etype.name(), epl.getMin(), epl.getMax());
             log.info("[EventManager] Add {} to {} with index: {}", new Object[]{player.getName(), holder.getClass().getSimpleName(), holder.Index()});
         }
-        this.tryStartEvent(holder);
+        this.tryStartEvent(holder, player);
 
         return new EventRegisterInfo(EventRergisterState.REGISTRED, registerMsg);
     }
@@ -187,7 +194,7 @@ public class EventManager {
             registerMsg = String.format("Your group is registered on a waiting list registrar.\nEvent: %s\nlevels: %s - %s", etype.name(), epl.getMin(), epl.getMax());
             log.info("[EventManager] Add playerGroup Leader {} to {} with index: {}", new Object[]{leader.getName(), holder.getClass().getSimpleName(), holder.Index()});
         }
-        this.tryStartEvent(holder);
+        this.tryStartEvent(holder, leader);
 
         return new EventRegisterInfo(EventRergisterState.REGISTRED, registerMsg);
     }
@@ -343,7 +350,24 @@ public class EventManager {
      *
      * @param holder Holder that participates in the launch of events
      */
-    private void tryStartEvent(IEventHolder holder) {
+    private void tryStartEvent(IEventHolder holder, Player player) {
+    	/**if(holder instanceof MultiPlayerEventHolder) {
+    		 if (holder.isReadyToGo()) {
+    			 WorldMapInstance inst = InstanceService.getNextAvailableEventInstance(holder);
+    	         EventStartPositionList poss = holder.getEventType().getEventTemplate().getStartPositionInfo();
+    	         switch (holder.getEventType()) {
+                 case E_FFA:
+                	 List<Player> p = new ArrayList<Player>();
+                	 p.add(player);
+                     this.startMovePlayers(poss, p, holder, inst, 0);
+                     break;
+           
+                 default:
+                     log.error("[EventManager] Unknown event type. Type: {}", holder);
+                     break;
+             }
+    		 }
+    	}**/
         if (holder.isReadyToGo()) {
             WorldMapInstance inst = InstanceService.getNextAvailableEventInstance(holder);
             EventStartPositionList poss = holder.getEventType().getEventTemplate().getStartPositionInfo();
@@ -534,8 +558,9 @@ public class EventManager {
         switch (etype) {
             case E_1x1:
             case E_LHE:
-            case E_FFA:
                 return new SimpleSinglePlayerEventHolder(index, etype, epl);
+            case E_FFA:
+                return new MultiPlayerEventHolder(index, etype, epl);
             case E_2x2:
             case E_3x3:
             case E_4x4:
@@ -551,7 +576,7 @@ public class EventManager {
             return new EventRegisterInfo(EventRergisterState.CRITICAL_ERROR, String.format("Event: %s not listed Events.", etype.name()));
         }
         if (!this.eventIsActive(etype)) {
-            return new EventRegisterInfo(EventRergisterState.EVENT_NOT_START, "This event has not yet started.");
+           return new EventRegisterInfo(EventRergisterState.EVENT_NOT_START, "This event has not yet started.");
         }
         return null;
     }

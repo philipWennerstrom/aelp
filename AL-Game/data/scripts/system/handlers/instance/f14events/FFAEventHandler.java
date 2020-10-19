@@ -146,7 +146,7 @@ public class FFAEventHandler extends BaseEventHandler {
                 }
             }, battle_time * 1000);
             this.startTimer(this.battle_time);
-            this.sendSpecMessage(EventManager, "Поехали!");
+            this.sendSpecMessage(EventManager, "Go!!!!!!");
         }
     }
 
@@ -171,12 +171,12 @@ public class FFAEventHandler extends BaseEventHandler {
             if (!hasFb) {
                 winnerPoints += this.FB_Bonus;
                 hasFb = true;
-                this.sendSpecMessage(EventManager, String.format("%s пролил(а) первую кровь, жертва %s", winner.getName(), victim.getName()));
+                this.sendSpecMessage(EventManager, String.format("%s matou %s", winner.getName(), victim.getName()));
             }
             winnerScore.incPoints(winnerPoints);
             loserScore.incPoints(-loserPoints);
-            PacketSendUtility.sendMessage(winner, String.format("Вы получаете %s очков.", winnerPoints));
-            PacketSendUtility.sendMessage(victim, String.format("Вы теряете %s очков.", loserPoints));
+            PacketSendUtility.sendMessage(winner, String.format("Vencendo no momento com %s pontos.", winnerPoints));
+            PacketSendUtility.sendMessage(victim, String.format("Perdendo no momento com %s pontos.", loserPoints));
 
             //PacketSendUtility.sendPacket(winner, new SM_SYSTEM_MESSAGE(1360001, victim.getName()));
         }
@@ -205,13 +205,13 @@ public class FFAEventHandler extends BaseEventHandler {
             Collections.sort(score);
             for (EventScore es : this.score) {
                 Player player = this.getPlayerFromEventList(es.PlayerObjectId);
-                this.sendSpecMessage(EventManager, String.format("Вы заняли %s место", rank), player);
+                this.sendSpecMessage(EventManager, String.format("Rank %s", rank), player);
                 EventRewardHelper.GiveRewardFor(player, eType, es, rank);
                 this.moveToEntry(player);
                 rank++;
             }
 
-            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Ивент: %s завершен, первое место занял(а): %s .",
+            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Evento: %s finalizado. Primeiro lugar: %s .",
                     eType.getEventTemplate().getEventName(), this.getPlayerFromEventList(this.score.get(0).PlayerObjectId).getName()), 3);
 
             this.players.clear();

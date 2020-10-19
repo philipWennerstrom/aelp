@@ -323,6 +323,6 @@ public class CustomConfig {
 	public static String GAMESERVER_AION_VERSION;
 	
 
-	@Property(key = "gameserver.doublexp", defaultValue = "1")
-	public static int DOUBLE_XP;
+	@Property(key = "gameserver.doublexp", defaultValue = "1.0")
+	public static float DOUBLE_XP;
 }

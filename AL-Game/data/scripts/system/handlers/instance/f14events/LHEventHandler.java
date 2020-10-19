@@ -159,7 +159,7 @@ public class LHEventHandler extends BaseEventHandler {
     private void EndBattle() {
         this.stopTimer();
         for (Player p : this.players) {
-            this.sendSpecMessage(EventManager, "Время вышло");
+            this.sendSpecMessage(EventManager, "O tempo acabou");
             this.moveToEntry(p);
         }
     }
@@ -172,7 +172,7 @@ public class LHEventHandler extends BaseEventHandler {
             Player winner = this.players.get(0);
             EventRewardHelper.GiveRewardFor(winner, eType, null, 1);
 
-            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Ивент: %s завершен, победитель: %s.",
+            Balalaka.sayInWorldOrangeTextCenterWithDelay(EventManager, String.format("Evento: %s finalizado, vencedor: %s.",
                     eType.getEventTemplate().getEventName(), winner.getName()), 2);
 
             this.players.clear();
@@ -195,10 +195,22 @@ public class LHEventHandler extends BaseEventHandler {
     @Override
     protected boolean ifOnePlayer() {
         if (this.players.size() == 1) {
-            EventScore es = this.score.get(0);
-            es.isWinner = true;
-            DoReward();
-            return true;
+        	Player winnerPlayer = this.getWinnerFromScoreByKills();
+        	EventScore es = null;
+        	for(EventScore esp:this.score) {
+        		if(esp.PlayerObjectId==winnerPlayer.getObjectId()) {
+        			es = esp;
+        		}
+        	}
+           // EventScore es = this.score.get(0);
+        	if(es!=null) {
+        		 es.setWins(this.winNeeded);
+                 es.setLoses(0);
+                 es.isWinner = true;
+                 DoReward();
+                 return true;
+        	}
+           return false;
         }
         return false;
     }

@@ -20,7 +20,7 @@ public class Pet extends AdminCommand {
 		if ("add".equals(command)) {
 			int petId = Integer.parseInt(params[1]);
 			String name = params[2];
-			PetAdoptionService.addPet(player, petId, name, 0);
+			PetAdoptionService.addPet(player, petId, name, 0,0);
 		}
 	}
 

@@ -157,7 +157,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler {
 				if(!isInstanceDestroyed && getNpc(700478) != null)
 					getNpc(700478).getController().onDelete();
 			}
-		}, 300000);
+		}, 600000);
 	}
 
 	private int calculatePointsReward(Npc npc) {
@@ -205,12 +205,12 @@ public class DarkPoetaInstance extends GeneralInstanceHandler {
 		switch (npc.getObjectTemplate().getTemplateId()) {
 			// Drana
 			case 700520:
-				pointsReward = 48;
+				pointsReward = 50;
 				break;
 			// Walls
 			case 700518:
 			case 700558:
-				pointsReward = 156;
+				pointsReward = 160;
 				break;
 			// Mutated Fungie
 			case 214885:
@@ -238,7 +238,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler {
 			case 214849:
 			case 214850:
 			case 214851:
-				pointsReward = 318;
+				pointsReward = 320;
 				break;
 			// Generators
 			case 214895:
