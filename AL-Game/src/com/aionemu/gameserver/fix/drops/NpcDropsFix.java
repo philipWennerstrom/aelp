@@ -39,6 +39,7 @@ public class NpcDropsFix {
 	}
 
 	private static void forEachDropGroup(NpcDrop drop) {
+		drop.getDropGroup().listIterator();
 		for(DropGroup dropGroup: drop.getDropGroup()) {
 			generalItens(dropGroup);
 			
