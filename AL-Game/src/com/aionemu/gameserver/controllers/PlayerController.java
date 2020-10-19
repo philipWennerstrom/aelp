@@ -74,8 +74,10 @@ public class PlayerController extends CreatureController<Player> {
 	private Logger log = LoggerFactory.getLogger(PlayerController.class);
 	private boolean isInShutdownProgress;
 	private long lastAttackMilis = 0;
+	private long lastPhysicalAttackMilis = 0;
 	private long lastAttackedMilis = 0;
 	private int stance = 0;
+	private Skill lastUsedSkill;
 
 	@Override
 	public void see(VisibleObject object) {
@@ -427,11 +429,12 @@ public class PlayerController extends CreatureController<Player> {
 
 		long milis = System.currentTimeMillis();
 		// network ping..
-		if (milis - lastAttackMilis + 300 < attackSpeed) {
+		if (milis - lastPhysicalAttackMilis + 300 < attackSpeed) {
 			// hack
 			return;
 		}
 		lastAttackMilis = milis;
+		lastPhysicalAttackMilis = milis;
 
 		/**
 		 * notify attack observers
@@ -510,6 +513,7 @@ public class PlayerController extends CreatureController<Player> {
 			skill.setTargetType(targetType, x, y, z);
 			skill.setHitTime(clientHitTime);
 			skill.useSkill();
+			//player.getController().setLastUsedSkill(skill);
 		}
 	}
 
@@ -858,5 +862,13 @@ public class PlayerController extends CreatureController<Player> {
 				return true;
 		}
 		return false;
+	}
+
+	public Skill getLastUsedSkill() {
+		return lastUsedSkill;
+	}
+
+	public void setLastUsedSkill(Skill lastUsedSkill) {
+		this.lastUsedSkill = lastUsedSkill;
 	}
 }
