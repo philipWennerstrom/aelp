@@ -34,8 +34,12 @@ public class cmd_event extends PlayerCommand {
 
     @Override
     public void execute(Player player, String... params) {
-        if ((player.getController().isInCombat() || player.isInInstance() || player.isInPrison()) && !player.isGM()) {
+        /**if ((player.getController().isInCombat() || player.isInInstance() || player.isInPrison()) && !player.isGM()) {
             PacketSendUtility.sendMessage(player, "You can not participate in the event, while you are in prison, in a time zone or in combat.");
+            return;
+        }**/
+    	if ((player.isInInstance() || player.isInPrison()) && !player.isGM()) {
+            PacketSendUtility.sendMessage(player, "You can not participate in the event, while you are in prison, in a time zone");
             return;
         }
         if (params.length == 2) {

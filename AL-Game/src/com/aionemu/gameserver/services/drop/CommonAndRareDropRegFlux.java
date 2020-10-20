@@ -47,7 +47,7 @@ public class CommonAndRareDropRegFlux {
 	 */
 	private void checkUniqueItens(Iterator<DropItem> iterator, ItemTemplate itemTemplate, int itemId,ItemQuality itemQuality) {
 		if (itemQuality == ItemQuality.COMMON || itemQuality == ItemQuality.RARE) {
-			checkCategory(iterator, itemTemplate, itemId);
+			checkUniqueArmorAndWeapon(iterator, itemId, itemTemplate.getEquipmentType());
 		}
 	}
 
@@ -72,6 +72,16 @@ public class CommonAndRareDropRegFlux {
 			iterator.remove();
 		}
 		uniqueCategoryMap.put(ARMOR, qtd+1);
+	}
+	
+	private void checkUniqueArmorAndWeapon(Iterator<DropItem> iterator, int itemId, EquipType equipType) {
+		if (equipType==EquipType.ARMOR || equipType==EquipType.WEAPON) {
+			int qtd = uniqueCategoryMap.get(ARMOR).intValue();
+			if (qtd >= maxItens) {
+				iterator.remove();
+			}
+			uniqueCategoryMap.put(ARMOR, qtd+1);
+		}
 	}
 	
 	/**
