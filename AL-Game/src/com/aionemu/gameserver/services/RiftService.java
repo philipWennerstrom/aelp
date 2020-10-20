@@ -48,7 +48,13 @@ public class RiftService {
 			schedule = RiftSchedule.load();
 			for (RiftSchedule.Rift rift : schedule.getRiftsList()) {
 				for (OpenRift open : rift.getRift()) {
-					CronService.getInstance().schedule(new RiftOpenRunnable(rift.getWorldId(), open.spawnGuards()), open.getSchedule());
+
+					int worldId = rift.getWorldId();
+					if (worldId == 220040000 || worldId == 210040000) {
+						CronService.getInstance().schedule(new RiftOpenRunnable(worldId, open.spawnGuards()), "0 0/30 0/1 ? * * *");
+					} else {
+						CronService.getInstance().schedule(new RiftOpenRunnable(worldId, open.spawnGuards()), open.getSchedule());
+					}
 				}
 			}
 		}

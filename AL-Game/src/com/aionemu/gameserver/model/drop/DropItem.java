@@ -165,4 +165,11 @@ public class DropItem {
 	public void setNpcObj(int npcObj) {
 		this.npcObj = npcObj;
 	}
+
+	@Override
+	public String toString() {
+		return dropTemplate.getItemTemplate().getName();
+	}
+	
+	
 }

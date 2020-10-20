@@ -221,7 +221,16 @@ public class DropRegistrationService {
 				}
 			}
 		}
-
+		GodstoneDropRegFix godDropFix = new GodstoneDropRegFix();
+		UniqueDropRegFix ndrf = new UniqueDropRegFix();
+		LegendDropReg ldrf = new LegendDropReg();
+		CommonAndRareDropRegFlux crdrf = new CommonAndRareDropRegFlux();
+		
+		godDropFix.fix(droppedItems);
+		ndrf.fix(droppedItems);
+		ldrf.fix(droppedItems);
+		crdrf.fix(droppedItems);
+		
 		if (npc.getPosition().isInstanceMap()) {
 			npc.getPosition().getWorldMapInstance().getInstanceHandler().onDropRegistered(npc);
 		}
