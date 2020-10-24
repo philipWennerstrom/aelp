@@ -1,0 +1,46 @@
+01:40:24.175 INFO [main]: com.aionemu.chatserver.configs.Config [Config.java:88] - Loading: mycs.properties
+01:40:24.180 INFO [main]: com.aionemu.chatserver.configs.Config [Config.java:92] - No override properties found
+01:40:24.224 INFO [main]: com.aionemu.chatserver.configs.Config [Config.java:98] - Loading: commons.properties
+01:40:24.234 INFO [main]: com.aionemu.chatserver.configs.Config [Config.java:100] - Loading: chatserver.properties
+01:40:24.244 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - OS: Windows 8.1 Build: 6.3
+01:40:24.244 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - OS Arch: amd64
+01:40:24.244 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - ..................................................
+01:40:24.244 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:117] - ..................................................
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - Available CPU(s): 8
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - Processor(s) Identifier: Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - ..................................................
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:112] - ..................................................
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Platform Information
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Runtime  Name: Java(TM) SE Runtime Environment
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Version: 1.7.0_80
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - Java Class Version: 51.0
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - ..................................................
+01:40:24.257 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:122] - ..................................................
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - Virtual Machine Information (JVM)
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Name: Java HotSpot(TM) 64-Bit Server VM
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM installation directory: C:\Program Files\Java\jdk1.7.0_80\jre
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM version: 24.80-b11
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Vendor: Oracle Corporation
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - JVM Info: mixed mode
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - ..................................................
+01:40:24.258 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:127] - ..................................................
+01:40:24.276 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - +----
+01:40:24.276 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Global Memory Informations at 1:40:24:
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Allowed Memory: 1831424 KB
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Allocated Memory: 123392 KB (6,7375%)
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Non-Allocated Memory: 1708032 KB (93,2625%)
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Allocated Memory: 123392 KB
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Used Memory: 26385 KB (1,4407%)
+01:40:24.277 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - |    |= Unused (cached) Memory: 97007 KB (5,2968%)
+01:40:24.278 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - | Useable Memory: 1805039 KB (98,5593%)
+01:40:24.278 INFO [main]: com.aionemu.commons.utils.AEInfos [AEInfos.java:107] - +----
+01:40:25.801 INFO [main]: com.aionemu.commons.network.NioServer [NioServer.java:121] - Server listening on IP: 127.0.0.1 Port 9021 for Gs Connections
+01:40:25.883 INFO [main]: com.aionemu.chatserver.ChatServer [ChatServer.java:100] - AL Chat Server started in 2 seconds.
+01:41:32.664 INFO [Accept Dispatcher]: com.aionemu.chatserver.network.gameserver.GsConnection [GsConnection.java:107] - Gameserver connection attemp from: 127.0.0.1
+01:41:32.874 INFO [pool-5-thread-1]: com.aionemu.chatserver.network.gameserver.clientpackets.CM_CS_AUTH [CM_CS_AUTH.java:54] - Gameserver #1 is now online.
+01:45:18.044 INFO [pool-2-thread-2]: com.aionemu.chatserver.network.netty.handler.ClientChannelHandler [ClientChannelHandler.java:45] - Channel connected Ip:127.0.0.1
+01:45:18.072 WARN [pool-2-thread-3]: com.aionemu.chatserver.model.ChatClient [ChatClient.java:166] - chat hack! different name  GM  Sm . expected Sm
+02:57:46.068 INFO [pool-2-thread-444]: com.aionemu.chatserver.network.netty.handler.AbstractChannelHandler [AbstractChannelHandler.java:39] - Channel disconnected IP: 127.0.0.1
+02:58:01.687 INFO [pool-5-thread-1]: com.aionemu.chatserver.network.gameserver.clientpackets.CM_PLAYER_LOGOUT [CM_PLAYER_LOGOUT.java:33] - Player logout 101827
+02:59:53.968 INFO [pool-5-thread-1]: com.aionemu.chatserver.service.GameServerService [GameServerService.java:52] - Gameserver #1 is disconnected

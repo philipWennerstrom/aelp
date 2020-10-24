@@ -10,7 +10,7 @@ public class AggroFix {
 		case JUNK:
 		case NORMAL:
 		case ELITE:
-			setAggroValue(npcTemplate, 10, 13);
+			setAggroValue(npcTemplate, 10, 11);
 			break;
 
 		default:

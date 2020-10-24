@@ -91,21 +91,21 @@ public class CommandEventHandler extends BaseEventHandler {
     @Override
     public void onPlayerLogOut(Player player) {
         super.onPlayerLogOut(player);
-        if (!eventIsComplete) {
+       /**if (!eventIsComplete) {
             this.removeFromScoreList(player.getObjectId());
             this.removeGroupByPlayer(player);
             this.ifOneGroup();
-        }
+        }**/
     }
 
     @Override
     public void onLeaveInstance(Player player) {
         super.onLeaveInstance(player);
-        if (!eventIsComplete) {
+        /**if (!eventIsComplete) {
             this.removeFromScoreList(player.getObjectId());
             this.removeGroupByPlayer(player);
             this.ifOneGroup();
-        }
+        }**/
     }
 
     @Override
@@ -232,6 +232,7 @@ public class CommandEventHandler extends BaseEventHandler {
 
     private boolean ifOneGroup() {
         if (groups.size() == 1) {
+        	getWinnerFromScoreByKills();
             this.DoReward();
             return true;
         }

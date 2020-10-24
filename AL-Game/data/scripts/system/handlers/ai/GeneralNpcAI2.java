@@ -94,8 +94,12 @@ public class GeneralNpcAI2 extends NpcAI2 {
 
 	@Override
 	protected void handleTargetChanged(Creature creature) {
-		super.handleTargetChanged(creature);
-		TargetEventHandler.onTargetChange(this, creature);
+		try {
+			super.handleTargetChanged(creature);
+			TargetEventHandler.onTargetChange(this, creature);
+		} catch (Exception e) {
+			System.out.println("Erro ao mudar target do npc " +this.getName());
+		}
 	}
 
 	@Override
@@ -138,7 +142,6 @@ public class GeneralNpcAI2 extends NpcAI2 {
 	@Override
 	public AttackIntention chooseAttackIntention() {
 		try {
-
 			VisibleObject currentTarget = getTarget();
 			Creature mostHated = getAggroList().getMostHated();
 

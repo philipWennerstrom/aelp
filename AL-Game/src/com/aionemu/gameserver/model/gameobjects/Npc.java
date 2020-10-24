@@ -3,15 +3,19 @@ package com.aionemu.gameserver.model.gameobjects;
 import java.util.Iterator;
 
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.ai2.AI2Engine;
 import com.aionemu.gameserver.ai2.AITemplate;
+import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.ai2.event.AIEventType;
 import com.aionemu.gameserver.ai2.poll.AIQuestion;
 import com.aionemu.gameserver.configs.main.AIConfig;
 import com.aionemu.gameserver.controllers.NpcController;
 import com.aionemu.gameserver.controllers.movement.NpcMoveController;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.fix.AttackEventBugFix;
 import com.aionemu.gameserver.fix.GeoDataBugUtils;
 import com.aionemu.gameserver.model.NpcType;
 import com.aionemu.gameserver.model.Race;
@@ -31,6 +35,7 @@ import com.aionemu.gameserver.model.templates.npcshout.ShoutType;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LOOKATOBJECT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.spawnengine.WalkerGroup;
 import com.aionemu.gameserver.spawnengine.WalkerGroupShift;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -46,8 +51,9 @@ import com.google.common.base.Preconditions;
  * 
  * @author Luno
  */
+@SuppressWarnings("unused")
 public class Npc extends Creature {
-
+	private static Logger log = LoggerFactory.getLogger(Npc.class);
 	private WalkerGroup walkerGroup;
 	private boolean isQuestBusy = false;
 	private NpcSkillList skillList;
@@ -321,13 +327,21 @@ public class Npc extends Creature {
 	@Override
 	public void setTarget(VisibleObject creature) {
 		if (getTarget() != creature) {
-			if (creature instanceof Player) {
-				if (!GeoDataBugUtils.canSee(this, ((Player) creature)))
-					return;
+			try {
+				if (creature instanceof Player) {
+					//if (!GeoDataBugUtils.canSee(this, ((Player) creature)))
+						//return;
+					AttackEventBugFix.checkGeoDataBug((NpcAI2)ai2, (Player) creature);
+				}
+			}catch (Exception e) {
+				log.warn("Npc error when setting target. NpcName: " + this.getName());
+				this.setTarget(null);
 			}
+			
 			super.setTarget(creature);
 			super.clearAttackedCount();
 			getGameStats().renewLastChangeTargetTime();
+			
 			if (!getLifeStats().isAlreadyDead()) {
 				PacketSendUtility.broadcastPacket(this, new SM_LOOKATOBJECT(this));
 				if(creature instanceof Player) {
