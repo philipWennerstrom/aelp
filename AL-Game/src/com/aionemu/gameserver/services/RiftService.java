@@ -51,7 +51,7 @@ public class RiftService {
 
 					int worldId = rift.getWorldId();
 					if (worldId == 220040000 || worldId == 210040000) {
-						CronService.getInstance().schedule(new RiftOpenRunnable(worldId, open.spawnGuards()), "0 0/30 0/1 ? * * *");
+						CronService.getInstance().schedule(new RiftOpenRunnable(worldId, open.spawnGuards()), "0 15,30,45 * ? * *");
 					} else {
 						CronService.getInstance().schedule(new RiftOpenRunnable(worldId, open.spawnGuards()), open.getSchedule());
 					}
