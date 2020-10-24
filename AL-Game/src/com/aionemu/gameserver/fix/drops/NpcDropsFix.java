@@ -160,7 +160,7 @@ public class NpcDropsFix {
 		   dropGroup.getGroupName().equals(NAMED_UNIQUE_WEAPON)) {
 			
 			for(Drop dropIndex: dropGroup.getDrop()) {
-					setChance(dropIndex, 1.6f, 2.3f);
+					setChance(dropIndex, 1.7f, 2.3f);
 			}
 		}
 	}

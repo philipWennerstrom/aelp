@@ -35,6 +35,8 @@ public class CommonAndRareDropRegFlux {
 			ItemTemplate itemTemplate = dropTemplate.getItemTemplate();
 			int itemId = dropTemplate.getItemId();
 			ItemQuality itemQuality = itemTemplate.getItemQuality();
+			
+		//	System.out.println("Name: "+ next.toString()+" | category: "+ itemTemplate.getCategory().name());
 			checkUniqueItens(iterator, itemTemplate, itemId, itemQuality);
 		}
 	}

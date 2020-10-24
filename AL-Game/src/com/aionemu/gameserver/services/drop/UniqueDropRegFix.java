@@ -23,7 +23,7 @@ public class UniqueDropRegFix {
 		uniqueCategoryMap.put(ARMOR, Integer.valueOf(0));
 		uniqueCategoryMap.put(WEAPON, Integer.valueOf(0));
 		uniqueCategoryMap.put(ACCESSORY, Integer.valueOf(0));
-		maxItens = (Math.random() <= 0.5) ? 1 : 2;
+		maxItens = (Math.random() <= 0.3) ? 2 : 3;
 	}
 	
 	public void fix(Set<DropItem> droppedItens) {
