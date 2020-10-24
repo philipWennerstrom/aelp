@@ -2256,7 +2256,7 @@
 			<spot x="1755.08" y="2090.92" z="588.01" h="66"/>
 			<spot x="1878.88" y="1901.33" z="595.32" h="72"/>
 		</spawn>
-		<!-- Cold Agrint -->
+		<!-- Cold Agrint
 		<spawn npc_id="213159" respawn_time="295">
 			<spot x="390.69" y="2364.48" z="218.271" h="57"/>
 			<spot x="406.945" y="2367.28" z="216.007" h="35"/>
@@ -2279,7 +2279,30 @@
 			<spot x="625.966" y="2113.29" z="227.998" h="52"/>
 			<spot x="626.472" y="2212.11" z="247.799" h="56"/>
 			<spot x="638.398" y="2287.1" z="238.725" h="30"/>
-		</spawn>
+		</spawn> -->
+		<!-- Cold Agrint EDITADO FARM AREA-->
+		<spawn npc_id="260197" respawn_time="295">
+			<spot x="390.69" y="2364.48" z="218.271" h="57" random_walk="15"/>
+			<spot x="406.945" y="2367.28" z="216.007" h="35" random_walk="15"/>
+			<spot x="439.67" y="2392.4" z="241.04297" h="37" walker_id="45C21E4046D2D76F410B7EE970D984894FC95B87"/>
+			<spot x="470.775" y="2468.51" z="269.858" h="10" random_walk="15"/>
+			<spot x="482.062" y="1937.6" z="283.563" h="82" random_walk="15"/>
+			<spot x="490.109" y="2446.01" z="265.252" h="46" random_walk="15"/>
+			<spot x="493.307" y="2021.71" z="215.314" h="77" random_walk="15"/>
+			<spot x="512.568" y="2047.49" z="219.121" h="8" random_walk="15"/>
+			<spot x="526.088" y="2082.94" z="210.322" h="29" random_walk="15"/>
+			<spot x="538.97" y="2380.58" z="249.47128" h="103" walker_id="7FC6450639A1226FC67F91C82C1E7158DBE3460F"/>
+			<spot x="542.916" y="1973.05" z="267.465" h="42" random_walk="15"/>
+			<spot x="548.816" y="2397.85" z="253.596" h="17" random_walk="15"/>
+			<spot x="549.05" y="2129.27" z="212.88" h="111" random_walk="15"/>
+			<spot x="590.02" y="2056.57" z="259.429" h="52" random_walk="15"/>
+			<spot x="591.289" y="2303.3" z="239.794" h="93" random_walk="15"/>
+			<spot x="605.935" y="2037.85" z="256.238" h="117" random_walk="15"/>
+			<spot x="611.397" y="2286.85" z="238.2" h="69" random_walk="15"/>
+			<spot x="625.966" y="2113.29" z="227.998" h="52" random_walk="15"/>
+			<spot x="626.472" y="2212.11" z="247.799" h="56" random_walk="15"/>
+			<spot x="638.398" y="2287.1" z="238.725" h="30" random_walk="15"/>
+		</spawn> 
 		<!-- Cold Cyclone Spirit -->
 		<spawn npc_id="213234" respawn_time="295">
 			<spot x="2454.96" y="1184.66" z="364.273" h="1"/>
@@ -2823,6 +2846,8 @@
 			<spot x="405.423" y="453.835" z="222.777" h="24"/>
 			<spot x="433.37" y="334.05" z="232.20073" h="76" walker_id="67897A28DA89833A460BABB7311FD6C59E3AB282"/>
 			<spot x="540.43" y="1912.27" z="261.375" h="89" walker_id="07E1AB80A739D3960DFF4C27A0E02B4DE0A0B6A9"/>
+			<!-- AREA DE FARM -->
+			<spot x="928.275" y="2265.57" z="317.649" h="49"/>
 		</spawn>
 		<!-- Defense Commander -->
 		<spawn npc_id="207584" respawn_time="295">
@@ -3301,7 +3326,7 @@
 			<spot x="901.86" y="2319.68" z="310.89127" h="95" walker_id="DAF947397C005DB7D725E8E2900344A399EF2BF1"/>
 			<spot x="964.96" y="2229.12" z="302.94507" h="63" walker_id="CD00128812DDF91BDCCA3ED710B35502D9CE6261"/>
 		</spawn>
-		<!-- Frost Agrint -->
+		<!-- Frost Agrint
 		<spawn npc_id="213142" respawn_time="295">
 			<spot x="463.884" y="2010.7" z="215.25" h="52"/>
 			<spot x="482.034" y="2072.88" z="210.453" h="86"/>
@@ -3349,7 +3374,45 @@
 			<spot x="906.407" y="1870.7" z="269.156" h="44"/>
 			<spot x="919.629" y="1867.66" z="266.343" h="2"/>
 			<spot x="924.871" y="1877.84" z="264.831" h="90"/>
-		</spawn>
+		</spawn> -->
+		<!-- Frost Agrint EDITADO FARM AREA -->
+		<spawn npc_id="260254" respawn_time="295">
+			<spot x="463.884" y="2010.7" z="215.25" h="52" random_walk="15"/>
+			<spot x="482.034" y="2072.88" z="210.453" h="86" random_walk="15"/>
+			<spot x="482.299" y="2005.84" z="215.25" h="20" random_walk="15"/>
+			<spot x="506.349" y="1954.57" z="277.663" h="93" random_walk="15"/>
+			<spot x="529.794" y="1833.33" z="214.602" h="33" random_walk="15"/>
+			<spot x="533.931" y="2046.58" z="219.81" h="16" random_walk="15"/>
+			<spot x="547.924" y="2062.96" z="214.56" h="56" random_walk="15"/>
+			<spot x="551.349" y="1718.32" z="213.605" h="14" random_walk="15"/>
+			<spot x="559.203" y="2098.87" z="216.068" h="82" random_walk="15"/>
+			<spot x="575.301" y="2134.45" z="215.525" h="1" random_walk="15"/>
+			<spot x="584.045" y="1748.1" z="213.119" h="69" random_walk="15"/>
+			<spot x="586.03" y="2018.57" z="259.05" h="47" random_walk="15"/>
+			<spot x="589" y="1972.35" z="254.791" h="86" random_walk="15"/>
+			<spot x="589.767" y="2271.72" z="240.547" h="40" random_walk="15"/>
+			<spot x="594.308" y="1805.24" z="216.857" h="105" random_walk="15"/>
+			<spot x="594.796" y="1726.68" z="212.342" h="30" random_walk="15"/>
+			<spot x="607.112" y="1917.22" z="250.632" h="33" random_walk="15"/>
+			<spot x="608.741" y="2226.62" z="243.665" h="54" random_walk="15"/>
+			<spot x="615.09" y="1878.28" z="215.25" h="105" random_walk="15"/>
+			<spot x="622.637" y="2138.93" z="225.143" h="90" random_walk="15"/>
+			<spot x="623.943" y="1768.8" z="216.043" h="104" random_walk="15"/>
+			<spot x="625.288" y="2051.19" z="253.759" h="35" random_walk="15"/>
+			<spot x="628.038" y="1716.27" z="214.846" h="15" random_walk="15"/>
+			<spot x="629.225" y="1840.04" z="215.25" h="77" random_walk="15"/>
+			<spot x="632.456" y="2149.23" z="225.202" h="67" random_walk="15"/>
+			<spot x="640.322" y="1936.86" z="247.679" h="113" random_walk="15"/>
+			<spot x="641.451" y="1976.29" z="249.248" h="92" random_walk="15"/>
+			<spot x="654.029" y="1802.38" z="213.796" h="90" random_walk="15"/>
+			<spot x="660.595" y="1877.54" z="215.346" h="78" random_walk="10"/>
+			<spot x="660.633" y="1764.6" z="216" h="99" random_walk="10"/>
+			<spot x="666.09" y="1939.72" z="247.575" h="33" random_walk="10"/>
+			<spot x="679.536" y="1833.79" z="215.138" h="93" random_walk="10"/>
+			<spot x="688.111" y="1673.36" z="218.315" h="50" random_walk="10"/>
+			<spot x="698.486" y="1988.45" z="249.254" h="65" random_walk="10"/>
+			<spot x="716.7" y="1943.45" z="248.622" h="61" random_walk="15"/>
+		</spawn> 
 		<!-- Frost Eye Ettin -->
 		<spawn npc_id="213096" respawn_time="295">
 			<spot x="1911.8" y="1140.17" z="351.581" h="21" random_walk="8"/>
@@ -3658,10 +3721,12 @@
 			<spot x="477.927" y="531.3" z="215.578" h="79"/>
 			<spot x="2301.64" y="1222.08" z="496.888" h="46"/>
 			<spot x="2817.94" y="1454.86" z="398.53625" h="29" walker_id="B95EAEDE9A87CA4C9B9AEA9BE0B86229F6D6E003"/>
+			<spot x="890.842" y="2183.45" z="257.928" h="12"/>
 		</spawn>
 		<!-- Garrison Patrol -->
 		<spawn npc_id="207800" respawn_time="295">
 			<spot x="1948.14" y="494.46" z="412.11624" h="29" walker_id="561EB48FF615F53EF7B469870E1915E99A1410D7"/>
+			<spot x="907.942" y="2281.18" z="318.037" h="66"/>
 		</spawn>
 		<!-- Garrison Patrol -->
 		<spawn npc_id="207786" respawn_time="295">
@@ -3673,6 +3738,8 @@
 			<spot x="2315.63" y="1237.64" z="469.545" h="90"/>
 			<spot x="2346.49" y="1266.36" z="467.428" h="120"/>
 			<spot x="2817.94" y="1454.86" z="398.53625" h="29" walker_id="B95EAEDE9A87CA4C9B9AEA9BE0B86229F6D6E003"/>
+			<!-- FARM AREA -->
+			<spot x="914.275" y="2265.57" z="317.649" h="49"/>
 		</spawn>
 		<!-- Garrison Patrol -->
 		<spawn npc_id="207779" respawn_time="295">
@@ -4594,7 +4661,7 @@
 		<spawn npc_id="204790" respawn_time="295">
 			<spot x="2223.32" y="1289.37" z="474.5" h="120"/>
 		</spawn>
-		<!-- Lament Obscura -->
+		<!-- Lament Obscura 
 		<spawn npc_id="213782" respawn_time="295">
 			<spot x="815.682" y="2257.85" z="267.787" h="50"/>
 			<spot x="829.854" y="2276.3" z="273.394" h="62"/>
@@ -4610,7 +4677,7 @@
 			<spot x="956.85" y="2217.37" z="296.403" h="76"/>
 			<spot x="977.278" y="2219.55" z="299.179" h="42"/>
 			<spot x="989.972" y="2178.21" z="287.771" h="42"/>
-		</spawn>
+		</spawn>-->
 		<!-- Landsberg -->
 		<spawn npc_id="798372" respawn_time="295">
 			<spot x="2804" y="1108" z="374.5" h="57"/>
@@ -5455,6 +5522,8 @@
 		<spawn npc_id="204711" respawn_time="295">
 			<spot x="338.69" y="334.87" z="229.18826" h="21" walker_id="A5CB96FC6C6CFEA33B9CEE8A788BD0BE2623F2A7"/>
 			<spot x="375.721" y="347.462" z="229.18" h="21"/>
+			<!-- AREA DE FARM -->
+			<spot x="922.275" y="2265.57" z="317.649" h="49"/>
 		</spawn>
 		<!-- Mostin -->
 		<spawn npc_id="204783" respawn_time="295">
@@ -5590,7 +5659,7 @@
 			<spot x="1082.66" y="1798.23" z="240.1" h="5"/>
 			<spot x="1098.1" y="1725.81" z="235.233" h="82"/>
 		</spawn>
-		<!-- Obsidian Kalgolem -->
+		<!-- Obsidian Kalgolem 
 		<spawn npc_id="213160" respawn_time="295">
 			<spot x="367.803" y="2191.53" z="215.5" h="32"/>
 			<spot x="394.872" y="2183.49" z="215.25" h="68"/>
@@ -5632,6 +5701,49 @@
 			<spot x="780.872" y="2189.71" z="263.889" h="47"/>
 			<spot x="792.794" y="2171.57" z="261.628" h="31"/>
 			<spot x="800.156" y="2118.2" z="244.099" h="3"/>
+		</spawn>-->
+		<!-- Obsidian Kalgolem EDITADO FARM AREA-->
+		<spawn npc_id="260257" respawn_time="295">
+			<spot x="367.803" y="2191.53" z="215.5" h="32" random_walk="15"/>
+			<spot x="394.872" y="2183.49" z="215.25" h="68" random_walk="15"/>
+			<spot x="395.823" y="2195.63" z="215.25" h="32" random_walk="15"/>
+			<spot x="422.911" y="2191.14" z="215.379" h="102" random_walk="15"/>
+			<spot x="439.236" y="1638.47" z="220.414" h="69" random_walk="15"/>
+			<spot x="447.779" y="2159.3" z="217.046" h="38" random_walk="15"/>
+			<spot x="468.781" y="2143" z="212.337" h="9" random_walk="15"/>
+			<spot x="480.501" y="1619.53" z="220.243" h="99" random_walk="15"/>
+			<spot x="490.973" y="2132.74" z="212.623" h="79" random_walk="15"/>
+			<spot x="505.495" y="1659.98" z="213.251" h="54" random_walk="15"/>
+			<spot x="506.559" y="2510.21" z="282.6" h="30" random_walk="15"/>
+			<spot x="515.317" y="2471.26" z="274.182" h="117" random_walk="15"/>
+			<spot x="522.149" y="2148.35" z="215.535" h="40" random_walk="15"/>
+			<spot x="526.96" y="2496.54" z="280.63876" h="43" walker_id="1AD9564F17BEEFAEA955F959A5FBEEFDB5519E40"/>
+			<spot x="561.641" y="1664.78" z="213.075" h="103" random_walk="15" />
+			<spot x="573.064" y="1642.08" z="214.859" h="27" random_walk="15" />
+			<spot x="574.274" y="2199.31" z="228.726" h="72" random_walk="15"/>
+			<spot x="593.729" y="2182.54" z="223.017" h="14" random_walk="15"/>
+			<spot x="612.735" y="2334.46" z="242.275" h="59" random_walk="15"/>
+			<spot x="626.454" y="1650.29" z="218.042" h="39" random_walk="15"/>
+			<spot x="629.789" y="2339.09" z="243.068" h="80" random_walk="15"/>
+			<spot x="662.029" y="2117.49" z="246.629" h="97" random_walk="15"/>
+			<spot x="666.83" y="2037.69" z="250.534" h="67" random_walk="15"/>
+			<spot x="671.125" y="2244.14" z="235.067" h="58" random_walk="15"/>
+			<spot x="671.568" y="2094.75" z="248.737" h="64" random_walk="15"/>
+			<spot x="672.646" y="2308.58" z="242.138" h="61" random_walk="15"/>
+			<spot x="673.575" y="2355.62" z="245.497" h="27" random_walk="15"/>
+			<spot x="692.088" y="2225.59" z="239.037" h="111" random_walk="15"/>
+			<spot x="694.935" y="2342.81" z="249.675" h="56" random_walk="15"/>
+			<spot x="696.683" y="2192.38" z="228.76" h="113" random_walk="15"/>
+			<spot x="713.631" y="2079.9" z="245.148" h="48" random_walk="15"/>
+			<spot x="715.135" y="2286.39" z="248.129" h="60" random_walk="15"/>
+			<spot x="718.123" y="2122.41" z="240.365" h="2" random_walk="15"/>
+			<spot x="730.258" y="2310.31" z="257.921" h="57" random_walk="15"/>
+			<spot x="743.571" y="2226.37" z="263.671" h="33" random_walk="15"/>
+			<spot x="765.759" y="2209.08" z="266.68" h="6" random_walk="15"/>
+			<spot x="774.962" y="2174.3" z="266.333" h="101" random_walk="15"/>
+			<spot x="780.872" y="2189.71" z="263.889" h="47" random_walk="15"/>
+			<spot x="792.794" y="2171.57" z="261.628" h="31" random_walk="15"/>
+			<spot x="800.156" y="2118.2" z="244.099" h="3" random_walk="15"/>
 		</spawn>
 		<!-- Obsidian Kirrin -->
 		<spawn npc_id="213219" respawn_time="295">
@@ -6866,6 +6978,23 @@
 			<spot x="405.795" y="449.197" z="222.785" h="24"/>
 			<spot x="2276.46" y="1276.77" z="472.792" h="10"/>
 			<spot x="2303.79" y="1285.6" z="474.82" h="81"/>
+			<!-- FARM AREA -->
+			<spot x="815.682" y="2257.85" z="267.787" h="50" random_walk="4"/>
+			<spot x="829.854" y="2276.3" z="273.394" h="62" random_walk="4"/>
+			<spot x="840.784" y="2254.6" z="269.586" h="30" random_walk="4"/>
+			<spot x="851" y="2264.6" z="271.948" h="118" random_walk="4"/>
+			<spot x="854.032" y="2321.08" z="290.945" h="8" random_walk="4"/>
+			<spot x="867.942" y="2293.95" z="293.493" h="21" random_walk="4"/>
+			<spot x="884.277" y="2331.86" z="305.758" h="1" random_walk="4"/>
+			<spot x="910.779" y="2296.95" z="315.722" h="67" random_walk="4"/>
+			<spot x="928.342" y="2277.68" z="315.875" h="119" random_walk="4"/>
+			<spot x="939.22" y="2263.25" z="315.875" h="93" random_walk="4"/>
+			<spot x="951.443" y="2253.32" z="315.875" h="102" random_walk="4"/>
+			<spot x="956.85" y="2217.37" z="296.403" h="76" random_walk="4"/>
+			<spot x="977.278" y="2219.55" z="299.179" h="42" random_walk="4"/>
+			<spot x="989.972" y="2178.21" z="287.771" h="42" random_walk="4"/>
+			<spot x="996.859" y="2197.89" z="293.742" h="31" random_walk="4"/>
+			<spot x="956.709" y="2167.61" z="275.329" h="75" random_walk="4"/>
 		</spawn>
 		<!-- Sentinel Leader -->
 		<spawn npc_id="207602" respawn_time="295">
