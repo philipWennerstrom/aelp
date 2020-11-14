@@ -25,7 +25,7 @@ import com.aionemu.gameserver.model.templates.stats.NpcStatsTemplate;
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "npc_template")
 public class NpcTemplate extends VisibleObjectTemplate {
-
+	
 	private int npcId;
 	
 	@XmlAttribute(name = "level", required = true)
@@ -105,6 +105,40 @@ public class NpcTemplate extends VisibleObjectTemplate {
 	
 	@XmlTransient
 	private NpcDrop npcDrop;
+	
+	public NpcTemplate() {
+		
+	}
+	
+	public NpcTemplate(NpcTemplate npcTemplate) {
+		this.npcId = npcTemplate.getTemplateId();
+		this.level = npcTemplate.getLevel();
+		this.nameId= npcTemplate.getNameId();
+		this.titleId = npcTemplate.getTitleId();
+		this.name = npcTemplate.getName();
+		this.height = npcTemplate.getHeight();
+		this.npcType= npcTemplate.getNpcType();
+		this.statsTemplate = npcTemplate.getStatsTemplate();
+		this.equipment =npcTemplate.getEquipment();
+		this.kiskStatsTemplate = npcTemplate.getKiskStatsTemplate();
+		this.ammoSpeed = npcTemplate.getAmmoSpeed();
+		this.rank =npcTemplate.getRank();
+		this.rating = npcTemplate.getRating();
+		this.aggrorange = npcTemplate.getAggroRange();
+		this.attackRange = npcTemplate.getAttackRange();
+		this.attackRate =npcTemplate.getAttackRate();
+		this.attackDelay = npcTemplate.getAttackDelay();
+		this.hpGauge = npcTemplate.getHpGauge();
+		this.tribe = npcTemplate.getTribe();
+		this.ai = npcTemplate.getAi();
+		this.race = npcTemplate.getRace();
+		this.state = npcTemplate.getState();
+		this.boundRadius = npcTemplate.getBoundRadius();
+		this.npcTemplateType = npcTemplate.getNpcTemplateType();
+		this.abyssNpcType = npcTemplate.getAbyssNpcType();
+		this.talkInfo = npcTemplate.getTalkInfo();
+		this.npcDrop = new NpcDrop(npcTemplate.getNpcDrop());
+	}
 
 	@Override
 	public int getTemplateId() {
@@ -275,6 +309,16 @@ public class NpcTemplate extends VisibleObjectTemplate {
 	 */
 	public boolean canInteract() {
 		return talkInfo != null;
+	}
+
+	public int getAmmoSpeed() {
+		return ammoSpeed;
+	}
+	
+	
+
+	public TalkInfo getTalkInfo() {
+		return talkInfo;
 	}
 
 	/**

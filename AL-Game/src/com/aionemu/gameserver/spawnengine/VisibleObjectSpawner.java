@@ -1,19 +1,18 @@
 package com.aionemu.gameserver.spawnengine;
 
-import com.aionemu.gameserver.configs.main.CustomConfig;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.configs.main.SiegeConfig;
-import com.aionemu.gameserver.controllers.*;
+import com.aionemu.gameserver.controllers.GatherableController;
+import com.aionemu.gameserver.controllers.NpcController;
+import com.aionemu.gameserver.controllers.PetController;
+import com.aionemu.gameserver.controllers.SiegeWeaponController;
+import com.aionemu.gameserver.controllers.SummonController;
 import com.aionemu.gameserver.controllers.effect.EffectController;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.NpcData;
-import com.aionemu.gameserver.dataholders.NpcDropData;
 import com.aionemu.gameserver.fix.drops.HeroAndLegendaryFixes;
 import com.aionemu.gameserver.fix.drops.NormalAndEliteFixes;
 import com.aionemu.gameserver.fix.npc.ai.AggroFix;
@@ -21,9 +20,6 @@ import com.aionemu.gameserver.fix.npc.ai.NpcStatsFlix;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
 import com.aionemu.gameserver.geoEngine.math.Vector3f;
 import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.drop.Drop;
-import com.aionemu.gameserver.model.drop.DropGroup;
-import com.aionemu.gameserver.model.drop.NpcDrop;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
 import com.aionemu.gameserver.model.gameobjects.GroupGate;
@@ -46,14 +42,12 @@ import com.aionemu.gameserver.model.house.House;
 import com.aionemu.gameserver.model.rift.RiftLocation;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.siege.SiegeRace;
-import com.aionemu.gameserver.model.skill.NpcSkillEntry;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
-import com.aionemu.gameserver.model.templates.npc.NpcRating;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.pet.PetTemplate;
-import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplate;
+import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawnTemplate;
 import com.aionemu.gameserver.model.vortex.VortexLocation;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
@@ -61,7 +55,6 @@ import com.aionemu.gameserver.services.RiftService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.VortexService;
-import com.aionemu.gameserver.skillengine.model.Skill;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -104,8 +97,8 @@ public class VisibleObjectSpawner {
 		npc.setKnownlist(new NpcKnownList(npc));
 		npc.setEffectController(new EffectController(npc));
 		
-		HeroAndLegendaryFixes.fixDrops(spawn, npcTemplate);
-		NormalAndEliteFixes.fixDrops(spawn, npcTemplate);
+		HeroAndLegendaryFixes.fixDrops(spawn,  npc);
+		NormalAndEliteFixes.fixDrops(spawn, npc);
 		if (WalkerFormator.getInstance().processClusteredNpc(npc, instanceIndex))
 			return npc;
 

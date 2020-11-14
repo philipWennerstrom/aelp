@@ -12,6 +12,7 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.drop.Drop;
 import com.aionemu.gameserver.model.drop.DropGroup;
 import com.aionemu.gameserver.model.drop.NpcDrop;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.templates.npc.NpcRating;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
@@ -24,16 +25,18 @@ public class HeroAndLegendaryFixes {
 		super();
 	}
 
-	public static void fixDrops(SpawnTemplate spawn, NpcTemplate npcTemplate) {
-		NpcRating npcRating = npcTemplate.getRating();
-		byte level = npcTemplate.getLevel();
+	public static void fixDrops(SpawnTemplate spawn, Npc npc) {
+		NpcTemplate nt = new NpcTemplate(npc.getObjectTemplate());
+		npc.setObjectTemplate(nt);
+		NpcRating npcRating = nt.getRating();
+		byte level = nt.getLevel();
 		switch (npcRating) {
 		case HERO:
 		case LEGENDARY:
-			fixBoss(spawn, npcTemplate, npcRating, level);
+			fixBoss(spawn, nt, npcRating, level);
 			break;
 		default:
-			fixNamedKey(spawn, npcTemplate, npcRating);
+			fixNamedKey(spawn, nt, npcRating);
 			break;
 		}
 	}

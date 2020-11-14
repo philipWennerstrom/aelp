@@ -31,10 +31,13 @@ public class NpcDrop implements DropCalculator {
     public NpcDrop(NpcDrop npcDrop) {
     	super();
 		this.dropGroup = new ArrayList<DropGroup>();
-		for(DropGroup dp: npcDrop.getDropGroup()) {
-			dropGroup.add(new DropGroup(dp));
-		}
+		if(npcDrop!= null &&npcDrop.getDropGroup()!=null) {
+			for(DropGroup dp: npcDrop.getDropGroup()) {
+				dropGroup.add(new DropGroup(dp));
+			}
 		this.npcId = npcDrop.getNpcId();
+		}
+	
     }
     
     /**

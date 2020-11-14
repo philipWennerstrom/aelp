@@ -229,7 +229,7 @@ public class DropRegistrationService {
 		godDropFix.fix(droppedItems);
 		ndrf.fix(droppedItems);
 		ldrf.fix(droppedItems);
-		crdrf.fix(droppedItems);
+		crdrf.fix(droppedItems, player);
 		
 		if (npc.getPosition().isInstanceMap()) {
 			npc.getPosition().getWorldMapInstance().getInstanceHandler().onDropRegistered(npc);

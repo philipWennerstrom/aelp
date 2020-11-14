@@ -347,92 +347,97 @@ public class SiegeService {
 	}
 
 	public void startPreparations() {
-		log.debug("Starting preparations of all source locations");
+		try {
+			log.debug("Starting preparations of all source locations");
 
-		// Set siege start timer..
-		ThreadPoolManager.getInstance().schedule(new Runnable() {
-			@Override
-			public void run() {
-				// Remove players from Tiamaranta's Eye
-				World.getInstance().getWorldMap(600040000).getWorldMapInstance().doOnAllPlayers(new Visitor<Player>() {
-					@Override
-					public void visit(Player player) {
-						TeleportService2.moveToBindLocation(player, true);
-					}
+			// Set siege start timer..
+			ThreadPoolManager.getInstance().schedule(new Runnable() {
+				@Override
+				public void run() {
+					// Remove players from Tiamaranta's Eye
+					World.getInstance().getWorldMap(600040000).getWorldMapInstance().doOnAllPlayers(new Visitor<Player>() {
+						@Override
+						public void visit(Player player) {
+							TeleportService2.moveToBindLocation(player, true);
+						}
 
-				});
+					});
 
-				// Start siege warfare
-				for (SourceLocation source : getSources().values())
-					startSiege(source.getLocationId());
+					// Start siege warfare
+					for (SourceLocation source : getSources().values())
+						startSiege(source.getLocationId());
+				}
+
+			}, 300 * 1000);
+
+			// 10 sec after start all players moved out and send SM_SHIELD_EFFECT & 2nd SM_SIEGE_LOCATION_STATE
+			ThreadPoolManager.getInstance().schedule(new Runnable() {
+				@Override
+				public void run() {
+					for (SourceLocation source : getSources().values())
+						source.clearLocation();
+
+					World.getInstance().getWorldMap(600030000).getWorldMapInstance().doOnAllPlayers(new Visitor<Player>() {
+						@Override
+						public void visit(Player player) {
+							for (SourceLocation source : getSources().values())
+								PacketSendUtility.sendPacket(player, new SM_SHIELD_EFFECT(source.getLocationId()));
+
+							for (SourceLocation source : getSources().values())
+								PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_STATE(source.getLocationId(), 2));
+						}
+
+					});
+				}
+
+			}, 310 * 1000);
+
+			for (final SourceLocation source : getSources().values()) {
+				source.setPreparation(true);
+
+				if (!source.getRace().equals(SiegeRace.BALAUR)) {
+					// Despawn old npc
+					deSpawnNpcs(source.getLocationId());
+
+					// Store old owner for msg
+					final int oldOwnerRaceId = source.getRace().getRaceId();
+					final int legionId = source.getLegionId();
+					final String legionName = legionId != 0 ? LegionService.getInstance().getLegion(legionId).getLegionName() : "";
+					final DescriptionId sourceNameId = new DescriptionId(source.getTemplate().getNameId());
+
+					// Reset owner
+					source.setRace(SiegeRace.BALAUR);
+					source.setLegionId(0);
+
+					// On start preparations msg
+					World.getInstance().doOnAllPlayers(new Visitor<Player>() {
+						@Override
+						public void visit(Player player) {
+							if (legionId != 0 && player.getRace().getRaceId() == oldOwnerRaceId)
+								PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301037,
+										legionName, sourceNameId));
+
+							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039,
+									source.getRace().getDescriptionId(), sourceNameId));
+
+							PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO(source));
+						}
+
+					});
+
+					// Spawn new npc
+					spawnNpcs(source.getLocationId(), SiegeRace.BALAUR, SiegeModType.PEACE);
+
+					DAOManager.getDAO(SiegeDAO.class).updateSiegeLocation(source);
+				}
 			}
 
-		}, 300 * 1000);
-
-		// 10 sec after start all players moved out and send SM_SHIELD_EFFECT & 2nd SM_SIEGE_LOCATION_STATE
-		ThreadPoolManager.getInstance().schedule(new Runnable() {
-			@Override
-			public void run() {
-				for (SourceLocation source : getSources().values())
-					source.clearLocation();
-
-				World.getInstance().getWorldMap(600030000).getWorldMapInstance().doOnAllPlayers(new Visitor<Player>() {
-					@Override
-					public void visit(Player player) {
-						for (SourceLocation source : getSources().values())
-							PacketSendUtility.sendPacket(player, new SM_SHIELD_EFFECT(source.getLocationId()));
-
-						for (SourceLocation source : getSources().values())
-							PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_STATE(source.getLocationId(), 2));
-					}
-
-				});
-			}
-
-		}, 310 * 1000);
-
-		for (final SourceLocation source : getSources().values()) {
-			source.setPreparation(true);
-
-			if (!source.getRace().equals(SiegeRace.BALAUR)) {
-				// Despawn old npc
-				deSpawnNpcs(source.getLocationId());
-
-				// Store old owner for msg
-				final int oldOwnerRaceId = source.getRace().getRaceId();
-				final int legionId = source.getLegionId();
-				final String legionName = legionId != 0 ? LegionService.getInstance().getLegion(legionId).getLegionName() : "";
-				final DescriptionId sourceNameId = new DescriptionId(source.getTemplate().getNameId());
-
-				// Reset owner
-				source.setRace(SiegeRace.BALAUR);
-				source.setLegionId(0);
-
-				// On start preparations msg
-				World.getInstance().doOnAllPlayers(new Visitor<Player>() {
-					@Override
-					public void visit(Player player) {
-						if (legionId != 0 && player.getRace().getRaceId() == oldOwnerRaceId)
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301037,
-									legionName, sourceNameId));
-
-						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039,
-								source.getRace().getDescriptionId(), sourceNameId));
-
-						PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO(source));
-					}
-
-				});
-
-				// Spawn new npc
-				spawnNpcs(source.getLocationId(), SiegeRace.BALAUR, SiegeModType.PEACE);
-
-				DAOManager.getDAO(SiegeDAO.class).updateSiegeLocation(source);
-			}
+			// Reset Tiamaranta's eye infiltration route status
+			updateTiamarantaRiftsStatus(true, false);
 		}
-
-		// Reset Tiamaranta's eye infiltration route status
-		updateTiamarantaRiftsStatus(true, false);
+		catch (Exception e) {
+			log.error("Erro prepando siege"+ e.getMessage());
+		}
 	}
 
 	public void startSiege(final int siegeLocationId) {

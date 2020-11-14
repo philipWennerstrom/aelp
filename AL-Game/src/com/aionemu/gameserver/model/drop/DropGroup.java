@@ -31,7 +31,10 @@ public class DropGroup implements DropCalculator {
     }
     
     public DropGroup(DropGroup dropGroup) {
-    	this.drop= new ArrayList<Drop>(dropGroup.getDrop());
+    	this.drop= new ArrayList<Drop>();
+    	for(Drop dp:dropGroup.getDrop()) {
+    		drop.add(new Drop(dp.getItemId(), dp.getMinAmount(), dp.getMaxAmount(), dp.getChance(), dp.isNoReduction()));
+    	}
     	this.race = dropGroup.getRace();
 		this.useCategory = dropGroup.useCategory;
 		this.group_name = dropGroup.group_name;

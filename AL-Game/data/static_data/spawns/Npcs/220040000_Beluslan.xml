@@ -629,6 +629,25 @@
 		<!-- Anair Spiritarcher -->
 		<spawn npc_id="213206" respawn_time="295">
 			<spot x="172.47" y="2322.5" z="218.625" h="112" walker_id="13FDFFBB001C27085C38727BC629D192FB7F588D"/>
+		</spawn> 
+		
+			<!-- FARM AREA ELYOS NAMED-->
+		<spawn npc_id="204510" respawn_time="295">
+			<spot x="465.765" y="2225.06" z="313.485" h="104" random_walk="5"/>
+		</spawn>
+		<!-- FARM AREA ELYOS HERO-->
+		<spawn npc_id="207569" respawn_time="295">
+			<spot x="470.765" y="2225.06" z="313.485" h="104" random_walk="5"/>
+		</spawn>
+		<!-- FARM AREA ELYOS PATROL-->
+		<spawn npc_id="207751" respawn_time="295">
+			<spot x="460.765" y="2225.06" z="313.485" h="104" />
+			<spot x="457.691" y="2219.4" z="312.193" h="83"  random_walk="5"/>
+		</spawn>
+		<!-- FARM AREA ELYOS PATROL-->
+		<spawn npc_id="207744" respawn_time="295">
+			<spot x="455.255" y="2285.59" z="307.354" h="88" />
+			<spot x="467.691" y="2219.4" z="312.193" h="83" random_walk="5"/>
 		</spawn>
 		<!-- Anair Spiritmage -->
 		<spawn npc_id="213164" respawn_time="295">
@@ -694,7 +713,7 @@
 			<spot x="331.378" y="2413.85" z="216.375" h="102"/>
 			<spot x="388.653" y="2355.14" z="216.349" h="7"/>
 		</spawn>
-		<!-- Anair Spiritwarrior -->
+		<!-- Anair Spiritwarrior 
 		<spawn npc_id="213162" respawn_time="295">
 			<spot x="100.504" y="2256.22" z="218.625" h="88"/>
 			<spot x="109.248" y="2238.59" z="218.578" h="110"/>
@@ -742,6 +761,32 @@
 			<spot x="557.453" y="2301.04" z="273.164" h="79"/>
 			<spot x="564.07" y="2229.19" z="247.46938" h="67" walker_id="DBF36A3B7FBA91F6D208D7159F23C9E361649B18"/>
 			<spot x="575.817" y="2230.86" z="244.094" h="69"/>
+		</spawn>-->
+		<!-- Anair Spiritwarrior AREA DE FARM ELYOS -->
+		<spawn npc_id="207580" respawn_time="295">
+			<spot x="407.648" y="2297.02" z="285.954" h="91" random_walk="4"/>
+			<spot x="414.034" y="2252.85" z="272.303" h="73" random_walk="4"/>
+			<spot x="415.558" y="2266.74" z="274.671" h="46" random_walk="4"/>
+			<spot x="434.283" y="2207.6" z="258.031" h="11" random_walk="4"/>
+			<spot x="457.005" y="2327.85" z="301.135" h="43" random_walk="4"/>
+			<spot x="462.691" y="2214.4" z="312.193" h="83" random_walk="4"/>
+			<spot x="463.792" y="2311.09" z="304.945" h="73" random_walk="4"/>
+			<spot x="477.765" y="2225.06" z="313.485" h="104" random_walk="4"/>
+			<spot x="479.444" y="2228.85" z="313.447" h="4" random_walk="4"/>
+			<spot x="481.032" y="2350.38" z="301.125" h="14" random_walk="4"/>
+			<spot x="512.221" y="2290.06" z="291.361" h="109" random_walk="4"/>
+			<spot x="520.954" y="2328.06" z="300.131" h="93" random_walk="4"/>
+			<spot x="530.726" y="2207.6" z="266.882" h="23" random_walk="4"/>
+			<spot x="532.879" y="2321.26" z="297.975" h="97" random_walk="4"/>
+			<spot x="532.883" y="2244.63" z="270.618" h="40" random_walk="4"/>
+			<spot x="534.362" y="2248.15" z="271.124" h="100" random_walk="4"/>
+			<spot x="536.712" y="2196.17" z="265.905" h="52" random_walk="4"/>
+			<spot x="538.864" y="2260.04" z="271.977" h="78" random_walk="4"/>
+			<spot x="543.98" y="2203.55" z="261.99625" h="75" walker_id="FF9870F938FDEEA58BE466C5BB5B6CD8BFEDC267"/>
+			<spot x="549.853" y="2288.63" z="273.162" h="84" random_walk="4"/>
+			<spot x="557.453" y="2301.04" z="273.164" h="79" random_walk="4"/>
+			<spot x="564.07" y="2229.19" z="247.46938" h="67" walker_id="DBF36A3B7FBA91F6D208D7159F23C9E361649B18"/>
+			<spot x="575.817" y="2230.86" z="244.094" h="69" random_walk="4" />
 		</spawn>
 		<!-- Anair Spiritwarrior -->
 		<spawn npc_id="213163" respawn_time="295">
@@ -2847,7 +2892,7 @@
 			<spot x="433.37" y="334.05" z="232.20073" h="76" walker_id="67897A28DA89833A460BABB7311FD6C59E3AB282"/>
 			<spot x="540.43" y="1912.27" z="261.375" h="89" walker_id="07E1AB80A739D3960DFF4C27A0E02B4DE0A0B6A9"/>
 			<!-- AREA DE FARM -->
-			<spot x="928.275" y="2265.57" z="317.649" h="49"/>
+			<spot x="928.275" y="2265.57" z="317.649" h="49" random_walk="6"/>
 		</spawn>
 		<!-- Defense Commander -->
 		<spawn npc_id="207584" respawn_time="295">
@@ -3739,7 +3784,7 @@
 			<spot x="2346.49" y="1266.36" z="467.428" h="120"/>
 			<spot x="2817.94" y="1454.86" z="398.53625" h="29" walker_id="B95EAEDE9A87CA4C9B9AEA9BE0B86229F6D6E003"/>
 			<!-- FARM AREA -->
-			<spot x="914.275" y="2265.57" z="317.649" h="49"/>
+			<spot x="914.275" y="2265.57" z="317.649" h="49" random_walk="5"/>
 		</spawn>
 		<!-- Garrison Patrol -->
 		<spawn npc_id="207779" respawn_time="295">
@@ -5523,7 +5568,7 @@
 			<spot x="338.69" y="334.87" z="229.18826" h="21" walker_id="A5CB96FC6C6CFEA33B9CEE8A788BD0BE2623F2A7"/>
 			<spot x="375.721" y="347.462" z="229.18" h="21"/>
 			<!-- AREA DE FARM -->
-			<spot x="922.275" y="2265.57" z="317.649" h="49"/>
+			<spot x="922.275" y="2265.57" z="317.649" h="49" random_walk="6"/>
 		</spawn>
 		<!-- Mostin -->
 		<spawn npc_id="204783" respawn_time="295">
@@ -6933,6 +6978,16 @@
 			<spot x="2316.74" y="1192.82" z="480.66174" h="79" walker_id="C04919F6BD524AD91D9A832FB2F102DF169FFF90"/>
 			<spot x="2343.5" y="1217.13" z="465.49252" h="6" walker_id="CA6373CED7BAE214C767FC52DF1A3CD67161F2E1"/>
 			<spot x="2345.93" y="1264.34" z="467.671" h="106"/>
+			
+			<!-- FARM AREA Soldier -->
+			<spot x="977.278" y="2219.55" z="299.179" h="42" random_walk="3"/>
+			<spot x="989.972" y="2178.21" z="287.771" h="42" random_walk="3"/>
+			<spot x="996.859" y="2197.89" z="293.742" h="31" random_walk="3"/>
+			<spot x="956.709" y="2167.61" z="275.329" h="75" random_walk="3"/>
+			<spot x="854.032" y="2321.08" z="290.945" h="8" random_walk="3"/>
+			<spot x="867.942" y="2293.95" z="293.493" h="21" random_walk="3"/>
+			<spot x="884.277" y="2331.86" z="305.758" h="1" random_walk="3"/>
+			<spot x="928.342" y="2277.68" z="315.875" h="119" random_walk="3"/>
 		</spawn>
 		<!-- Senior Soldier -->
 		<spawn npc_id="207601" respawn_time="295">
@@ -6979,22 +7034,15 @@
 			<spot x="2276.46" y="1276.77" z="472.792" h="10"/>
 			<spot x="2303.79" y="1285.6" z="474.82" h="81"/>
 			<!-- FARM AREA -->
-			<spot x="815.682" y="2257.85" z="267.787" h="50" random_walk="4"/>
-			<spot x="829.854" y="2276.3" z="273.394" h="62" random_walk="4"/>
-			<spot x="840.784" y="2254.6" z="269.586" h="30" random_walk="4"/>
-			<spot x="851" y="2264.6" z="271.948" h="118" random_walk="4"/>
-			<spot x="854.032" y="2321.08" z="290.945" h="8" random_walk="4"/>
-			<spot x="867.942" y="2293.95" z="293.493" h="21" random_walk="4"/>
-			<spot x="884.277" y="2331.86" z="305.758" h="1" random_walk="4"/>
-			<spot x="910.779" y="2296.95" z="315.722" h="67" random_walk="4"/>
-			<spot x="928.342" y="2277.68" z="315.875" h="119" random_walk="4"/>
-			<spot x="939.22" y="2263.25" z="315.875" h="93" random_walk="4"/>
-			<spot x="951.443" y="2253.32" z="315.875" h="102" random_walk="4"/>
-			<spot x="956.85" y="2217.37" z="296.403" h="76" random_walk="4"/>
-			<spot x="977.278" y="2219.55" z="299.179" h="42" random_walk="4"/>
-			<spot x="989.972" y="2178.21" z="287.771" h="42" random_walk="4"/>
-			<spot x="996.859" y="2197.89" z="293.742" h="31" random_walk="4"/>
-			<spot x="956.709" y="2167.61" z="275.329" h="75" random_walk="4"/>
+			<spot x="815.682" y="2257.85" z="267.787" h="50" random_walk="3"/>
+			<spot x="829.854" y="2276.3" z="273.394" h="62" random_walk="3"/>
+			<spot x="840.784" y="2254.6" z="269.586" h="30" random_walk="3"/>
+			<spot x="851" y="2264.6" z="271.948" h="118" random_walk="3"/>
+			<spot x="910.779" y="2296.95" z="315.722" h="67" random_walk="3"/>
+			<spot x="939.22" y="2263.25" z="315.875" h="93" random_walk="3"/>
+			<spot x="951.443" y="2253.32" z="315.875" h="102" random_walk="3"/>
+			<spot x="956.85" y="2217.37" z="296.403" h="76" random_walk="3"/>
+			
 		</spawn>
 		<!-- Sentinel Leader -->
 		<spawn npc_id="207602" respawn_time="295">

@@ -50,6 +50,15 @@ public class NpcDropsFix {
 			
 			namedLegendAmorAndWeapons(dropGroup);
 			namedUniqueAmorAndWeapons(dropGroup);
+			isBalaur(dropGroup);
+		}
+	}
+	
+	private static void isBalaur(DropGroup dropGroup) {
+		if (dropGroup.getGroupName().contains("BALAUR")) {
+			for (Drop dropIndex : dropGroup.getDrop()) {
+				dropIndex.setChance(1f);
+			}
 		}
 	}
 

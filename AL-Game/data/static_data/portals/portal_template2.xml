@@ -2,6 +2,7 @@
 <portal_templates2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_template2.xsd">
 	<!-- ***************** PORTAL USE ***************** -->
 	<!-- ************ INSTANCES ************ -->
+
 	<!--  Portal Event Pvp -->
 	<portal_use npc_id="205437">
 		<portal_path loc_id="6000355" race="ASMODIANS"/>
