@@ -36,6 +36,7 @@ import gnu.trove.procedure.TObjectProcedure;
 public class NpcDropData {
 	public static final String GODSTONES = "GODSTONES";
 	public static final Map<Integer, Drop> godstoneDrops = new HashMap<Integer, Drop>();
+	public static final Map<Integer, Drop> decorationDrops = new HashMap<Integer, Drop>();
 	private static Logger log = LoggerFactory.getLogger(DataManager.class);
     //@XmlElement(name = "npc_drop")
     protected List<NpcDrop> npcDrop;
@@ -202,9 +203,40 @@ public class NpcDropData {
 				}
 			}
 		}
+		
+		for (NpcDrop npcDrop2 : npcDrops) {
+			for (DropGroup dropGroup : npcDrop2.getDropGroup()) {
+
+				for (Drop godDrop : dropGroup.getDrop()) {
+					
+					if (godDrop.getItemId()==186000079) {
+						decorationDrops.put(186000079, godDrop);
+					}
+					
+					if (godDrop.getItemId()==186000078) {
+						decorationDrops.put(186000078, godDrop);
+					}
+					
+					int itemId = godDrop.getItemId();
+					if (isReliquia(itemId)) {
+						if (godDrop.getChance() > 0.4) {
+							float maxItens = (Math.random() <= 0.5) ? 0.7f : 0.15f;
+							godDrop.setChance(maxItens);
+						}
+						System.out.println("Item: " + itemId + "name = " + godDrop.getItemTemplate().getName()
+								+ " Chance: " + godDrop.getChance());
+					}
+				}
+			
+			}
+		}
    		dropData.setNpcDrop(npcDrops);
    		return dropData;
    	}
+
+	public static boolean isReliquia(int itemId) {
+		return (itemId > 186000048 && itemId < 186000097) || itemId==186000030;
+	}
        
        public static void reload() {
    		TIntObjectHashMap<NpcTemplate> npcData = DataManager.NPC_DATA.getNpcData();

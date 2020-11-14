@@ -1,5 +1,8 @@
 package com.aionemu.gameserver.fix.drops;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +33,21 @@ public class NormalAndEliteFixes {
 		case ELITE:
 			fix(spawn, npc, npcRating, level);
 			farmArea(spawn, npc);
+			leftChamberBalance(spawn, npc);
 			break;
 		default:
 			break;
+		}
+	}
+	
+	private static void leftChamberBalance(SpawnTemplate spawn, Npc npc) {
+		if(spawn.getWorldId()==300080000) {
+			NpcTemplate nt = new NpcTemplate(npc.getObjectTemplate());
+			npc.setObjectTemplate(nt);
+			NpcDrop npcDrop = nt.getNpcDrop();
+			for(DropGroup dg:npcDrop.getDropGroup()) {
+				isReliquia(dg, nt);
+			}
 		}
 	}
 
@@ -44,12 +59,39 @@ public class NormalAndEliteFixes {
 			for(DropGroup dg:npcDrop.getDropGroup()) {
 				isBalicGroup(dg, nt);
 				isBalaurGroup(dg, nt);
+				
+				
 			}
+			List<Drop>d1 = new ArrayList<Drop>();
+			
+			d1.add(new Drop(186000078, 1, 1, 2.1f, false));
+			DropGroup dg1 = new DropGroup(d1, Race.ELYOS, false, "mycustom");
+			
+			List<Drop>d2 = new ArrayList<Drop>();
+			d2.add(new Drop(186000079, 1, 1, 2.1f, false));
+			DropGroup dg2 = new DropGroup(d2, Race.ASMODIANS, false, "mycustom2");
+			npcDrop.getDropGroup().add(dg1);
+			npcDrop.getDropGroup().add(dg2);
 		}
+	}
+	
+	private static void isReliquia(DropGroup dg, NpcTemplate npcTemplate) {
+			for(Drop drop:dg.getDrop()) {
+				int iId = drop.getItemId();
+				if (NpcDropData.isReliquia(iId)) {
+					float maxItens = (Math.random() <= 0.5) ? 2.7f : 1.5f;
+					drop.setChance(maxItens);
+					System.out.println("Item: " + iId + "name = " + drop.getItemTemplate().getName()
+							+ " Chance: " + drop.getChance());
+				}
+				
+			}
+		
 	}
 	
 	private static void isBalaurGroup(DropGroup dg, NpcTemplate npcTemplate) {
 		if(dg.getGroupName().contains("BALAUR")) {
+		
 			for(Drop drop:dg.getDrop()) {
 				log.info("++ Drop Name: "+ drop.getItemTemplate().getName());
 				drop.setChance(5f);

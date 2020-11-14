@@ -8,6 +8,8 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.dataholders.NpcDropData;
+import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.drop.Drop;
 import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -16,7 +18,9 @@ import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemQuality;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 
+@SuppressWarnings("unused")
 public class CommonAndRareDropRegFlux {
+	
 	private static final Logger log = LoggerFactory.getLogger(CommonAndRareDropRegFlux.class);
 	private static final String ACCESSORY = "ACCESSORY";
 	private static final String WEAPON = "WEAPON";
@@ -29,30 +33,41 @@ public class CommonAndRareDropRegFlux {
 		uniqueCategoryMap.put(ARMOR, Integer.valueOf(0));
 		uniqueCategoryMap.put(WEAPON, Integer.valueOf(0));
 		uniqueCategoryMap.put(ACCESSORY, Integer.valueOf(0));
-		maxItens = (Math.random() <= 0.3) ? 1 : 2;
+		maxItens = (Math.random() <= 0.3) ? 1 : 3;
 	}
 	
 	public void fix(Set<DropItem> droppedItens, Player player) {
 		Iterator<DropItem> iterator = droppedItens.iterator();
+		
 		while (iterator.hasNext()) {
 			DropItem next = iterator.next();
 			Drop dropTemplate = next.getDropTemplate();
 			ItemTemplate itemTemplate = dropTemplate.getItemTemplate();
 			int itemId = dropTemplate.getItemId();
 			ItemQuality itemQuality = itemTemplate.getItemQuality();
+			
 			if(dropTemplate.getItemId()==152014014) {
+				
 				if(player.getPlayerAccount().getMembership()==1 || player.getPlayerAccount().getMembership()==2) {
 					double random = Math.random();
-					int dc = (random <= 0.4) ? 2 : 1;
+					int dc = (random <= 0.45) ? 3 : 1;
 					next.setCount(dc);
 					if (dc > 1) {
-						log.info("Player ganhou +1 boiling: " + player.getName());
+						log.info("Player ganhou 3 boiling: " + player.getName());
 					}
 				}
 				
 			}
+			
+			if(NpcDropData.isReliquia(dropTemplate.getItemId())) {
+				if(player.getRace()==Race.ELYOS) {
+					next.setCount(2);
+				}
+			}
 		//	System.out.println("Name: "+ next.toString()+" | category: "+ itemTemplate.getCategory().name());
 			checkUniqueItens(iterator, itemTemplate, itemId, itemQuality);
+			
+			
 		}
 	}
 

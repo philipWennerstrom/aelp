@@ -80,9 +80,10 @@ public class EnchantItemAction extends AbstractItemAction {
 		final int currentEnchant = targetItem.getEnchantLevel();
 		final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
 		player.getController().cancelUseItem();
+		int actTime = 1600;
 		PacketSendUtility.broadcastPacketAndReceive(player,
 			new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate()
-				.getTemplateId(), 5000, 0, 0));
+				.getTemplateId(), actTime, 0, 0));
 		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
 
 			@Override
@@ -112,7 +113,7 @@ public class EnchantItemAction extends AbstractItemAction {
 				}
 			}
 
-		}, 5000));
+		}, actTime));
 	}
 
 	/**
