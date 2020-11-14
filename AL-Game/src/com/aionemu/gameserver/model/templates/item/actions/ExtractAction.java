@@ -34,7 +34,9 @@ public class ExtractAction extends AbstractItemAction {
 
 	@Override
 	public void act(final Player player, final Item parentItem, final Item targetItem) {
-		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 5000, 0, 0));
+		//alterando tempo de cast ao utilizar item de 5s para 1s
+		int useTime = 1500;
+		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), useTime, 0, 0));
 		player.getController().cancelTask(TaskId.ITEM_USE);
 		final ItemUseObserver observer = new ItemUseObserver() {
 
@@ -55,6 +57,6 @@ public class ExtractAction extends AbstractItemAction {
 				boolean result = EnchantService.breakItem(player, targetItem, parentItem);
 				PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, result ? 1 : 2, 0));
 			}
-		}, 5000));
+		}, useTime));
 	}
 }

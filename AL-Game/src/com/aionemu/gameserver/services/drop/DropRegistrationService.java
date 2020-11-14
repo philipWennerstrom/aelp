@@ -221,6 +221,7 @@ public class DropRegistrationService {
 				}
 			}
 		}
+		
 		GodstoneDropRegFix godDropFix = new GodstoneDropRegFix();
 		UniqueDropRegFix ndrf = new UniqueDropRegFix();
 		LegendDropReg ldrf = new LegendDropReg();

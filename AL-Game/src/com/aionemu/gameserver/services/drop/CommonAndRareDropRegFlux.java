@@ -24,7 +24,7 @@ public class CommonAndRareDropRegFlux {
 		uniqueCategoryMap.put(ARMOR, Integer.valueOf(0));
 		uniqueCategoryMap.put(WEAPON, Integer.valueOf(0));
 		uniqueCategoryMap.put(ACCESSORY, Integer.valueOf(0));
-		maxItens = (Math.random() <= 0.3) ? 1 : 2;
+		maxItens = (Math.random() <= 0.2) ? 1 : 2;
 	}
 	
 	public void fix(Set<DropItem> droppedItens) {

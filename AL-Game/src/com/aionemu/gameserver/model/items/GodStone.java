@@ -57,7 +57,8 @@ public class GodStone extends ItemStone {
 
 		Item equippedItem = player.getEquipment().getEquippedItemByObjId(getItemObjId());
 		long equipmentSlot = equippedItem.getEquipmentSlot();
-		final int handProbability = equipmentSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? probability : probabilityLeft;
+		//diminuindo chance de Godstone
+		final int handProbability =( equipmentSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? probability : probabilityLeft) - 10;
 		actionListener = new ActionObserver(ObserverType.ATTACK) {
 
 			@Override

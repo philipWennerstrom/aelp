@@ -47,9 +47,9 @@ public class PulledEffect extends EffectTemplate {
 		final float x1 = (float) Math.cos(radian);
 		final float y1 = (float) Math.sin(radian);
 		
-		float f = PullEffectFix.fixZ(effect);
+		//float f = PullEffectFix.fixZ(effect);
 		
-		effect.setTargetLoc(effector.getX() + x1, effector.getY() + y1, f + 0.25F);
+		effect.setTargetLoc(effector.getX() + x1, effector.getY() + y1, effector.getZ() + 0.25F);
 	}
 
 	@Override

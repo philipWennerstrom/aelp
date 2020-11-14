@@ -202,6 +202,24 @@ public class NpcDropData {
 				}
 			}
 		}
+		
+		for (NpcDrop npcDrop2 : npcDrops) {
+			for (DropGroup dropGroup : npcDrop2.getDropGroup()) {
+
+				for (Drop godDrop : dropGroup.getDrop()) {
+					int itemId = godDrop.getItemId();
+					if ((itemId > 186000048 && itemId < 186000097) ||itemId==186000030) {
+						if (godDrop.getChance() > 0.4) {
+							float maxItens = (Math.random() <= 0.5) ? 0.3f : 0.15f;
+							godDrop.setChance(maxItens);
+						}
+						System.out.println("Item: " + itemId + "name = " + godDrop.getItemTemplate().getName()
+								+ " Chance: " + godDrop.getChance());
+					}
+				}
+			
+			}
+		}
    		dropData.setNpcDrop(npcDrops);
    		return dropData;
    	}
